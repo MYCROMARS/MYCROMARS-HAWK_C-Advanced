@@ -3,8 +3,8 @@
 // Main function
 void mainMenu_1(int *m)
 {
-    // Function: --- A
-    //calculation_a();
+    // Function: Loop A
+    loop_a();
 
     // Output
     printf("\n### --- END ###\n");

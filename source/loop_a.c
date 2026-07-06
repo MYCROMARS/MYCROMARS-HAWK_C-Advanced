@@ -8,18 +8,18 @@
 void loop_a(void)
 {
     // Output
-    printf("### Loop A: While loop 1...12 ###\n\n");
+    printf("### Loop A: Do while loop ###\n\n");
 
-    // Assign
+    // Create & assign
     int value = 1;
 
-    // While Loop
-    while(value <= DOZEN)
+    // Do while Loop
+    do 
     {
         // Output
         printf("value: %d\n", value);
 
         // Assign
         value++;
-    }
+    } while(value < 11);
 }
