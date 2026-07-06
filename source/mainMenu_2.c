@@ -14,9 +14,9 @@ void mainMenu_2(int *m)
     // scanf("%d", &value);
 
     // Function: Delay A
-    // delay_a(value);
+    enum_a();
     
     // Output
-    printf("\n### --- END ###\n");
+    printf("\n### Enum END ###\n");
     printf(".......................\n");
 }

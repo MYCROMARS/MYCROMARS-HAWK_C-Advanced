@@ -1,6 +1,6 @@
 /*
 MYCROMARS HAWK 
-C Programming Advanced V0.0.1
+C Programming Advanced v0.0.1
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -47,12 +47,11 @@ int main()
     // Output
     printf("\n");
     printf("MYCROMARS HAWK\n");
-    printf("C Programming Advanced V0.0.1\n\n");
+    printf("C Programming Advanced v0.0.1\n\n");
 
     printf("MYCROMARS HAWK Copyright (C) 2026 Alexander Rudi\n");
     printf("This program comes with ABSOLUTELY NO WARRANTY\n");
-    printf("This is free software, and you are welcome to redistribute it \
-        under certain conditions.\n");
+    printf("This is free software, and you are welcome to redistribute it under certain conditions.\n");
     printf("Licensed: GNU General Public License v3.0\n");
     printf("https://www.mycromars.com\n");
     
@@ -66,7 +65,7 @@ int main()
     // Output
     printf("\n*** MAIN MENU ***\n");
     printf("Press (0) EXIT \n");
-    printf("Press (1) --- | (2) --- | (3) --- | (4) ---\n");
+    printf("Press (1) LOOP | (2) ENUM | (3) --- | (4) ---\n");
     printf("Press (5) ---     | (6) ---| (7) ---  | (8) ---\n");
     printf("Press (9) ---      | (10) ---\n");
 
@@ -91,13 +90,13 @@ int main()
                     mainMenu_0(&menuB);
         
             case 1:
-                    /* Function:  */
+                    /* Function: Loop */
                     mainMenu_1(&menuB);
                     break;
 
             case 2:
                     /* Function:  */
-                    //mainMenu_2(&menuB);
+                    mainMenu_2(&menuB);
                     break;
 
             case 3:

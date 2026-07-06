@@ -20,6 +20,8 @@
     // ********** Include header files
     #include "header/mainMenu.h"
 
+    #include "header/enum_a.h"
+    
     #include "header/calculation_a.h"
 
     #include "header/delay_a.h"
@@ -88,6 +90,8 @@
     #include "source/mainMenu_10.c"
 
     // ********** Include source files
+    #include "source/enum_a.c"
+
     #include "source/calculation_a.c"
 
     #include "source/delay_a.c"
