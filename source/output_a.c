@@ -7,20 +7,44 @@
 void output_a(void) {
     // Output
     printf("\n### OUTPUT A ###\n\n");
-    printf("With printf(): Hello World\n");
+
+    // Output: 
+    printf("Character with: \\\\= \\\n\n");
+
+    printf("Character with: \\\'= \'\n\n");
+
+    printf("Character with: \\\"= \"\n\n");
+
+    printf("Character with: \\\?= \?\n\n");
     
-    // Output: with putc
-    printf("With putc(): ");
-    putc('H', stdout);
-    putc('e', stdout);
-    putc('l', stdout);
-    putc('l', stdout);
-    putc('o', stdout);
-    putc(' ', stdout);
-    putc('W', stdout);
-    putc('o', stdout);
-    putc('r', stdout);
-    putc('l', stdout);
-    putc('d', stdout);
-    putc('\n', stdout);
+    printf("Backspace with: \\b= \bTest\n\n");
+    
+    printf("V Tab with: \\f= \fTest\n\n");
+    
+    printf("Next Line with: \\n= \nTest\n\n");
+    
+    printf("Carriage Return with: \\rTest---- =\n");
+    printf("Carriage Return\rTest----\n\n");
+    
+    printf("H Tab with: \\t= \tTest\n\n");
+    printf("V Tab with: \\v= \vTest\n");
+
+    //printf("Alert with: \a\n");
+
+    // Output: 
+    printf("Character with: ??<= {\n\n");
+    printf("Character with: ??>= }\n\n");
+
+    printf("Character with: ??-= ~\n\n");
+
+    printf("Character with: ??!= |\n\n");
+
+    printf("Character with: ??'= ^\n\n");
+
+    printf("Character with: ??(= [\n\n");
+    printf("Character with: ??)= ]\n\n");
+
+    printf("Character with: ??/= \\n\n");
+
+    printf("Character with: ??= #\n\n");
 }

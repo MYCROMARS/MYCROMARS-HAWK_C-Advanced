@@ -65,7 +65,7 @@ int main()
     // Output
     printf("\n*** MAIN MENU ***\n");
     printf("Press (0) EXIT \n");
-    printf("Press (1) LOOP | (2) ENUM | (3) --- | (4) ---\n");
+    printf("Press (1) LOOP | (2) ENUM | (3) OUTPUT | (4) ---\n");
     printf("Press (5) ---     | (6) ---| (7) ---  | (8) ---\n");
     printf("Press (9) ---      | (10) ---\n");
 
@@ -95,13 +95,13 @@ int main()
                     break;
 
             case 2:
-                    /* Function:  */
+                    /* Function: ENUM */
                     mainMenu_2(&menuB);
                     break;
 
             case 3:
                     /* Function:  */
-                    //mainMenu_3(&menuB);
+                    mainMenu_3(&menuB);
                     break;
 
             case 4:
