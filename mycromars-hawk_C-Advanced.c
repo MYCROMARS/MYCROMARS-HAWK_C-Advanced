@@ -100,7 +100,7 @@ int main()
                     break;
 
             case 3:
-                    /* Function:  */
+                    /* Function: OUTPUT */
                     mainMenu_3(&menuB);
                     break;
 

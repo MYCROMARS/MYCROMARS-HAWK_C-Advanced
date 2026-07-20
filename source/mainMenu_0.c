@@ -13,12 +13,4 @@ void mainMenu_0(int *m)
 
     // Exit
     exit(EXIT_SUCCESS);
-
-    // Further exit options:
-    // exit(1);
-    // exit(EXIT_FAILURE);
-
-    // With a return value—not used here:
-    // return EXIT_FAILURE;
-    // return EXIT_SUCCESS;
 }

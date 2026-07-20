@@ -30,6 +30,7 @@
     #include "header/input_b.h"
 
     #include "header/output_a.h"
+    #include "header/output_b.h"
 
     #include "header/pointer_a.h"
     #include "header/pointer_b.h"
@@ -100,6 +101,7 @@
     #include "source/input_b.c"
 
     #include "source/output_a.c"
+    #include "source/output_b.c"
 
     #include "source/pointer_a.c"
     #include "source/pointer_b.c"

@@ -6,8 +6,7 @@ void mainMenu_1(int *m)
     // Output
         printf("\n*** LOOP MENU ***\n");
         printf("Press: (0) EXIT\n");
-        printf("Press: (1) A | (2) B | (3) C | (4) D\n");
-        printf("Press: (5) E | (6) F | (7) G\n");
+        printf("Press: (1) A | (2) B\n");
         printf("Your Input: ");
 
         // Input
@@ -36,31 +35,6 @@ void mainMenu_1(int *m)
                 case 2:
                         // Function: B
                         loop_b();
-                        break;
-
-                case 3:
-                        // Function: C
-                        //loop_c();
-                        break;
-
-                case 4:
-                        // Function: D
-                        //loop_d();
-                        break;
-
-                case 5:
-                        // Function: E
-                        //loop_e();
-                        break;
-
-                case 6:
-                        // Function: F
-                        //loop_f();
-                        break;
-
-                case 7:
-                        // Function: G
-                        //loop_g();
                         break;
 
                 default:

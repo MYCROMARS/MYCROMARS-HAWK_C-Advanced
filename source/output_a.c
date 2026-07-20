@@ -5,10 +5,8 @@
 // Output A
 // Main function
 void output_a(void) {
-    // Output
-    printf("\n### OUTPUT A ###\n\n");
+    // Output character, tab, return: 
 
-    // Output: 
     printf("Character with: \\\\= \\\n\n");
 
     printf("Character with: \\\'= \'\n\n");
@@ -24,14 +22,16 @@ void output_a(void) {
     printf("Next Line with: \\n= \nTest\n\n");
     
     printf("Carriage Return with: \\rTest---- =\n");
-    printf("Carriage Return\rTest----\n\n");
+    printf("Carriage Return\rTest----\n\n");    // Test---- = 8 characters, overright at start
     
     printf("H Tab with: \\t= \tTest\n\n");
     printf("V Tab with: \\v= \vTest\n");
-
+    
     //printf("Alert with: \a\n");
 
-    // Output: 
+
+    // Output: not working: 
+    /*
     printf("Character with: ??<= {\n\n");
     printf("Character with: ??>= }\n\n");
 
@@ -47,4 +47,5 @@ void output_a(void) {
     printf("Character with: ??/= \\n\n");
 
     printf("Character with: ??= #\n\n");
+    */
 }
