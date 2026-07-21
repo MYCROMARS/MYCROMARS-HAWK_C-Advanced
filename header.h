@@ -21,6 +21,8 @@
     #include "header/mainMenu.h"
 
     #include "header/enum_a.h"
+    #include "header/enum_b.h"
+    #include "header/enum_c.h"
     
     #include "header/calculation_a.h"
 
@@ -92,6 +94,8 @@
 
     // ********** Include source files
     #include "source/enum_a.c"
+    #include "source/enum_b.c"
+    #include "source/enum_c.c"
 
     #include "source/calculation_a.c"
 

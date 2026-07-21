@@ -3,7 +3,7 @@
 // Main function
 void mainMenu_1(int *m)
 {
-    // Output
+        // Output
         printf("\n*** LOOP MENU ***\n");
         printf("Press: (0) EXIT\n");
         printf("Press: (1) A | (2) B\n");

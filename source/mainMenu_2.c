@@ -3,19 +3,54 @@
 // Main function
 void mainMenu_2(int *m)
 {
-    // Create & assign
-    //int value = 0;
-
     // Output
-    // printf("\n### DELAY A ###\n");
-    // printf("Input a number (for example 1000): ");
+    printf("\n*** ENUM MENU ***\n");
+    printf("Press: (0) EXIT\n");
+    printf("Press: (1) A | (2) B | (3) C\n");
+    printf("Your Input: ");
 
     // Input
-    // scanf("%d", &value);
+    scanf("%d", m);
 
-    // Function: Delay A
-    enum_a();
-    
+    // Output
+    printf("\n");
+
+    // Switch-case statement
+    switch (*m)
+    {
+            case 0:
+                    // Exit
+                    // Assign
+                    *m = 0;
+
+                    // Output
+                    printf("### EXIT ###\n");
+                    break;
+
+            case 1:
+                    // Function
+                    enum_a();
+                    break;
+
+            case 2:
+                    // Function
+                    enum_b();
+                    break;
+            
+            case 3:
+                    // Function
+                    enum_c();
+                    break;
+
+            default:
+                    // Assign
+                    *m = 0;
+
+                    // Output
+                    printf("### END ###\n");
+                    break;
+    }
+
     // Output
     printf("\n### Enum END ###\n");
     printf(".......................\n");

@@ -65,9 +65,9 @@ int main()
     // Output
     printf("\n*** MAIN MENU ***\n");
     printf("Press (0) EXIT \n");
-    printf("Press (1) LOOP | (2) ENUM | (3) OUTPUT | (4) ---\n");
-    printf("Press (5) ---     | (6) ---| (7) ---  | (8) ---\n");
-    printf("Press (9) ---      | (10) ---\n");
+    printf("Press (1) LOOP | (2) ENUM | (3) OUTPUT \n");
+    // printf("Press (5) ---     | (6) ---| (7) ---  | (8) ---\n");
+    // printf("Press (9) ---      | (10) ---\n");
 
     printf("Your input: ");
 

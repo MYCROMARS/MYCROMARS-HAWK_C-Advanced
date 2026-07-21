@@ -11,11 +11,11 @@ void output_b(void) {
     // Int Array
     int x[] = (int[]) {1,2};
     printf("int: %d\n", x[0]);      // 1
-    printf("int: %p\n", x[0]);      // 0x1
+    //printf("int: %p\n", x[0]);      // 0x1
     printf("int: %p\n", &x[0]);     // 0x16f012b80
     printf("int: %d\n\n", x[1]);    // 2
 
-    printf("int: %d\n\n", &x[1]);        // 1862347652
+    //printf("int: %d\n\n", &x[1]);        // 1862347652
 
     // Pointer Array
     int *p = (int[]) {10,20};               
@@ -30,8 +30,8 @@ void output_b(void) {
     printf("Address &p: %p\n", &p[0]);      // 6156790648
     printf("Address &p: %p\n\n", &p[1]);    // 6156790652
     
-    printf("Address d: %d\n", p);           // 1861823352
-    printf("Address &p: %d\n", &p[0]);      // 1861823352
-    printf("Address &p: %d\n", &p[1]);      // 1861823356
+    //printf("Address d: %d\n", p);           // 1861823352
+    //printf("Address &p: %d\n", &p[0]);      // 1861823352
+    //printf("Address &p: %d\n", &p[1]);      // 1861823356
     printf("\n");
 }
