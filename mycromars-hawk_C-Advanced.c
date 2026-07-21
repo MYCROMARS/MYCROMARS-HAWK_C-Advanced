@@ -1,6 +1,6 @@
 /*
 MYCROMARS HAWK 
-C Programming Advanced v0.0.1
+C Programming Advanced v0.0.2
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -47,7 +47,7 @@ int main()
     // Output
     printf("\n");
     printf("MYCROMARS HAWK\n");
-    printf("C Programming Advanced v0.0.1\n\n");
+    printf("C Programming Advanced v0.0.2\n\n");
 
     printf("MYCROMARS HAWK Copyright (C) 2026 Alexander Rudi\n");
     printf("This program comes with ABSOLUTELY NO WARRANTY\n");
@@ -58,6 +58,7 @@ int main()
     // Create & assign (initialize)
     int menu = 0;
     int menuB = 0;
+    const int menuMax = 4;
 
     // Jump mark: start
     mainMenu:
@@ -72,85 +73,85 @@ int main()
     printf("Your input: ");
 
     // Conditional statement
-    if (scanf("%d", &menu)) {
-
-        // Wrong number, not 1...10
-        if (menu < 0 || menu > 10){
-            // Output
-            printf("\nInput is wrong, not 1...10\n\n");
-
-            // Jump to start
-            goto mainMenu;
-        }
-        // Switch-case statement
-        switch (menu)
-        {
-            case 0:
-                    /* Function: Exit */
-                    mainMenu_0(&menuB);
-        
-            case 1:
-                    /* Function: Loop */
-                    mainMenu_1(&menuB);
-                    break;
-
-            case 2:
-                    /* Function: ENUM */
-                    mainMenu_2(&menuB);
-                    break;
-
-            case 3:
-                    /* Function: OUTPUT */
-                    mainMenu_3(&menuB);
-                    break;
-
-            case 4:
-                    /* Function:  */
-                    //mainMenu_4(&menuB);
-                    break;
-
-            case 5:
-                    /* Function:  */
-                    //mainMenu_5(&menuB);
-                    break;
-
-            case 6:
-                    /* Function:  */
-                    //mainMenu_6(&menuB);
-                    break;
-
-            case 7:
-                    /* Function:  */
-                    //mainMenu_7(&menuB);
-                    break;
-
-            case 8:
-                    /* Function:  */
-                    //mainMenu_8(&menuB);
-                    break;
-
-            case 9: 
-                    /* Function:  */
-                    //mainMenu_9(&menuB);
-                    break;
-
-            case 10:
-                    /* Function:  */
-                    //mainMenu_10(&menuB);
-                    break;
-
-            default:
-                    // Output
-                    printf("Input is not a number 1...10\n\n");
-                    break;
-        }
-    }
-    else {
+    if (scanf("%d", &menu) == 0)  {
         // Output
-        printf("\nInput is not a number\n\n");
+        printf("\nInput is not a number!\n\n");
 
         // function: Catch invalid input
         scanString0();
+
+        // Jump to start
+        goto mainMenu;
+    }
+    else if (menu >= 0 && menu <= menuMax){
+
+        // Switch-case statement
+        switch (menu)
+        {
+        case 0:
+                /* Function: Exit */
+                mainMenu_0(&menuB);
+        
+        case 1:
+                /* Function: Loop */
+                mainMenu_1(&menuB);
+                break;
+
+        case 2:
+                /* Function: ENUM */
+                mainMenu_2(&menuB);
+                break;
+
+        case 3:
+                /* Function: OUTPUT */
+                mainMenu_3(&menuB);
+                break;
+        
+        //case 4:
+                /* Function:  */
+                //mainMenu_4(&menuB);
+                //break;
+
+        //case 5:
+                /* Function:  */
+                //mainMenu_5(&menuB);
+                //break;
+
+        //case 6:
+                /* Function:  */
+                //mainMenu_6(&menuB);
+                //break;
+
+        //case 7:
+                /* Function:  */
+                //mainMenu_7(&menuB);
+                //break;
+
+        //case 8:
+                /* Function:  */
+                //mainMenu_8(&menuB);
+                //break;
+
+        //case 9: 
+                /* Function:  */
+                //mainMenu_9(&menuB);
+                //break;
+
+        //case 10:
+                /* Function:  */
+                //mainMenu_10(&menuB);
+                //break;
+         
+        default:
+                // Output
+                printf("This Menu  is not available!\n\n");
+                break;
+        }
+    }
+    else {
+        // Wrong number, not 1...menuMax
+        // Output
+        printf("\nInput is wrong, not 1...%d\n\n", menuMax);
 
         // Jump to start
         goto mainMenu;

@@ -6,7 +6,7 @@ void mainMenu_2(int *m)
     // Output
     printf("\n*** ENUM MENU ***\n");
     printf("Press: (0) EXIT\n");
-    printf("Press: (1) A | (2) B | (3) C\n");
+    printf("Press: (1) A | (2) B | (3) C | (4) D | (5) E | (6) F\n");
     printf("Your Input: ");
 
     // Input
@@ -18,37 +18,52 @@ void mainMenu_2(int *m)
     // Switch-case statement
     switch (*m)
     {
-            case 0:
-                    // Exit
-                    // Assign
-                    *m = 0;
+        case 0:
+                // Exit
+                // Assign
+                *m = 0;
 
-                    // Output
-                    printf("### EXIT ###\n");
-                    break;
+                // Output
+                printf("### EXIT ###\n");
+                break;
 
-            case 1:
-                    // Function
-                    enum_a();
-                    break;
+        case 1:
+                // Function
+                enum_a();
+                break;
 
-            case 2:
-                    // Function
-                    enum_b();
-                    break;
-            
-            case 3:
-                    // Function
-                    enum_c();
-                    break;
+        case 2:
+                // Function
+                enum_b();
+                break;
+        
+        case 3:
+                // Function
+                enum_c();
+                break;
 
-            default:
-                    // Assign
-                    *m = 0;
+        case 4:
+                // Function
+                enum_d();
+                break;
 
-                    // Output
-                    printf("### END ###\n");
-                    break;
+        case 5:
+                // Function
+                enum_e();
+                break;
+
+        case 6:
+                // Function
+                enum_f();
+                break;
+
+        default:
+                // Assign
+                *m = 0;
+
+                // Output
+                printf("### END ###\n");
+                break;
     }
 
     // Output

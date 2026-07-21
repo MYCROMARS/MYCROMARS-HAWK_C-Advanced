@@ -9,34 +9,35 @@ void enum_c(void)
 {
     // Output
     printf("\n### ENUM C ###\n");
-
+    
     // Create Enum Boolean 
     enum BOOLEAN{
         false,
         true
     };
 
-    enum BOOLEAN button;
+    enum BOOLEAN isNumber;
 
-    button = false;
-    printf("button is: %d\n", button);
-    
-    printf("Switch button..\n");
+    isNumber = true;
+ 
+    int number;
 
-    button = true;
-    printf("button is: %d\n", button);
-    
+    start:
 
-    // or
-    //enum BOOLEAN { false, true } button;
-    
-    // or
-    //enum BOOLEAN button;
+    printf("Input a number 1...5: ");
 
-    //if ( button == false){
-        //.
-        //.
-        //.
-    //}
-    //button = true;
+    if((scanf("%d", &number)) != isNumber)
+    {
+        printf("Input is not a number! \n\n");
+    }
+    else if (number >=1 && number <=5)
+    {
+        printf("correct!\n");
+        printf("Your input was: %d\n", number);
+    }
+    else
+    {
+        printf("The number is not 1...5 \n\n");
+        goto start;
+    }
 }
