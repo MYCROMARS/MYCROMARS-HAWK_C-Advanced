@@ -16,16 +16,22 @@ void enum_c(void)
         true
     };
 
+    // Create Enum Item
     enum BOOLEAN isNumber;
 
+    // Assign
     isNumber = true;
  
+    // Create
     int number;
 
+    // Go here
     start:
 
+    // Output
     printf("Input a number 1...5: ");
 
+    // Input
     if((scanf("%d", &number)) != isNumber)
     {
         printf("Input is not a number! \n\n");

@@ -4,13 +4,13 @@
 
 // ENUM E
 
-// Typedef Enum
-enum st{
-    SUCCESS, FAILURE, PENDING
+// Create Enum List
+enum LIST{
+    ITEM_1, ITEM_2, ITEM_3
 };
 
 // Function Definition
-void connectStatus(enum st status);
+void ItemList(enum LIST item);
 
 // Main function
 void enum_e(void)
@@ -18,31 +18,40 @@ void enum_e(void)
     // Output
     printf("\n### ENUM E ###\n");
        
-	// SUCCESS, FAILURE, PENDING
-    enum st status1 = PENDING;
+	// Create & assign Enum Item
+    enum LIST ITEM = ITEM_1;
+	// or
+    //enum LIST ITEM = ITEM_2;
+	// or
+    //enum LIST ITEM = ITEM_3;
 
-    printf("%d\n", status1);
+	// Output
+    printf("ITEM in Main: %d\n", ITEM);
 
-	connectStatus(status1);
+	// Execute function
+	ItemList(ITEM);
 }
 
 // Function
-void connectStatus(enum st status){
+void ItemList(enum LIST item){
 
-    printf("%d\n", status);
+	// Output
+    printf("ITEM in Funktion: %d\n", item);
+    printf("In switch case: ");
 
-	switch(status){
+	// Switch statement 
+	switch(item){
 
-		case SUCCESS:
-			printf("Connection\n");
+		case ITEM_1:
+			printf("ITEM 1\n");
 			break;
 		
-		case FAILURE:
-			printf("Not connect\n");
+		case ITEM_2:
+			printf("ITEM 2\n");
 			break;
 
-		case PENDING:
-			printf("Connection…\n");
+		case ITEM_3:
+			printf("ITEM 3\n");
 			break;
 
 		default: break;
