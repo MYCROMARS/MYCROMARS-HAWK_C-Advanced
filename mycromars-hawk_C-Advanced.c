@@ -66,7 +66,7 @@ int main()
     // Output
     printf("\n*** MAIN MENU ***\n");
     printf("Press (0) EXIT \n");
-    printf("Press (1) LOOP | (2) ENUM | (3) OUTPUT \n");
+    printf("Press (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT\n");
     // printf("Press (5) ---     | (6) ---| (7) ---  | (8) ---\n");
     // printf("Press (9) ---      | (10) ---\n");
 
@@ -107,10 +107,10 @@ int main()
                 mainMenu_3(&menuB);
                 break;
         
-        //case 4:
-                /* Function:  */
-                //mainMenu_4(&menuB);
-                //break;
+        case 4:
+                /* Function: BIT OPERATION */
+                mainMenu_4(&menuB);
+                break;
 
         //case 5:
                 /* Function:  */
@@ -144,7 +144,7 @@ int main()
          
         default:
                 // Output
-                printf("This Menu  is not available!\n\n");
+                printf("This Menu %d is not available!\n\n", menu);
                 break;
         }
     }
