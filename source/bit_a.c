@@ -6,11 +6,11 @@
 // Input A
 
 // Function definition
-void _zero();
-void _one();
+void input_zero();
+void input_one();
 
 // Create & assign
-char s[50] = "";
+char bit_string[50] = "";
 const char zero[2] = "0";
 const char one[2] = "1";
 
@@ -27,29 +27,30 @@ void scanString_bit(void){
 void bit_a(void)
 {
     // Output
-    printf("### BIT OPERATION A ###\n\n");
+    printf("### BIT OPERATION A ###\n");
+    printf("Decimal to Binary to Decimal\n\n");
 
     // Create
-    int val;
-    int valMax = 255;
+    int value;
+    char *hold_bits;
+    int value_a;
+    long value_b;
+    int v_bit;    // placeholder for bit
 
-    int count_zero;
-    int count_one;
-    #define ar 8  // 8 bit
-
-    int val_bit;
-    
-    int a[ar] = {0,0,0,0,0,0,0,0};
+    // Create & assign
+    int v_max = 255;
+    #define ar 8    // 8 bit
+    int bits[ar] = {0,0,0,0,0,0,0,0};  // String Placeholder for bit's
     int count_ar = 7;
     
     // Go here
     main:
     
     // Output
-    printf("Input a Dezimal number 0...255 (8 bit): ");
+    printf("Input a number 0...255 (8 bit): ");
 
     // Conditional statement
-    if (scanf("%d", &val) == 0)  {
+    if (scanf("%d", &value) == 0)  {
         // Output
         printf("\nInput is not a number!\n\n");
         
@@ -59,60 +60,60 @@ void bit_a(void)
         // Jump to start
         goto main;
     }
-    else if (val >= 0 && val <= valMax){
+    else if (value >= 0 && value <= v_max){
         printf("\n");
 
-        int val_e = val;
+        // Pass value
+        value_a = value;
 
-        // write binär numbers to array
-        while (val_e > 0)
+        // write Binary numbers to array
+        while (value_a > 0)
         {
-            val_bit = val_e % 2;            // R 0
-            val_e = val_e/2;                // 11
-            printf("value : 2 = %d R %d\n", val_e, val_bit);
+            v_bit = value_a % 2;            
+            value_a = value_a/2;     
+            printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
     
-            a[count_ar] = val_bit;
+            bits[count_ar] = v_bit;
             count_ar--;
         }
     }
     else {
         // Wrong number, not 1...menuMax
         // Output
-        printf("\nInput is wrong, not 1...%d\n\n", valMax);
+        printf("\nInput is wrong, not 1...%d\n\n", v_max);
 
         // Jump to start
         goto main;
     }
 
-    // write binär number to string
+    // write Binary number to string
     for (int i = 0; i < ar; i++)
     {
-        if (a[i] == 0){
-            //printf("0");
-            _zero();
+        if (bits[i] == 0){
+            // Function
+            input_zero();
         }
-        else if (a[i] == 1){
-             //printf("1");
-            _one();
+        else if (bits[i] == 1){
+             // Function
+            input_one();
         }
     }
 
-    // Create char Pointer
-    char *endptr2;
-
-    // String to int
-    long val2 = strtol(s, &endptr2, 2);
+    // Pass Binary string to int
+    value_b = strtol(bit_string, &hold_bits, 2);
     
+    // Output
     //printf("\nInput: %d\n", val);
-    printf("\nBinär: %s\n", s);
-    printf("Dezimal: %ld\n", val2);
+    printf("\nBinär: %s\n", bit_string);
+    printf("Dezimal: %ld\n", value_b);
 }
 
-// Count Zero
-void _zero(){
-        strcat(s, zero);
+// Function: Input zero
+void input_zero(){
+        strcat(bit_string, zero);
 }
-// Count One
-void _one(){
-        strcat(s, one);
+
+// Function: Input one
+void input_one(){
+        strcat(bit_string, one);
 }
