@@ -16,9 +16,9 @@ void input_zero_3();
 void input_one_3();
 
 // Create & assign
-char bit_string_1[10];
-char bit_string_2[10];
-char bit_string_3[10];
+char bit_string_1[50];
+char bit_string_2[50];
+char bit_string_3[50];
 
 const char zero_1[2] = "0";
 const char one_1[2] = "1";
@@ -80,6 +80,14 @@ void bit_b(void)
         // Jump to start
         goto main_1;
     }
+    else if (value_1 < 0 || value_1 > v_max)
+    {
+        // Output
+        printf("\nInput is not a number 0...%d!\n\n", v_max);
+        
+        // Jump to start
+        goto main_1;
+    }
 
     // Go here
     main_2:
@@ -98,64 +106,61 @@ void bit_b(void)
         // Jump to start
         goto main_2;
     }
-    
-    // Conditional statement: value 1 & value 2 <= v_max
-    if ((value_1 && value_2 >= 0) && (value_1 && value_2 <= v_max))
+    else if (value_2 < 0 || value_2 > v_max)
     {
-        printf("\n");
-
-        // Pass value
-        value_a = value_1;
-        value_b = value_2;
-
-        // Bitwise AND
-        value_3 = value_1&value_2;
-
-        // Pass value
-        value_c = value_3;
-
-        // write 1. Binary number to array
-        while (value_a > 0)
-        {
-            v_bit = value_a % 2;            
-            value_a = value_a/2;     
-            bits_1[count_ar] = v_bit;
-            count_ar--;
-            //printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
-        }
- 
-        // Assign
-        count_ar = 7;
-
-        // write 2. Binary number to array
-        while (value_b > 0)
-        {
-            v_bit = value_b % 2;            
-            value_b = value_b/2;     
-            bits_2[count_ar] = v_bit;
-            count_ar--;
-        }
-      
-        // Assign
-        count_ar = 7;
-
-        // write 3. Binary number to array
-        while (value_c > 0)
-        {
-            v_bit = value_c % 2;            
-            value_c = value_c/2;     
-            bits_3[count_ar] = v_bit;
-            count_ar--;
-        }
-    }
-    else {
-        // Wrong number, not 1...Max(255)
         // Output
-        printf("\nInput is wrong, not 1...%d\n\n", v_max);
-
+        printf("\nInput is not a number 0...%d!\n\n", v_max);
+        
         // Jump to start
-        goto main_1;
+        goto main_2;
     }
+    
+    printf("\n");
+
+    // Pass value
+    value_a = value_1;
+    value_b = value_2;
+
+    // Bitwise AND
+    value_3 = value_1&value_2;
+
+    // Pass value
+    value_c = value_3;
+
+    // write 1. Binary number to array
+    while (value_a > 0)
+    {
+        v_bit = value_a % 2;            
+        value_a = value_a/2;     
+        bits_1[count_ar] = v_bit;
+        count_ar--;
+        //printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
+    }
+
+    // Assign
+    count_ar = 7;
+
+    // write 2. Binary number to array
+    while (value_b > 0)
+    {
+        v_bit = value_b % 2;            
+        value_b = value_b/2;     
+        bits_2[count_ar] = v_bit;
+        count_ar--;
+    }
+    
+    // Assign
+    count_ar = 7;
+
+    // write 3. Binary number to array
+    while (value_c > 0)
+    {
+        v_bit = value_c % 2;            
+        value_c = value_c/2;     
+        bits_3[count_ar] = v_bit;
+        count_ar--;
+    }
+    
 
     // Loop: write Binary number to string 1
     for (int i = 0; i < ar; i++)

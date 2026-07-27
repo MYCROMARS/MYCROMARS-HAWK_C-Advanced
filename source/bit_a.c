@@ -10,7 +10,7 @@ void input_zero();
 void input_one();
 
 // Create & assign
-char bit_string[10];
+char bit_string[50];
 const char zero[2] = "0";
 const char one[2] = "1";
 
