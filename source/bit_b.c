@@ -69,7 +69,7 @@ void bit_b(void)
     // Output
     printf("Input 1. number 0...255 (8 bit): ");
     
-    // Conditional statement
+    // Conditional statement: value 1
     if (scanf("%d", &value_1) == 0)  {
         // Output
         printf("\nInput is not a number!\n\n");
@@ -81,10 +81,13 @@ void bit_b(void)
         goto main_1;
     }
 
+    // Go here
     main_2:
+
     // Output
     printf("Input 2. number 0...255 (8 bit): ");
 
+    // Conditional statement: value 2
     if (scanf("%d", &value_2) == 0)  {
         // Output
         printf("\nInput is not a number!\n\n");
@@ -96,7 +99,8 @@ void bit_b(void)
         goto main_2;
     }
     
-    if ((value_1 || value_2 >= 0) && (value_1 || value_2 <= v_max))
+    // Conditional statement: value 1 & value 2 <= v_max
+    if ((value_1 && value_2 >= 0) && (value_1 && value_2 <= v_max))
     {
         printf("\n");
 
@@ -104,15 +108,20 @@ void bit_b(void)
         value_a = value_1;
         value_b = value_2;
 
+        // Bitwise AND
+        value_3 = value_1&value_2;
+
+        // Pass value
+        value_c = value_3;
+
         // write 1. Binary number to array
         while (value_a > 0)
         {
             v_bit = value_a % 2;            
             value_a = value_a/2;     
-            //printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
-    
             bits_1[count_ar] = v_bit;
             count_ar--;
+            //printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
         }
  
         // Assign
@@ -123,8 +132,6 @@ void bit_b(void)
         {
             v_bit = value_b % 2;            
             value_b = value_b/2;     
-            //printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
-    
             bits_2[count_ar] = v_bit;
             count_ar--;
         }
@@ -132,17 +139,11 @@ void bit_b(void)
         // Assign
         count_ar = 7;
 
-        // Bitwise AND
-        value_1 = value_1&value_2;
-        value_c = value_1;
-
         // write 3. Binary number to array
         while (value_c > 0)
         {
             v_bit = value_c % 2;            
             value_c = value_c/2;     
-            //printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
-    
             bits_3[count_ar] = v_bit;
             count_ar--;
         }
@@ -156,7 +157,7 @@ void bit_b(void)
         goto main_1;
     }
 
-    // write Binary number to string 1
+    // Loop: write Binary number to string 1
     for (int i = 0; i < ar; i++)
     {
         if (bits_1[i] == 0){
@@ -169,7 +170,7 @@ void bit_b(void)
         }
     }
     
-    // write Binary number to string 2
+    // Loop: write Binary number to string 2
     for (int i = 0; i < ar; i++)
     {
         if (bits_2[i] == 0){
@@ -182,7 +183,7 @@ void bit_b(void)
         }
     }
 
-    // write Binary number to string 3
+    // Loop: write Binary number to string 3
     for (int i = 0; i < ar; i++)
     {
         if (bits_3[i] == 0){
@@ -200,14 +201,11 @@ void bit_b(void)
     //binary_to_int_2 = strtol(bit_string_2, &hold_bits, 2);
     
     // Output
-    printf("\nBinary 1: %s\n", bit_string_1);
-    printf("Binary 2: %s\n", bit_string_2);
+    printf("Binary A: %s\n", bit_string_1);
+    printf("Binary B: %s\n", bit_string_2);
     printf("--------------------\n");
-    printf("1 AND 2 : %s\n\n", bit_string_3);
-    
-    //value_1 = value_1&value_2;
-
-    printf("Value 1 & value 2: %d\n", value_1);
+    printf("A AND B : %s\n", bit_string_3);
+    printf("Decimal : %d\n", value_3);
 }
 
 // Function: Input zero ----------------
