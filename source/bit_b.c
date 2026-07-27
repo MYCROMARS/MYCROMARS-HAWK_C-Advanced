@@ -30,6 +30,7 @@ char buffer_bit_b[50];
 void scanString_bit_a(void){
     // Input
     scanf("%s", &buffer_bit_b[0]);
+    buffer_bit_b[0] = '\0';
 }
 
 // Main function
@@ -211,6 +212,11 @@ void bit_b(void)
     printf("--------------------\n");
     printf("A AND B : %s\n", bit_string_3);
     printf("Decimal : %d\n", value_3);
+
+    // Delate string
+    bit_string_1[0] = '\0';
+    bit_string_2[0] = '\0';
+    bit_string_3[0] = '\0';
 }
 
 // Function: Input zero ----------------

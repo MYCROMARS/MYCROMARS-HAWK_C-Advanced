@@ -21,6 +21,7 @@ char buffer_bit_a[50];
 void scanString_bit(void){
     // Input
     scanf("%s", &buffer_bit_a[0]);
+    buffer_bit_a[0] = '\0';
 }
 
 // Main function
@@ -106,6 +107,9 @@ void bit_a(void)
     //printf("\nInput: %d\n", val);
     printf("\nBinary: %s\n", bit_string);
     printf("Decimal: %ld\n", value_b);
+
+    // Delate string
+    bit_string[0] = '\0';
 }
 
 // Function: Input zero

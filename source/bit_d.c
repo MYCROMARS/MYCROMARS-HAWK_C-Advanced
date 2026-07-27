@@ -8,24 +8,18 @@
 // Function definition
 void input_zero_1b();
 void input_one_1b();
-
-void input_zero_2b();
-void input_one_2b();
+char bit_string_1b[50];
+char buffer_bit_d[50];
 
 // Create & assign
-char bit_string_1b[50];
-char bit_string_2b[50];
-
 const char zero_1b[2] = "0";
 const char one_1b[2] = "1";
-
-// Create 
-char buffer_bit_d[50];
 
 // Catch invalid input
 void scanString_bit_d(void){
     // Input
     scanf("%s", &buffer_bit_d[0]);
+    buffer_bit_d[0] = '\0';
 }
 
 // Main function
@@ -51,9 +45,7 @@ void bit_d(void)
     int count_ar = 7;
 
     int bits_1[ar] = {0,0,0,0,0,0,0,0};  // String 1 Placeholder for bit's
-    int bits_2[ar] = {0,0,0,0,0,0,0,0};  // String 2 Placeholder for bit's
-
-    int v_negative;
+    //int bits_2[ar] = {0,0,0,0,0,0,0,0};  // String 2 Placeholder for bit's
 
     long binary_to_int_1;
     long binary_to_int_2;
@@ -83,69 +75,75 @@ void bit_d(void)
         // Jump to start
         goto main_1;
     }
+    else{ 
+        printf("\n");
     
-    printf("\n");
-
-    // Pass value
-    value_a = value_1;
-
-    // Bitwise NOT
-    value_2 = ~value_1;
-
-    // Pass value
-    //value_b = value_2;
-
-    // write 1. Binary number to array
-    while (count_ar >= 0)
-    {
-        v_bit = value_a % 2;            
-        value_a = value_a/2;  
-
-        bits_1[count_ar] = v_bit;
+        // Pass value
+        value_a = value_1;
+    
+        // Bitwise NOT
+        value_2 = ~value_1;
+    
+        // Pass value
+        //value_b = value_2;
+    
+        // write 1. Binary number to array
+        while (count_ar >= 0)
+        {
+            v_bit = value_a % 2;            
+            value_a = value_a/2;  
+    
+            bits_1[count_ar] = v_bit;
+            
+            count_ar--;
+        }
         
-        count_ar--;
-    }
-    
-    // Loop: write Binary number to string 1
-    for (int i = 0; i < ar; i++)
-    {
-        if (bits_1[i] == 0){
-            // Function
-            input_zero_1b();
+        // Loop: write Binary number to string 1
+        for (int i = 0; i < ar; i++)
+        {
+            if (bits_1[i] == 0){
+                // Function
+                input_zero_1b();
+            }
+            else if (bits_1[i] == 1){
+                // Function
+                input_one_1b();
+            }
         }
-        else if (bits_1[i] == 1){
-            // Function
-            input_one_1b();
-        }
-    }
-     
-    // Pass Binary string to int
-    binary_to_int_1 = strtol(bit_string_1b, &hold_bits, 2);
-    
-    // Output    
-    printf("Binary String: %s\n", bit_string_1b);
-    printf("Binary string to Decimal: %ld\n", binary_to_int_1);
+         
+        printf("Binary String: %s\n", bit_string_1b);
+        printf("hold:   %d\n", *hold_bits);
 
-    // Value 1 in Binary
-    printf("Decimal to Binary: ");
-    for (int i = 31; i >= 0; i--) {
-        int bit = (value_1 >> i) & 1;
-        printf("%d", bit);
-        if (i % 8 == 0) printf(" "); // Optionaler Abstand nach 4 Bits
-    }
+        // Pass Binary string to int
+        binary_to_int_1 = strtol(bit_string_1b, &hold_bits, 2);
+        
+        printf("Binary string to Decimal: %ld\n", binary_to_int_1);
+        
+        // Delate string
+        bit_string_1b[0] = '\0';
+        printf("Binary String: %s\n", bit_string_1b);
     
-    printf("\n--------------------\n");
-    printf("Bitwise NOT '~': %d\n", value_2);
-    //printf("Bitwise NOT '~': %b\n", value_2);     // C23 
-    
-    // Value 2 in Binary
-    printf("Decimal to Binary: ");
-    for (int i = 31; i >= 0; i--) {
-        int bit = (value_2 >> i) & 1;
-        printf("%d", bit);
-        if (i % 8 == 0) printf(" "); // Optionaler Abstand nach 4 Bits
+        // Value 1 in Binary
+        printf("Decimal to Binary: ");
+        for (int i = 15; i >= 0; i--) {
+            int bit = (value_1 >> i) & 1;
+            printf("%d", bit);
+            if (i % 8 == 0) printf(" "); // Optionaler Abstand nach 4 Bits
+        }
+        
+        printf("\n--------------------\n");
+        printf("Bitwise NOT '~': %d\n", value_2);
+        //printf("Bitwise NOT '~': %b\n", value_2);     // C23 
+        
+        // Value 2 in Binary
+        printf("Decimal to Binary: ");
+        for (int i = 15; i >= 0; i--) {
+            int bit = (value_2 >> i) & 1;
+            printf("%d", bit);
+            if (i % 8 == 0) printf(" "); // Optionaler Abstand nach 4 Bits
+        }
+        printf("\n");
     }
-    printf("\n");
 }
 
 // Function: Input zero ----------------

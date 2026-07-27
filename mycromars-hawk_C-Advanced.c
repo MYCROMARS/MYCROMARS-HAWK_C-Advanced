@@ -39,6 +39,7 @@ char buffer[50];
 void scanString0(void){
     // Input
     scanf("%s", &buffer[0]);
+    buffer[0] = '\0';
 }
 
 // Main function
