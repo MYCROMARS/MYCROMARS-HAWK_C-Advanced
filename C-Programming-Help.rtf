@@ -225,7 +225,7 @@ lu		long, unsigned decimal integer\
 lf		long double, float\
 0f\
 1f\
-\
+B\
 \
 \
 Struct pointer on structure \
@@ -386,7 +386,10 @@ Mithilfe von Bit-Operatoren k\'f6nnen Sie direkt auf die bin\'e4re Darstellung d
 \ls3\ilvl0\cf0 {\listtext	\uc0\u9642 	}Ist das erste Bit eine 1 ist die Zahl ungerade.\
 \pard\tx566\pardeftab560\pardirnatural\partightenfactor0
 \cf0 \
-Bitweises UND\
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+
+\fs48 \cf0 Bitweises UND (&)
+\fs24 \
 
 \itap1\trowd \taflags0 \trgaph108\trleft-108 \trcbpat11 \trwWidth15680\trftsWidth3 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
 \clvertalc \clcbpat10 \clwWidth3655\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt60 \clpadl60 \clpadb60 \clpadr60 \gaph\cellx2880
@@ -498,12 +501,11 @@ Als Beispiel soll 22
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-\
 	  =  10110\cb1 \kerning1\expnd0\expndtw0 \
 \pard\tx566\pardeftab560\pardirnatural\partightenfactor0
-\cf0 \
-\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
 
 \fs36 \cf0 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-Bitweise ODER\
+\
+Bitweise ODER (|)\
 \pard\tx566\pardeftab560\pardirnatural\partightenfactor0
 
 \fs24 \cf0 Char x = 1;\
@@ -519,13 +521,50 @@ X = x|126;		// x = 127
 \fs36 \
 \pard\tx566\pardeftab560\pardirnatural\partightenfactor0
 \cf0 \
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+
+\fs24 \cf0 0	0 = 0\
+0	1 = 1\
+1 	0 = 1\
+1	1 = 1 
+\fs36 \
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+Bitweise XOR (^)\
+\
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+
+\fs24 \cf0 Char x = 20;\
+X = x^55;		// x = 35\
+\
+20			0		0		0		1		0		1		0		1\
+^55			0		0		1		1		0		1		1		1\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+35			0		0		1		0		0		0		1		1\
+\
 0	0 = 0\
 0	1 = 1\
 1 	0 = 1\
-1	1 = 1 \
+1	1 = 0 
+\fs36 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \
+Bitweise Komplement, NOT-Operator (~)\
+
+\fs24 Char x = 20;\
+X =  ~x;	// x = -21\
+0 = 1\
+1 = 0
+\fs36 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+Linksverschiebung\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Rechtsverschiebung\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \pard\tx566\pardeftab560\pardirnatural\partightenfactor0
-\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\cf0 \
 \pard\tx566\pardeftab560\pardirnatural\partightenfactor0
 
 \fs48 \cf0 Speicherzugriff
