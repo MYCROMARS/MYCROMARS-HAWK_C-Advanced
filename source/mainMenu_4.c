@@ -5,7 +5,7 @@ void mainMenu_4(int *m)
 {
         // Output
         printf("\n*** BIT OPERATION MENU ***\n");
-        printf("Press: (0) EXIT | (1) A | (2) B\n");
+        printf("Press: (0) EXIT | (1) A | (2) B | (3) C\n");
         printf("Your Input: ");
 
         // Input
@@ -27,13 +27,18 @@ void mainMenu_4(int *m)
                         break;
 
                 case 1:
-                        // Function: A
+                        // Function: A, Decimal to Binary to Decimal
                         bit_a();
                         break;
 
                 case 2:
-                        // Function: B 
+                        // Function: B, Bitwise AND 
                         bit_b();
+                        break;
+                
+                case 3:
+                        // Function: C, Bitwise OR
+                        bit_c();
                         break;
 
                 default:

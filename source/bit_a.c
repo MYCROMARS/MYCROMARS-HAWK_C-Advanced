@@ -10,17 +10,17 @@ void input_zero();
 void input_one();
 
 // Create & assign
-char bit_string[50] = "";
+char bit_string[10];
 const char zero[2] = "0";
 const char one[2] = "1";
 
 // Create 
-char buffer[50];
+char buffer_bit_a[50];
 
 // Catch invalid input
 void scanString_bit(void){
     // Input
-    scanf("%s", &buffer[0]);
+    scanf("%s", &buffer_bit_a[0]);
 }
 
 // Main function

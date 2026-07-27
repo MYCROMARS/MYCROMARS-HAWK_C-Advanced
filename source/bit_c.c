@@ -1,43 +1,43 @@
 // if it's not working acivate this:
 // #include <stdio.h>
 // #include <string.h>
-// #include "../header/bit_b.h"
+// #include "../header/bit_c.h"
 
 // Input A
 
 // Function definition
-void input_zero_1();
-void input_one_1();
+void input_zero_1a();
+void input_one_1a();
 
-void input_zero_2();
-void input_one_2();
+void input_zero_2a();
+void input_one_2a();
 
-void input_zero_3();
-void input_one_3();
+void input_zero_3a();
+void input_one_3a();
 
 // Create & assign
-char bit_string_1[10];
-char bit_string_2[10];
-char bit_string_3[10];
+char bit_string_1a[10];
+char bit_string_2a[10];
+char bit_string_3a[10];
 
-const char zero_1[2] = "0";
-const char one_1[2] = "1";
+const char zero_1a[2] = "0";
+const char one_1a[2] = "1";
 
 // Create 
-char buffer_bit_b[50];
+char buffer_bit_c[50];
 
 // Catch invalid input
-void scanString_bit_a(void){
+void scanString_bit_c(void){
     // Input
-    scanf("%s", &buffer_bit_b[0]);
+    scanf("%s", &buffer_bit_c[0]);
 }
 
 // Main function
-void bit_b(void)
+void bit_c(void)
 {
     // Output
     printf("### BIT OPERATION A ###\n");
-    printf("Bitwise AND '&'\n\n");
+    printf("Bitwise OR '|'\n\n");
 
     // Create
     int value_1;
@@ -75,7 +75,7 @@ void bit_b(void)
         printf("\nInput is not a number!\n\n");
         
         // function: Catch invalid input
-        scanString_bit_a();
+        scanString_bit_c();
         
         // Jump to start
         goto main_1;
@@ -93,7 +93,7 @@ void bit_b(void)
         printf("\nInput is not a number!\n\n");
         
         // function: Catch invalid input
-        scanString_bit_a();
+        scanString_bit_c();
         
         // Jump to start
         goto main_2;
@@ -108,8 +108,8 @@ void bit_b(void)
         value_a = value_1;
         value_b = value_2;
 
-        // Bitwise AND
-        value_3 = value_1&value_2;
+        // Bitwise OR
+        value_3 = value_1|value_2;
 
         // Pass value
         value_c = value_3;
@@ -162,11 +162,11 @@ void bit_b(void)
     {
         if (bits_1[i] == 0){
             // Function
-            input_zero_1();
+            input_zero_1a();
         }
         else if (bits_1[i] == 1){
             // Function
-            input_one_1();
+            input_one_1a();
         }
     }
     
@@ -175,11 +175,11 @@ void bit_b(void)
     {
         if (bits_2[i] == 0){
             // Function
-            input_zero_2();
+            input_zero_2a();
         }
         else if (bits_2[i] == 1){
              // Function
-            input_one_2();
+            input_one_2a();
         }
     }
 
@@ -188,54 +188,54 @@ void bit_b(void)
     {
         if (bits_3[i] == 0){
             // Function
-            input_zero_3();
+            input_zero_3a();
         }
         else if (bits_3[i] == 1){
              // Function
-            input_one_3();
+            input_one_3a();
         }
     }
 
     // Pass Binary string to int
-    //binary_to_int_1 = strtol(bit_string_1, &hold_bits, 2);
-    //binary_to_int_2 = strtol(bit_string_2, &hold_bits, 2);
+    //binary_to_int_1 = strtol(bit_string_1a, &hold_bits, 2);
+    //binary_to_int_2 = strtol(bit_string_2a, &hold_bits, 2);
     
     // Output
-    printf("Binary A: %s\n", bit_string_1);
-    printf("Binary B: %s\n", bit_string_2);
+    printf("Binary A: %s\n", bit_string_1a);
+    printf("Binary B: %s\n", bit_string_2a);
     printf("--------------------\n");
-    printf("A AND B : %s\n", bit_string_3);
+    printf("A AND B : %s\n", bit_string_3a);
     printf("Decimal : %d\n", value_3);
 }
 
 // Function: Input zero ----------------
-void input_zero_1(){
-        strcat(bit_string_1, zero_1);
+void input_zero_1a(){
+        strcat(bit_string_1a, zero_1a);
 }
 
 // Function: Input one
-void input_one_1(){
-        strcat(bit_string_1, one_1);
+void input_one_1a(){
+        strcat(bit_string_1a, one_1a);
 }
 
 
 // Function: Input zero ----------------
-void input_zero_2(){
-        strcat(bit_string_2, zero_1);
+void input_zero_2a(){
+        strcat(bit_string_2a, zero_1a);
 }
 
 // Function: Input one
-void input_one_2(){
-        strcat(bit_string_2, one_1);
+void input_one_2a(){
+        strcat(bit_string_2a, one_1a);
 }
 
 
 // Function: Input zero ----------------
-void input_zero_3(){
-        strcat(bit_string_3, zero_1);
+void input_zero_3a(){
+        strcat(bit_string_3a, zero_1a);
 }
 
 // Function: Input one
-void input_one_3(){
-        strcat(bit_string_3, one_1);
+void input_one_3a(){
+        strcat(bit_string_3a, one_1a);
 }

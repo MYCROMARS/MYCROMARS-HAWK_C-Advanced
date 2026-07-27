@@ -33,6 +33,7 @@
 
     #include "header/bit_a.h"
     #include "header/bit_b.h"
+    #include "header/bit_c.h"
 
     #include "header/input_b.h"
 
@@ -111,6 +112,7 @@
 
     #include "source/bit_a.c"
     #include "source/bit_b.c"
+    #include "source/bit_c.c"
 
     #include "source/input_b.c"
 
