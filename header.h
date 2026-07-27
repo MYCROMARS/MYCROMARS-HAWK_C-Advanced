@@ -32,6 +32,8 @@
     #include "header/delay_a.h"
 
     #include "header/bit_a.h"
+    #include "header/bit_b.h"
+
     #include "header/input_b.h"
 
     #include "header/output_a.h"
@@ -108,6 +110,8 @@
     #include "source/delay_a.c"
 
     #include "source/bit_a.c"
+    #include "source/bit_b.c"
+
     #include "source/input_b.c"
 
     #include "source/output_a.c"

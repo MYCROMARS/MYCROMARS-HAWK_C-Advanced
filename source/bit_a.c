@@ -104,8 +104,8 @@ void bit_a(void)
     
     // Output
     //printf("\nInput: %d\n", val);
-    printf("\nBinär: %s\n", bit_string);
-    printf("Dezimal: %ld\n", value_b);
+    printf("\nBinary: %s\n", bit_string);
+    printf("Decimal: %ld\n", value_b);
 }
 
 // Function: Input zero

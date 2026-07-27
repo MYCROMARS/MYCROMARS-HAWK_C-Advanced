@@ -5,7 +5,7 @@ void mainMenu_4(int *m)
 {
         // Output
         printf("\n*** BIT OPERATION MENU ***\n");
-        printf("Press: (0) EXIT | (1) A\n");
+        printf("Press: (0) EXIT | (1) A | (2) B\n");
         printf("Your Input: ");
 
         // Input
@@ -33,7 +33,7 @@ void mainMenu_4(int *m)
 
                 case 2:
                         // Function: B 
-                        //input_b();
+                        bit_b();
                         break;
 
                 default:
