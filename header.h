@@ -26,34 +26,14 @@
     #include "header/enum_d.h"
     #include "header/enum_e.h"
     #include "header/enum_f.h"
-    
-    #include "header/calculation_a.h"
-
-    #include "header/delay_a.h"
 
     #include "header/bit_a.h"
     #include "header/bit_b.h"
     #include "header/bit_c.h"
     #include "header/bit_d.h"
 
-    #include "header/input_b.h"
-
     #include "header/output_a.h"
     #include "header/output_b.h"
-
-    #include "header/pointer_a.h"
-    #include "header/pointer_b.h"
-    #include "header/pointer_c.h"
-    #include "header/pointer_d.h"
-    #include "header/pointer_e.h"
-    #include "header/pointer_f.h"
-
-    #include "header/array_a.h"
-    #include "header/array_b.h"
-    #include "header/array_c.h"
-    #include "header/array_d.h"
-    #include "header/array_e.h"
-    #include "header/array_f.h"
 
     #include "header/loop_a.h"
     #include "header/loop_b.h"
@@ -62,21 +42,6 @@
     #include "header/loop_e.h"
     #include "header/loop_f.h"
     #include "header/loop_g.h"
-
-    #include "header/structure_a.h"
-    #include "header/structure_b.h"
-    #include "header/structure_c.h"
-    #include "header/structure_d.h"
-    #include "header/structure_e.h"
-    #include "header/structure_f.h"
-    #include "header/structure_g.h"
-    #include "header/structure_h.h"
-    #include "header/structure_i.h"
-    #include "header/structure_j.h"
-    #include "header/structure_k.h"
-
-    #include "header/malloc_a.h"
-    #include "header/malloc_b.h"
     
     #include "header/data_a.h"
     #include "header/data_b.h"
@@ -107,33 +72,13 @@
     #include "source/enum_e.c"
     #include "source/enum_f.c"
 
-    #include "source/calculation_a.c"
-
-    #include "source/delay_a.c"
-
     #include "source/bit_a.c"
     #include "source/bit_b.c"
     #include "source/bit_c.c"
     #include "source/bit_d.c"
 
-    #include "source/input_b.c"
-
     #include "source/output_a.c"
     #include "source/output_b.c"
-
-    #include "source/pointer_a.c"
-    #include "source/pointer_b.c"
-    #include "source/pointer_c.c"
-    #include "source/pointer_d.c"
-    #include "source/pointer_e.c"
-    #include "source/pointer_f.c"
-
-    #include "source/array_a.c"
-    #include "source/array_b.c"
-    #include "source/array_c.c"
-    #include "source/array_d.c"
-    #include "source/array_e.c"
-    #include "source/array_f.c"
 
     #include "source/loop_a.c"
     #include "source/loop_b.c"
@@ -142,21 +87,6 @@
     #include "source/loop_e.c"
     #include "source/loop_f.c"
     #include "source/loop_g.c"
-
-    #include "source/structure_a.c"
-    #include "source/structure_b.c"
-    #include "source/structure_c.c"
-    #include "source/structure_d.c"
-    #include "source/structure_e.c"
-    #include "source/structure_f.c"
-    #include "source/structure_g.c"
-    #include "source/structure_h.c"
-    #include "source/structure_i.c"
-    #include "source/structure_j.c"
-    #include "source/structure_k.c"
-
-    #include "source/malloc_a.c"
-    #include "source/malloc_b.c"
 
     #include "source/data_a.c"
     #include "source/data_b.c"

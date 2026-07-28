@@ -115,108 +115,111 @@ void bit_c(void)
         // Jump to start
         goto main_2;
     }
+    else
+    {
+        printf("\n");
     
-    printf("\n");
-
-    // Pass value
-    value_a = value_1;
-    value_b = value_2;
-
-    // Bitwise OR
-    value_3 = value_1|value_2;
-
-    // Pass value
-    value_c = value_3;
-
-    // write 1. Binary number to array
-    while (value_a > 0)
-    {
-        v_bit = value_a % 2;            
-        value_a = value_a/2;     
-        bits_1[count_ar] = v_bit;
-        count_ar--;
-        //printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
-    }
-
-    // Assign
-    count_ar = 7;
-
-    // write 2. Binary number to array
-    while (value_b > 0)
-    {
-        v_bit = value_b % 2;            
-        value_b = value_b/2;     
-        bits_2[count_ar] = v_bit;
-        count_ar--;
+        // Pass value
+        value_a = value_1;
+        value_b = value_2;
+    
+        // Bitwise OR
+        value_3 = value_1|value_2;
+    
+        // Pass value
+        value_c = value_3;
+    
+        // write 1. Binary number to array
+        while (value_a > 0)
+        {
+            v_bit = value_a % 2;            
+            value_a = value_a/2;     
+            bits_1[count_ar] = v_bit;
+            count_ar--;
+            //printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
+        }
+    
+        // Assign
+        count_ar = 7;
+    
+        // write 2. Binary number to array
+        while (value_b > 0)
+        {
+            v_bit = value_b % 2;            
+            value_b = value_b/2;     
+            bits_2[count_ar] = v_bit;
+            count_ar--;
+        }
+        
+        // Assign
+        count_ar = 7;
+    
+        // write 3. Binary number to array
+        while (value_c > 0)
+        {
+            v_bit = value_c % 2;            
+            value_c = value_c/2;     
+            bits_3[count_ar] = v_bit;
+            count_ar--;
+        }
+      
+    
+        // Loop: write Binary number to string 1
+        for (int i = 0; i < ar; i++)
+        {
+            if (bits_1[i] == 0){
+                // Function
+                input_zero_1a();
+            }
+            else if (bits_1[i] == 1){
+                // Function
+                input_one_1a();
+            }
+        }
+        
+        // Loop: write Binary number to string 2
+        for (int i = 0; i < ar; i++)
+        {
+            if (bits_2[i] == 0){
+                // Function
+                input_zero_2a();
+            }
+            else if (bits_2[i] == 1){
+                 // Function
+                input_one_2a();
+            }
+        }
+    
+        // Loop: write Binary number to string 3
+        for (int i = 0; i < ar; i++)
+        {
+            if (bits_3[i] == 0){
+                // Function
+                input_zero_3a();
+            }
+            else if (bits_3[i] == 1){
+                 // Function
+                input_one_3a();
+            }
+        }
+    
+        // Pass Binary string to int
+        //binary_to_int_1 = strtol(bit_string_1a, &hold_bits, 2);
+        //binary_to_int_2 = strtol(bit_string_2a, &hold_bits, 2);
+        
+        // Output
+        printf("Binary A: %s\n", bit_string_1a);
+        printf("Binary B: %s\n", bit_string_2a);
+        printf("--------------------\n");
+        printf("A AND B : %s\n", bit_string_3a);
+        printf("Decimal : %d\n", value_3);
+    
+        // Delate string
+        bit_string_1a[0] = '\0';
+        bit_string_2a[0] = '\0';
+        bit_string_3a[0] = '\0';
     }
     
-    // Assign
-    count_ar = 7;
-
-    // write 3. Binary number to array
-    while (value_c > 0)
-    {
-        v_bit = value_c % 2;            
-        value_c = value_c/2;     
-        bits_3[count_ar] = v_bit;
-        count_ar--;
-    }
-  
-
-    // Loop: write Binary number to string 1
-    for (int i = 0; i < ar; i++)
-    {
-        if (bits_1[i] == 0){
-            // Function
-            input_zero_1a();
-        }
-        else if (bits_1[i] == 1){
-            // Function
-            input_one_1a();
-        }
-    }
-    
-    // Loop: write Binary number to string 2
-    for (int i = 0; i < ar; i++)
-    {
-        if (bits_2[i] == 0){
-            // Function
-            input_zero_2a();
-        }
-        else if (bits_2[i] == 1){
-             // Function
-            input_one_2a();
-        }
-    }
-
-    // Loop: write Binary number to string 3
-    for (int i = 0; i < ar; i++)
-    {
-        if (bits_3[i] == 0){
-            // Function
-            input_zero_3a();
-        }
-        else if (bits_3[i] == 1){
-             // Function
-            input_one_3a();
-        }
-    }
-
-    // Pass Binary string to int
-    //binary_to_int_1 = strtol(bit_string_1a, &hold_bits, 2);
-    //binary_to_int_2 = strtol(bit_string_2a, &hold_bits, 2);
-    
-    // Output
-    printf("Binary A: %s\n", bit_string_1a);
-    printf("Binary B: %s\n", bit_string_2a);
-    printf("--------------------\n");
-    printf("A AND B : %s\n", bit_string_3a);
-    printf("Decimal : %d\n", value_3);
-
-    // Delate string
-    bit_string_1a[0] = '\0';
-    bit_string_2a[0] = '\0';
-    bit_string_3a[0] = '\0';
 }
 
 // Function: Input zero ----------------

@@ -559,9 +559,30 @@ X =  ~x;	// x = -21\
 \fs36 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \
-Linksverschiebung\
+Linksverschiebung (Multiplikation)\
+
+\fs24 Char x = 8;\
+printf(\'93x=%d\\n\'94, x);\
+X<<=1;	// Alle Bits um eine Stelle nach links\
+printf(\'93x=%d\\n\'94, x);
+\fs36 \
+\
+
+\fs24 <<=1 *2\
+<<=2 *4\
+<<=3 *8\
+<<=4 *16
+\fs36 \
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-Rechtsverschiebung\
+Rechtsverschiebung (Division)\
+
+\fs24 \
+>>=1 /2\
+>>=2 /4\
+>>=3 /8\
+>>=4 /16
+\fs36 \
+\
 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \pard\tx566\pardeftab560\pardirnatural\partightenfactor0
 \cf0 \
@@ -615,32 +636,80 @@ Beispiel ?:			int x = (int [])\{1, 2, 3\};					\
 \fs28 \cf0 \
 \pard\tx566\pardeftab560\pardirnatural\partightenfactor0
 
-\fs48 \cf0 Hexadezimal zu Dezimalumrechnen
+\fs48 \cf0 Hexadezimal zu Dezimal umrechnen
 \fs28 \
 \pard\tx566\pardeftab560\pardirnatural\partightenfactor0
 
-\fs24 \cf0 A3F\
+\fs24 \cf0 \
+0\
+1\
+2\
+3\
+4\
+5\
+6\
+7\
+8\
+9\
+10= A\
+11= B\
+12= C\
+13= D\
+14= E\
+15= F\
+\
+A3F\
 \
 A = 10\
-3 = 3\
+3 =  3\
 F = 15\
 \
-10*16^2 + 3*16^1 + 15*16^0\
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+\cf0 (10) (3) (15)\
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+\cf0 \
+10 *16\'b2 \
+ 3 *16\'b9 \
+15 *16\uc0\u8304 \
 \
-  10 * 16^2\
-   3 * 16^1\
-+ 15 * 16^0\
+  10 * 16\'b2 = 10 * 256 = 2560\
+   3 * 16\'b9 =  3 *  16 = 48\
++ 15 * 16\uc0\u8304  = 15 *   1 = 15\
 \'97\'97\'97\'97\'97\'97\'97\'97\
 = 2560 + 48 + 15\
 = 2623\
-\
-\
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+\cf0 \
 Dezimal zu Hexadezimal\
 \
-2623 : 16 = 163 R 15 = F\
- 163 : 16 = 10  R 3  = 3\
-  10 : 16 = 0   R 10 = A\
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+2623 : 16 = 163 R 15 = F 	*16\uc0\u8304  =   15\
+ 163 : 16 =  10 R  3 = 3	*16\'b9 =   48\
+  10 : 16 =   0 R 10 = A	*16\'b2 = 2560\
+\
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+\cf0 163*16 + 15  = 2.608 + 15 = 2623\
+\
+160*16 = 2.560 = 10*16*16 = 10 * 16\'b2\
+  3*16 =    48 \
+\
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+\cf0 163*16  = 2.608 \
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+\cf0 2608-48 = 2.560 \
+\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+16 : 16 = 1 R 0		*16\uc0\u8304   =  0 \
+ 1 : 16 = 0 R 1		*16\'b9  = 16\
+\
+Hexadezimal: 10 \
+\
+1 *16\'b9 = 1*16\
+0 *16\uc0\u8304  = 0*1\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \
 = A3F\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
