@@ -53,9 +53,7 @@ void bit_b(void)
     long binary_to_int_b1;
     long binary_to_int_b2;
     int bit_b;      // placeholder for bit
-
     char *hold_bits;
-    
     int max_b = 255;
 
     #define BITS_B 8    // 8 bit

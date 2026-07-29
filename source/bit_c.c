@@ -40,7 +40,7 @@ void bit_c(void)
     printf("### BIT OPERATION C ###\n");
     printf("Bitwise OR '|'\n\n");
 
-    // Create
+    // Create & assign
     int value_c1;
     int value_c2;
     int value_c3;
@@ -51,12 +51,11 @@ void bit_c(void)
 
     long binary_to_int_c1;
     long binary_to_int_c2;
-
-    char *hold_bits;
-    int bit_c;    // placeholder for bit
     
-    // Create & assign
+    int bit_c;    // placeholder for bit
+    char *hold_bits;
     int max_c = 255;
+
     #define BITS_C 8    // 8 bit
     int count_c = BITS_C-1;
 

@@ -35,11 +35,8 @@ void bit_a(void)
     int value_a1;
     int value_a2;
     long value_a3;
-    
     int bit_a;      // placeholder for bit
-
     char *hold_bits;
-
     int max_a = 255;
     
     #define BITS_A 8        // 8 bit

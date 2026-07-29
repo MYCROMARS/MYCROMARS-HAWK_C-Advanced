@@ -32,6 +32,7 @@
     #include "header/bit_c.h"
     #include "header/bit_d.h"
     #include "header/bit_e.h"
+    #include "header/bit_f.h"
 
     #include "header/output_a.h"
     #include "header/output_b.h"
@@ -78,6 +79,7 @@
     #include "source/bit_c.c"
     #include "source/bit_d.c"
     #include "source/bit_e.c"
+    #include "source/bit_f.c"
 
     #include "source/output_a.c"
     #include "source/output_b.c"

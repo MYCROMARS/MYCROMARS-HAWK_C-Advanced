@@ -33,14 +33,15 @@ void bit_e(void)
 {
     // Output
     printf("### BIT OPERATION E ###\n");
-    printf("Bitwise NOT '~'\n\n");
+    printf("Bitwise shift left '<<'\n\n");
 
     // Create & assign
     int value_e1;
     int value_e2;
 
     int value_e1_1;
-    //int value_e2_1;
+    int value_e2_1; // shift left
+
     int bit_e1;     // placeholder for bit
     int bit_e2;     // placeholder for bit
     int bit_e3;     // placeholder for bit
@@ -48,8 +49,7 @@ void bit_e(void)
     int bit_size_e2;
 
     char *hold_bits;
-    
-    int max_e = 256;
+    int max_e = 255;
 
     #define BITS_E 16   // 16 bit
     int count_e = BITS_E-1;
@@ -86,13 +86,38 @@ void bit_e(void)
         // Jump to start
         goto main_1;
     }
+
+    main_2:
+
+    // Output
+    printf("Input a shift left number 1...%d:    ", BITS_E/2);
+    
+    // Conditional statement: value 1
+    if (scanf("%d", &value_e2) == 0)  {
+        // Output
+        printf("\nInput is not a number!\n\n");
+        
+        // function: Catch invalid input
+        scanString_bit_e();
+        
+        // Jump to start
+        goto main_2;
+    }
+    else if (value_e2 < 1 || value_e2 > BITS_E/2)
+    {
+        // Output
+        printf("\nInput is not a number 1...%d!\n\n", BITS_E/2);
+        
+        // Jump to start
+        goto main_2;
+    }
     else
     { 
         // Pass value
         value_e1_1 = value_e1;
     
-        // Bitwise NOT
-        value_e2 = ~value_e1;
+        // Bitwise shift left <<
+        value_e2_1 = value_e1 << value_e2;
 
         // Negative to positive
         if (value_e1_1 < 0){
@@ -128,43 +153,13 @@ void bit_e(void)
          
         // Output
         printf("\nInput to Binary String: %s\n", bit_string_e1);
-        
-        // Pass Binary string to int
-        binary_to_int_e1 = strtol(bit_string_e1, &hold_bits, 2);
 
         // Delate string
         bit_string_e1[0] = '\0';
-
-        // Output
-        printf("String to Decimal:\t%ld\n\n", binary_to_int_e1);
         
         // Assign
         bit_size_e1 = sizeof(value_e1) * 4; // 4*4=16
         
-        // Output
-        printf("Output right shift, Value & Bit:\n");
-
-        // Loop: right shift, Value & Bit, Value 1 in Binary
-        for (int i = bit_size_e1-1; i >= 0; i--) {
-
-            // Assign: odd number, bit= 1 
-            bit_e2 = (value_e1 >> i) & 1;   
-
-            // Example, if Input is: 4, 00000100
-            //  i=7 value: 0, 00000000 = bit=0
-            //  i=6 value: 0, 00000000 = bit=0
-            //  i=5 value: 0, 00000000 = bit=0
-            //  i=4 value: 0, 00000000 = bit=0
-            //  i=3 value: 0, 00000000 = bit=0
-            //  i=2 value: 1, 00000001 = bit=1
-            //  i=1 value: 2, 00000010 = bit=0
-            //  i=0 value: 4, 00000100 = bit=0
-
-            // Output
-            if (i < 10) printf(" "); 
-            printf("Right shift: %d: value: %d bit: %d\n", i, (value_e1 >> i), bit_e2);
-        }
-
         // Output
         printf("\nInput to Binary:\t");
 
@@ -179,13 +174,13 @@ void bit_e(void)
             if (i % 8 == 0) printf(" "); // spacing after 8 bits
         }
         
-        // Output
+
+        // Output ---------------------------------------
         printf("\n\n");
-        printf("Bitwise NOT '~':\t%d\n", value_e2);
-        //printf("Bitwise NOT '~': %b\n", value_2);     //only in C23 
+        printf("Bitwise shift left %d:\t%d\n",value_e2, value_e2_1);
         
         // Assign
-        bit_size_e2 = sizeof(value_e2) * 4; // 4*4=16
+        bit_size_e2 = sizeof(value_e2_1) * 4; // 4*4=16
 
         // Output 
         printf("New Binary:\t\t");
@@ -194,7 +189,7 @@ void bit_e(void)
         for (int i = bit_size_e2-1; i >= 0; i--) {
 
             // Assign: odd number, bit= 1 
-            bit_e3 = (value_e2 >> i) & 1;
+            bit_e3 = (value_e2_1 >> i) & 1;
 
             // Output
             printf("%d", bit_e3);

@@ -40,16 +40,16 @@ void bit_d(void)
     int value_d2;
 
     int value_d1_1;
-    //int value_d2_1;
+   
     int bit_d1;     // placeholder for bit
     int bit_d2;     // placeholder for bit
     int bit_d3;     // placeholder for bit
+
     int bit_size_b1;
     int bit_size_b2;
 
     char *hold_bits;
-    
-    int max_d = 256;
+    int max_d = 255;
 
     #define BITS_D 16   // 16 bit
     int count_d = BITS_D-1;

@@ -5,7 +5,7 @@ void mainMenu_4(int *m)
 {
         // Output
         printf("\n*** BIT OPERATION MENU ***\n");
-        printf("Press: (0) EXIT | (1) A | (2) B | (3) C | (4) D | (5) E\n");
+        printf("Press: (0) EXIT | (1) A | (2) B | (3) C | (4) D | (5) E | (6) F\n");
         printf("Your Input: ");
 
         // Input
@@ -44,6 +44,16 @@ void mainMenu_4(int *m)
                 case 4:
                         // Function: D, Bitwise NOT
                         bit_d();
+                        break;
+
+                case 5:
+                        // Function: E, Bitwise shift left 
+                        bit_e();
+                        break;
+
+                case 6:
+                        // Function: F, Bitwise shift right
+                        bit_f();
                         break;
 
                 default:
