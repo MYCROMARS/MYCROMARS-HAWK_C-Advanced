@@ -3,7 +3,7 @@
 // #include <string.h>
 // #include "../header/bit_b.h"
 
-// Input A
+// Bit B
 
 // Function definition
 void input_zero_1();
@@ -37,7 +37,7 @@ void scanString_bit_a(void){
 void bit_b(void)
 {
     // Output
-    printf("### BIT OPERATION A ###\n");
+    printf("### BIT OPERATION B ###\n");
     printf("Bitwise AND '&'\n\n");
 
     // Create
@@ -57,12 +57,12 @@ void bit_b(void)
     
     // Create & assign
     int v_max = 255;
-    #define ar 8    // 8 bit
+    #define ab 8    // 8 bit
     int count_ar = 7;
 
-    int bits_1[ar] = {0,0,0,0,0,0,0,0};  // String 1 Placeholder for bit's
-    int bits_2[ar] = {0,0,0,0,0,0,0,0};  // String 2 Placeholder for bit's
-    int bits_3[ar] = {0,0,0,0,0,0,0,0};  // String 3 Placeholder for bit's
+    int bits_1[ab] = {0,0,0,0,0,0,0,0};  // String 1 Placeholder for bit's
+    int bits_2[ab] = {0,0,0,0,0,0,0,0};  // String 2 Placeholder for bit's
+    int bits_3[ab] = {0,0,0,0,0,0,0,0};  // String 3 Placeholder for bit's
     
     // Go here
     main_1:
@@ -164,7 +164,7 @@ void bit_b(void)
     
 
     // Loop: write Binary number to string 1
-    for (int i = 0; i < ar; i++)
+    for (int i = 0; i < ab; i++)
     {
         if (bits_1[i] == 0){
             // Function
@@ -177,7 +177,7 @@ void bit_b(void)
     }
     
     // Loop: write Binary number to string 2
-    for (int i = 0; i < ar; i++)
+    for (int i = 0; i < ab; i++)
     {
         if (bits_2[i] == 0){
             // Function
@@ -190,7 +190,7 @@ void bit_b(void)
     }
 
     // Loop: write Binary number to string 3
-    for (int i = 0; i < ar; i++)
+    for (int i = 0; i < ab; i++)
     {
         if (bits_3[i] == 0){
             // Function
@@ -201,11 +201,7 @@ void bit_b(void)
             input_one_3();
         }
     }
-
-    // Pass Binary string to int
-    //binary_to_int_1 = strtol(bit_string_1, &hold_bits, 2);
-    //binary_to_int_2 = strtol(bit_string_2, &hold_bits, 2);
-    
+ 
     // Output
     printf("Binary A: %s\n", bit_string_1);
     printf("Binary B: %s\n", bit_string_2);

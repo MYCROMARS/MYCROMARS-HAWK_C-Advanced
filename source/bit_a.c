@@ -1,9 +1,9 @@
-// if it's not working acivate this (on macOS):
+// if it's not working acivate this:
 // #include <stdio.h>
 // #include <string.h>
 // #include "../header/bit_a.h"
 
-// Input A
+// Bit A
 
 // Function definition
 void input_zero();

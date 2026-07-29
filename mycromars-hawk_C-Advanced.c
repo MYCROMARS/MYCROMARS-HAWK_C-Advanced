@@ -38,8 +38,8 @@ char buffer[50];
 // Catch invalid input
 void scanString0(void){
     // Input
-    scanf("%s", &buffer[0]);
-    buffer[0] = '\0';
+        scanf("%s", &buffer[0]);
+        buffer[0] = '\0';
 }
 
 // Main function

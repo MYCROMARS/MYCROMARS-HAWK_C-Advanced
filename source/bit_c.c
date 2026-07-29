@@ -3,7 +3,7 @@
 // #include <string.h>
 // #include "../header/bit_c.h"
 
-// Input A
+// Bit C
 
 // Function definition
 void input_zero_1a();
@@ -37,7 +37,7 @@ void scanString_bit_c(void){
 void bit_c(void)
 {
     // Output
-    printf("### BIT OPERATION A ###\n");
+    printf("### BIT OPERATION C ###\n");
     printf("Bitwise OR '|'\n\n");
 
     // Create
@@ -57,12 +57,12 @@ void bit_c(void)
     
     // Create & assign
     int v_max = 255;
-    #define ar 8    // 8 bit
+    #define ac 8    // 8 bit
     int count_ar = 7;
 
-    int bits_1[ar] = {0,0,0,0,0,0,0,0};  // String 1 Placeholder for bit's
-    int bits_2[ar] = {0,0,0,0,0,0,0,0};  // String 2 Placeholder for bit's
-    int bits_3[ar] = {0,0,0,0,0,0,0,0};  // String 3 Placeholder for bit's
+    int bits_1[ac] = {0,0,0,0,0,0,0,0};  // String 1 Placeholder for bit's
+    int bits_2[ac] = {0,0,0,0,0,0,0,0};  // String 2 Placeholder for bit's
+    int bits_3[ac] = {0,0,0,0,0,0,0,0};  // String 3 Placeholder for bit's
     
     // Go here
     main_1:
@@ -162,10 +162,9 @@ void bit_c(void)
             bits_3[count_ar] = v_bit;
             count_ar--;
         }
-      
-    
+       
         // Loop: write Binary number to string 1
-        for (int i = 0; i < ar; i++)
+        for (int i = 0; i < ac; i++)
         {
             if (bits_1[i] == 0){
                 // Function
@@ -178,7 +177,7 @@ void bit_c(void)
         }
         
         // Loop: write Binary number to string 2
-        for (int i = 0; i < ar; i++)
+        for (int i = 0; i < ac; i++)
         {
             if (bits_2[i] == 0){
                 // Function
@@ -191,7 +190,7 @@ void bit_c(void)
         }
     
         // Loop: write Binary number to string 3
-        for (int i = 0; i < ar; i++)
+        for (int i = 0; i < ac; i++)
         {
             if (bits_3[i] == 0){
                 // Function
@@ -202,10 +201,6 @@ void bit_c(void)
                 input_one_3a();
             }
         }
-    
-        // Pass Binary string to int
-        //binary_to_int_1 = strtol(bit_string_1a, &hold_bits, 2);
-        //binary_to_int_2 = strtol(bit_string_2a, &hold_bits, 2);
         
         // Output
         printf("Binary A: %s\n", bit_string_1a);
