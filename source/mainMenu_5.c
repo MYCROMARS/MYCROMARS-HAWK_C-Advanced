@@ -40,7 +40,7 @@ void mainMenu_5(int *m)
 
                 case 1:
                         // Function: A
-                        //pointer_a();
+                        data_a();
                         break;
 
                 case 2: 

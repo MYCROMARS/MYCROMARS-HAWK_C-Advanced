@@ -1,6 +1,6 @@
 /*
 MYCROMARS HAWK 
-C Programming Advanced v0.0.2
+C Programming Advanced v0.5.0
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -48,7 +48,7 @@ int main()
     // Output
     printf("\n");
     printf("MYCROMARS HAWK\n");
-    printf("C Programming Advanced v0.0.2\n\n");
+    printf("C Programming Advanced v0.5.0\n\n");
 
     printf("MYCROMARS HAWK Copyright (C) 2026 Alexander Rudi\n");
     printf("This program comes with ABSOLUTELY NO WARRANTY\n");
@@ -59,7 +59,7 @@ int main()
     // Create & assign (initialize)
     int menu = 0;
     int menuB = 0;
-    const int menuMax = 4;
+    const int menuMax = 5;
 
     // Jump mark: start
     mainMenu:
@@ -67,10 +67,8 @@ int main()
     // Output
     printf("\n*** MAIN MENU ***\n");
     printf("Press (0) EXIT \n");
-    printf("Press (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT\n");
-    // printf("Press (5) ---     | (6) ---| (7) ---  | (8) ---\n");
-    // printf("Press (9) ---      | (10) ---\n");
-
+    printf("Press (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT | (5) DATA\n");
+   
     printf("Your input: ");
 
     // Conditional statement
@@ -113,10 +111,10 @@ int main()
                 mainMenu_4(&menuB);
                 break;
 
-        //case 5:
-                /* Function:  */
-                //mainMenu_5(&menuB);
-                //break;
+        case 5:
+                /* Function: DATA */
+                mainMenu_5(&menuB);
+                break;
 
         //case 6:
                 /* Function:  */
