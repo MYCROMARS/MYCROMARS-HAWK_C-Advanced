@@ -143,7 +143,7 @@ void bit_d(void)
         printf("Output right shift, Value & Bit:\n");
 
         for (int i = b-1; i >= 0; i--) {
-            int bit = (value_1 >> i) & 1;   
+            int bit = (value_1 >> i) & 1;   // bei ungerader Zahl ist bit 1
             // Example, if Input is: 4, 00000100
             // 00000000 = bit=0, number: 0, i=7
             // 00000000 = bit=0, number: 0, i=6
