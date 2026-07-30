@@ -11,6 +11,9 @@ void input_one_g1();
 
 void input_minus_g();
 
+int function_negative(int value);
+int binary_to_array(int count, int value, int array[]);
+
 // Create
 char bit_string_g1[50] = "";
 
@@ -45,6 +48,7 @@ void bit_g(void)
     int bit_size_g1;
     char *hold_bits;
     int max_g = 255;
+
     long binary_to_int_g1;
     int negative_g = 0;
 
@@ -110,18 +114,16 @@ void bit_g(void)
         
             // Negative to positive
             if (value_g1_1 < 0){
-                value_g1_1 = value_g1_1 * -1;
+                // Assign
                 negative_g = 1;
+                
+                // Function: negative to positive value
+                value_g1_1 = function_negative(value_g1_1);
             }
         
-            // write Binary numbers to array
-            while (value_g1_1 > 0)
-            {
-                bit_g1 = value_g1_1 % 2; 
-                value_g1_1 = value_g1_1/2;  
-                array_bits_g1[count_g] = bit_g1;
-                count_g--;
-            }
+            // Function: write Binary numbers to array
+            array_bits_g1[0] = binary_to_array(count_g, value_g1_1, array_bits_g1);
+         
     
             // Loop: write Array number to string 
             for (int i = 0; i < BITS_G; i++)
@@ -202,3 +204,28 @@ void input_one_g1(){
 void input_minus_g(){
         strcat(bit_string_g1, minus_g);
 }
+
+// Function: switch negative to positive
+int function_negative(int value){
+    value = value * -1;
+    
+    return value;
+}
+
+   int binary_to_array(int count, int value, int array[]){
+        int bit;
+        
+        while (value > 0)
+        {
+            
+            bit = value % 2; 
+
+            value = value/2;  
+
+            array[count] = bit;
+
+            count--;
+        }
+
+        return array[0];
+    }
