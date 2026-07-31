@@ -9,6 +9,7 @@
     #define MakeDirectory(path) _mkdir(path)
 #else
     #include <unistd.h>
+    #include <libgen.h>
     //#include <sys/stat.h>
     //#define GetCurrentDir getcwd
     //#define MakeDirectory(path) mkdir(path, 0777)
@@ -23,13 +24,20 @@ void data_a(void)
     printf("### DATE A: SHOW DIRECTORY ###\n\n");
     
     // Create & assign
-    int value_1 = 700;
-
+    //int value_1 = 700;
     char buffer[1024];
 
-    getcwd(buffer, 1024);
+    //getcwd(buffer, 1024);
+    //printf("Directory: \n%s\n", buffer);
 
-    printf("Directory: \n\n%s\n", buffer);
+    if (getcwd(buffer, sizeof(buffer)) != NULL) {
+        printf("Aktueller Ordner Phad: \n%s\n\n", buffer);
+
+        char *folder = basename(buffer);
+        printf("Nur Aktueller Ordner: \n%s\n\n", folder);
+    } else {
+        perror("Fehler beim Lesen des Ordners");
+    }
     
 
 

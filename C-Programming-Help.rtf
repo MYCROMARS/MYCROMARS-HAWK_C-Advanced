@@ -1713,8 +1713,43 @@ _chdir(\'93c:\\\\temp\'94);\
 \pard\tx566\pardeftab560\pardirnatural\partightenfactor0
 
 \fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 #include <stdio.h> \
+#include <unistd.h> \
+#include <string.h> \
+int main() \{ \
+char cwd[1024]; \
 \
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+// Aktuellen Pfad auslesen \
+if (getcwd(cwd, sizeof(cwd)) != NULL) \{ \
+	// Den letzten Slash suchen \
+	char *last_slash = strrchr(cwd, '/'); \
+	if (last_slash != NULL) \{ \
+	\
+	// Tempor\'e4r abschneiden, um den vorletzten Slash zu finden *last_slash = '\\0'; \
+	char *prev_slash = strrchr(cwd, '/'); \
+	\
+	// Slashes wiederherstellen und Zeiger richtig setzen \
+	*last_slash = '/'; \
+	if (prev_slash != NULL) \{ \
+	\
+		// Zeiger startet jetzt beim vorletzten Slash (z.B. /ordner1/ordner2) \
+		printf("Letzte zwei Ordner: %s\\n", prev_slash); \
+		\} else \{ \
+	\
+		// Falls es nur einen \'fcbergeordneten Ordner gibt (z.B. /home) \
+		printf("Pfad zu kurz: %s\\n", cwd); \
+		\} \
+		\} else \{ \
+			printf("Pfad: %s\\n", cwd); \
+		\} \
+		\} else \{ \
+			perror("getcwd() Fehler"); \
+\} return 0; \
+\}\kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx566\pardeftab560\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \
 \pard\pardeftab720\partightenfactor0
 \cf3 \cb25 \expnd0\expndtw0\kerning0
