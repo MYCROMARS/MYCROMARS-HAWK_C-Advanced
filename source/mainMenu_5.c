@@ -7,10 +7,9 @@
 void mainMenu_5(int *m)
 {
         // Output
-        printf("\n*** --- MENU ***\n");
+        printf("\n*** DATA MENU ***\n");
         printf("Press: (0) EXIT\n");
-        printf("Press: (1) A | (2) B | (3) C | (4) D\n");
-        printf("Press: (5) E | (6) F \n");
+        printf("Press: (1) A | (2) B | (3) C | (4) D | (5) E | (6) F | (7) G\n");
         printf("Your Input: ");
 
         // Input
@@ -45,60 +44,33 @@ void mainMenu_5(int *m)
 
                 case 2: 
                         // Function: B
-                        //pointer_b();
+                        data_b();
                         break;
                 
                 case 3: 
                         // Function: C
-                        //pointer_c();
+                        data_c();
                         break;
 
                 case 4: 
-                        // Assign
-                        //value_1 = 1234567;
-
                         // Function: D
-                        //pointer_d(&value_1);
-
-                        // Output
-                        //printf("Int value 1: %d\n", value_1);
+                        data_d();
                         break;
                 
                 case 5:
-                        // Assign
-                        //value_2 = 7;
-
-                        // assign
-                        //int *pointer_1 = &value_2;
-
                         // Function: E
-                        //pointer_e(pointer_1);
-
-                        // Output
-                        //printf("Int value 2: %d\n", value_2);
+                        data_e();
                         break;
 
                 case 6:
-                        // Output
-                        printf("## --- F: --- ###\n\n");
-
-                        // Assign
-                        //value_3 = 100;
-
-                        // Create
-                        //int *pointer_2;
-
-                        // Asssign
-                        //pointer_2 = &value_3;
-
-                        // Output
-                        //printf("Int value 3: %d\n\n", value_3);
-
                         // Function: F
-                        //pointer_f(pointer_2);
+                        data_f();
+                       break;
 
-                        // Output
-                        //printf("Int value 3: %d\n", value_3);
+                case 7:
+                        // Function: G
+                        data_g();
+                       break;
                         
                 default:
                         // Assign
@@ -110,6 +82,6 @@ void mainMenu_5(int *m)
         }
 
         // Output
-        printf("\n### --- END ###\n");
+        printf("\n### DATA END ###\n");
         printf(".......................\n");
 }  

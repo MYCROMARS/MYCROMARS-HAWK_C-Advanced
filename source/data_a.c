@@ -1,7 +1,18 @@
-// if it's not working acivate this (on macOS):
+// if it's not working acivate this:
 #include <stdio.h>
 #include <stdlib.h>
 // #include "../header/data_a.h"
+
+#ifdef _WIN32
+    #include <direct.h>
+    #define GetCurrentDir _getcwd
+    #define MakeDirectory(path) _mkdir(path)
+#else
+    #include <unistd.h>
+    //#include <sys/stat.h>
+    //#define GetCurrentDir getcwd
+    //#define MakeDirectory(path) mkdir(path, 0777)
+#endif
 
 // Data A
 
@@ -9,18 +20,28 @@
 void data_a(void)
 {
     // Output
-    printf("### DATE A: File open/create for writing to end of file. ###\n\n");
+    printf("### DATE A: SHOW DIRECTORY ###\n\n");
     
     // Create & assign
     int value_1 = 700;
+
+    char buffer[1024];
+
+    getcwd(buffer, 1024);
+
+    printf("Directory: \n\n%s\n", buffer);
     
+
+
     // Create a pointer for the file data: need <stdio.h> 
-    FILE *save;
+    //FILE *save;
     
     // File open: The file will be created if it doesn’t exist.
-    save = fopen("save.dat", "a");
+    //save = fopen("save.dat", "a");
 
     // Conditional statement
+    /*
+    
     if(save == NULL)
     {
         // Output
@@ -44,4 +65,5 @@ void data_a(void)
         // Output
         puts("File closed.");
     }
+    */
 }
