@@ -21,7 +21,8 @@ void input_zero_g1(void);
 void input_one_g1(void);
 void input_minus_g(void);
 
-int function_negative(int value);
+//int function_negative(int value);
+void function_negative(int *value);
 int binary_to_array(int count, int value, int array[]);
 int array_to_string(int negative, int array[]);
 void decimal_to_binary(int bit_size, int value, int bit);
@@ -109,7 +110,7 @@ void bit_g(void)
                 negative_g = 1;
                 
                 // Function: negative to positive value
-                value_g1_1 = function_negative(value_g1_1);
+                function_negative(&value_g1_1);
             }
         
             // Function: write binary numbers to array
@@ -153,7 +154,7 @@ void bit_g(void)
     } 
 }
 
-// ---------------------------------------
+// -----------------------------------------------------
 // Catch invalid input 
 void scanString_bit_g(void){
     // Input
@@ -162,10 +163,8 @@ void scanString_bit_g(void){
 }
 
 // Function: switch negative to positive 
-int function_negative(int value){
-    value = value * -1;
-    
-    return value;
+void function_negative(int *value){
+    *value = *value * -1;
 }
 
 // Function: write binary numbers to array
