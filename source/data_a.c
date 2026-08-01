@@ -5,12 +5,14 @@
 
 #ifdef _WIN32
     #include <direct.h>
-    #define GetCurrentDir _getcwd
-    #define MakeDirectory(path) _mkdir(path)
+    //#define GetCurrentDir _getcwd
+    //#define MakeDirectory(path) _mkdir(path)
+    #define MODUS )
 #else
     #include <unistd.h>
     #include <libgen.h>
-    //#include <sys/stat.h>
+    #include <sys/stat.h>
+    #define MODUS ,0711)
     //#define GetCurrentDir getcwd
     //#define MakeDirectory(path) mkdir(path, 0777)
 #endif
@@ -27,19 +29,63 @@ void data_a(void)
     //int value_1 = 700;
     char buffer[1024];
 
+    // Show Directory ------------------------
     //getcwd(buffer, 1024);
     //printf("Directory: \n%s\n", buffer);
 
     if (getcwd(buffer, sizeof(buffer)) != NULL) {
-        printf("Aktueller Ordner Phad: \n%s\n\n", buffer);
+        printf("Show folder path: \n%s\n\n", buffer);
 
-        char *folder = basename(buffer);
-        printf("Nur Aktueller Ordner: \n%s\n\n", folder);
+        //char *folder = basename(buffer);
+        //printf("Show actual folder: \n%s\n\n", folder);
     } else {
-        perror("Fehler beim Lesen des Ordners");
+        perror("error!");
     }
     
+    // Create: Folder ------------------------
+    char pfadname[200];
 
+    printf("What should the new folder be named?: ");
+    
+    scanf("%199s", pfadname);
+    
+    if (mkdir(pfadname MODUS == -1){
+        printf("Can not create folder!");
+    }
+    else{
+        printf("New folder created: %s\n", pfadname);
+    }
+    
+    
+    // Got to folder
+    printf("\nGo to this folder\n");
+
+    if (chdir(pfadname) == -1){
+        printf("failed!");
+    }
+    
+    // Show Derectory
+    if (getcwd(buffer, sizeof(buffer)) != NULL) {
+        char *folder = basename(buffer);
+        printf("Show actual folder: \n%s\n", folder);
+    } else {
+        perror("error!");
+    }
+
+    // Got folder up
+    printf("\nGo folder up\n");
+
+    if (chdir("..") == -1){
+        printf("failed!");
+    }
+
+    // Show path
+       if (getcwd(buffer, sizeof(buffer)) != NULL) {
+        char *folder = basename(buffer);
+        printf("Show actual folder: \n%s\n\n", folder);
+    } else {
+        perror("error!");
+    }
 
     // Create a pointer for the file data: need <stdio.h> 
     //FILE *save;
