@@ -1,9 +1,43 @@
-// if it's not working acivate this (on macOS):
-// #include <stdio.h>
-// #include <stdlib.h>
+// if it's not working acivate this:
+#include <stdio.h>
+#include <stdlib.h>
 // #include "../header/data_c.h"
 
+#ifdef _WIN32
+    #include <direct.h>
+    #define MODUS )
+    #define MakeFolder(path) _mkdir(path)
+#else
+    #include <unistd.h>
+    #include <sys/stat.h>   // for mkdir()
+    #define MODUS ,0755)
+    #define MakeFolder(path) mkdir(path)
+#endif
+
 // Data C
+
+// Main function
+void data_c(void)
+{
+    // Output
+    printf("### DATE C: CREATE FOLDER ###\n\n");
+    
+    // Create Folder ------------------------
+    char folderName[100];
+    
+    printf("Input folder name: ");
+    
+    scanf("%99s", folderName);
+    
+    if (MakeFolder(folderName MODUS == -1){
+        printf("Folder cannot be created!");
+    }
+    else{
+        printf("successful!\n");
+    }
+}
+
+/*
 
 // Main function
 void data_c(void)
@@ -57,6 +91,7 @@ void data_c(void)
         // Output
         puts("File closed.");
     }
+*/
     
     /*
     // Conditional statement: Read string with: fgetc()
@@ -118,4 +153,3 @@ void data_c(void)
         puts("File closed\n");
     }
     */
-} 

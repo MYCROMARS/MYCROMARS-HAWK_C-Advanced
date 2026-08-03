@@ -1,11 +1,43 @@
-// if it's not working acivate this (on macOS):
-// #include <stdio.h>
-// #include <stdlib.h>
+// if it's not working acivate this:
+#include <stdio.h>
+#include <stdlib.h>
 // #include "../header/data_b.h"
+
+#ifdef _WIN32
+    #include <direct.h>
+    #include <string.h>   // GNU-Version basename(), verändert nicht den String
+    #define CURRENT_path _getcwd
+#else
+    #include <unistd.h>
+    #include <libgen.h>     // POSIX-Version Dateinamen basename(), dirname()
+    #define CURRENT_path getcwd
+#endif
 
 // Data B
 
 // Main function
+void data_b(void)
+{
+    // Output
+    printf("### DATE B: SHOW DIRECTORY & CURRENT FOLDER ###\n\n");
+    
+    // Create & assign
+    char path[1024];
+
+    // Show Directory ------------------------
+    if (CURRENT_path(path, sizeof(path)) != NULL) {
+        printf("sizeof path: %lu\n\n", sizeof(path));
+        printf("Show current path: %s\n", path);
+
+        char *folder = basename(path);
+        printf("Show current folder: %s\n\n", folder);
+    } else {
+        perror("ERROR!");
+    }
+}
+
+/*
+
 void data_b(void)
 {
     // Output
@@ -44,3 +76,4 @@ void data_b(void)
         puts("File closed.");
     }
 } 
+*/
