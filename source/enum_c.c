@@ -12,15 +12,15 @@ void enum_c(void)
     
     // Create Enum Boolean 
     enum BOOLEAN{
-        false,
-        true
+        false_,
+        true_
     };
 
     // Create Enum Item
     enum BOOLEAN isNumber;
 
     // Assign
-    isNumber = true;
+    isNumber = true_;
  
     // Create
     int number;

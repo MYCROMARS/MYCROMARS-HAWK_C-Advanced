@@ -61,11 +61,10 @@ void data_b(void)
         // Current folder
         #ifdef _WIN32
 
-        #elif __APPLE__
+        #else 
             char *folder = CURRENT_folder(path_b1);
-            printf("Show current folder (macOS): %s\n\n", folder);
-        #elif __linux__
-
+            printf("On macOS, Linux\n");
+            printf("Current folder: %s\n\n", folder);
         #endif
     }
     else {

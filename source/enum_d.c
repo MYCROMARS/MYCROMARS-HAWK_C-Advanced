@@ -12,15 +12,15 @@ void enum_d(void)
        
     // Create Enum Boolean 
     enum BOOLEAN{
-        false,
-        true
+        false_,
+        true_
     };
 
     // Create Enum Item
     enum BOOLEAN button;
 
     // Assign
-    button = false;
+    button = false_;
 
     // Output
     printf("button is: %d\n", button);
@@ -38,7 +38,7 @@ void enum_d(void)
    
 
     // Input
-    if((scanf("%d", &input)) == false)
+    if((scanf("%d", &input)) == false_)
     {
         printf("Input is not a number! \n\n");
 
@@ -50,13 +50,13 @@ void enum_d(void)
     {
         printf("Correct, your input was: %d\n", input);
 
-        if (button == false)
+        if (button == false_)
         {
-            button = true;
+            button = true_;
         }
-        else if (button == true)
+        else if (button == true_)
         {
-            button = false;
+            button = false_;
         }
 
         printf("button is now: %d\n\n", button);
