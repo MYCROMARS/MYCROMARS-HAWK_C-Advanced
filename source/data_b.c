@@ -93,6 +93,8 @@ void data_b(void)
    
 
     #ifdef _WIN32
+        printf("Only on Windows, output path\n");
+
         // 1. Method, Output path split
         // const char* full_path = "C:\\Users\\Admin\\Documents";
         const char* path_b1_1 = path_b1;
@@ -125,42 +127,42 @@ void data_b(void)
     #endif
 
 
-        // 2. Method, Output path split
-        printf("\nMethod 2, output Filename\n");
+    // 2. Method, Output path split
+    printf("\nMethod 2, output Filename\n");
 
-        const char *path_b1_2 = path_b1;
-        //const char* full_path = "C:\\Users\\Admin\\Documents\\text.txt";
+    const char *path_b1_2 = path_b1;
+    //const char* full_path = "C:\\Users\\Admin\\Documents\\text.txt";
 
-        // 1. Find the last separator (handles both Windows backslash and Linux forward slash)
-        const char *filename = strrchr(path_b1_2, '\\');
+    // 1. Find the last separator (handles both Windows backslash and Linux forward slash)
+    const char *filename = strrchr(path_b1_2, '\\');
 
-        if (!filename) filename = strrchr(path_b1_2, '/');
-        
-        // If no slash found, the entire path is the filename
-        if (!filename) filename = path_b1_2; 
-        else filename++; // Step past the slash pointer
+    if (!filename) filename = strrchr(path_b1_2, '/');
+    
+    // If no slash found, the entire path is the filename
+    if (!filename) filename = path_b1_2; 
+    else filename++; // Step past the slash pointer
 
-        printf("Filename:  %s\n", filename); 
+    printf("Filename:  %s\n\n", filename); 
 
-        
-        // Extension
-        const char *Extension = strrchr(filename, '.');
-        
-        // 2. Find the extension dot
-        if (Extension !=NULL)
-        {
-            printf("Extension: %s\n", Extension);  
-        }
-        
-        /*
-        // Output Length
-        printf("path_b1_2 length:  %d\n", path_b1_2); 
-        printf("filename length:   %d\n", filename); 
-        printf("Name Length:       %d\n", filename-path_b1_2+1); 
-        int a = filename-path_b1_2;
-        printf("Char:              %c\n", path_b1[a]); 
-        
-        */
+    
+    // Extension
+    const char *Extension = strrchr(filename, '.');
+    
+    // 2. Find the extension dot
+    if (Extension !=NULL)
+    {
+        printf("Extension: %s\n", Extension);  
+    }
+    
+    /*
+    // Output Length
+    printf("path_b1_2 length:  %d\n", path_b1_2); 
+    printf("filename length:   %d\n", filename); 
+    printf("Name Length:       %d\n", filename-path_b1_2+1); 
+    int a = filename-path_b1_2;
+    printf("Char:              %c\n", path_b1[a]); 
+    
+    */          
 }
 
 /*
