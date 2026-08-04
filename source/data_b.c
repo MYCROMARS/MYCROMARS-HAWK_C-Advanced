@@ -5,12 +5,37 @@
 
 #ifdef _WIN32
     #include <direct.h>
+    //#include <errno.h>
     #include <string.h>   // GNU-Version basename(), verändert nicht den String
     #define CURRENT_path _getcwd
-#else
-    #include <unistd.h>
-    #include <libgen.h>     // POSIX-Version Dateinamen basename(), dirname()
-    #define CURRENT_path getcwd
+
+    // Manually define 
+    #ifndef _MAX_DRIVE
+        #define _MAX_DRIVE 3    // Drive letter + ':' + '\0'
+        #define _MAX_DIR 256
+        #define _MAX_FNAME 256
+        #define _MAX_EXT 256
+    #endif
+
+    // #ifndef _ERRNO_T_DEFINED
+    //     #define _ERRNO_T_DEFINED
+    //     typedef int errno_t;
+    // #endif
+
+    // 2. FORWARD DECLARATION: This fixes the "implicit declaration" GCC error
+    extern int _splitpath_s(
+        const char *path,
+        char *drive, size_t driveNumberOfElements,
+        char *dir,   size_t dirNumberOfElements,
+        char *fname, size_t fnameNumberOfElements,
+        char *ext,   size_t extNumberOfElements
+    );
+
+    #else
+        #include <unistd.h>
+        #include <libgen.h>     // POSIX-Version Dateinamen basename(), dirname()
+        #define CURRENT_path getcwd
+        #define CURRENT_folder(path) basename(path)
 #endif
 
 // Data B
@@ -21,19 +46,108 @@ void data_b(void)
     // Output
     printf("### DATE B: SHOW DIRECTORY & CURRENT FOLDER ###\n\n");
     
-    // Create & assign
-    char path[1024];
+    // Create 
+    char path_b1[1024];
 
     // Show Directory ------------------------
-    if (CURRENT_path(path, sizeof(path)) != NULL) {
-        printf("sizeof path: %lu\n\n", sizeof(path));
-        printf("Show current path: %s\n", path);
+    if (CURRENT_path(path_b1, sizeof(path_b1)) != NULL) {
 
-        char *folder = basename(path);
-        printf("Show current folder: %s\n\n", folder);
+        // Output: size of
+        printf("sizeof char path: %lu\n\n", sizeof(path_b1));
+
+        // Output: path
+        printf("Show current path: %s\n\n", path_b1);
+
+        // Current folder
+        #ifdef _WIN32
+
+        #elif __APPLE__
+            char *folder = CURRENT_folder(path_b1);
+            printf("Show current folder: %s\n\n", folder);
+        #elif __linux__
+
+        #endif
+
+        // 2. Method, output path & Lengh
+        printf("Method 2\n");
+
+        // Create
+        char *path_b2;
+
+        if ((path_b2 = CURRENT_path(NULL, 0)) == NULL)
+            perror("ERROR!");
+        else{
+            // Output: path
+            printf("show current path: %s\n", path_b2);
+
+            // Output: Length
+            printf("String length: %zu\n\n", strlen(path_b2));
+
+            free(path_b2);
+        }
+        
     } else {
         perror("ERROR!");
     }
+
+
+    // 1. Method, Output path split
+    // const char* full_path = "C:\\Users\\Admin\\Documents";
+    const char* path_b1_1 = path_b1;
+
+    // Allocate buffers using standard size constants
+    // Create
+    char drive[_MAX_DRIVE];
+    char dir[_MAX_DIR];
+    char fname[_MAX_FNAME];
+    char ext[_MAX_EXT];
+
+    // Split the path securely
+    int spPath = _splitpath_s(
+        path_b1_1, 
+        drive, _MAX_DRIVE, 
+        dir, _MAX_DIR, 
+        fname, _MAX_FNAME, 
+        ext, _MAX_EXT
+    );
+
+    // Check if the function succeeded (returns 0)
+    if (spPath == 0) {
+        //printf("Drive:     %s\n", drive);  // Outputs: Drive
+        //printf("Directory: %s\n", dir);    // Outputs: path
+        printf("Filename:  %s\n", fname);    // Outputs: name
+        //printf("Extension: %s\n", ext);    // Outputs: Extension
+    } else {
+        printf("Error splitting path. Error code: %d\n\n", spPath);
+    }
+
+
+    // 2. Method, Output path split
+    printf("\nMethod 2:\n");
+
+    const char *path_b1_2 = path_b1;
+    //const char* full_path = "C:\\Users\\Admin\\Documents\\text.txt";
+
+    // 1. Find the last separator (handles both Windows backslash and Linux forward slash)
+    const char *filename = strrchr(path_b1_2, '\\');
+
+    if (!filename) filename = strrchr(path_b1_2, '/');
+    
+    // If no slash found, the entire path is the filename
+    if (!filename) filename = path_b1_2; 
+    else filename++; // Step past the slash pointer
+
+    printf("Filename:  %s\n", filename); 
+    
+    // Extension
+    const char *Extension = strrchr(filename, '.');
+    
+    // 2. Find the extension dot
+    if (Extension !=NULL)
+    {
+        printf("Extension: %s\n", Extension);  
+    }
+  
 }
 
 /*

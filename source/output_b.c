@@ -1,5 +1,5 @@
 // if it's not working acivate this (on macOS):
-// #include <stdio.h>
+//#include <stdio.h>
 // #include "../header/output_b.h"
 
 // Output B
@@ -8,8 +8,7 @@ void output_b(void) {
     // Output
     printf("\n### OUTPUT B ###\n\n");
 
-    // Int Array
-    int x[] = (int[]) {1,2};
+    int x[] = {1,2};
     printf("int: %d\n", x[0]);      // 1
     //printf("int: %p\n", x[0]);      // 0x1
     printf("int: %p\n", &x[0]);     // 0x16f012b80

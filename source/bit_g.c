@@ -3,7 +3,7 @@
 // #include <string.h>
 // #include "../header/bit_g.h"
 
-// Bit F
+// Bit G
 
 // Create global variables --------------------
 char bit_string_g1[50] = "";
