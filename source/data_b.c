@@ -63,7 +63,7 @@ void data_b(void)
 
         #elif __APPLE__
             char *folder = CURRENT_folder(path_b1);
-            printf("Show current folder: %s\n\n", folder);
+            printf("Show current folder (macOS): %s\n\n", folder);
         #elif __linux__
 
         #endif
