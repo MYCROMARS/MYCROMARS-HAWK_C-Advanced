@@ -1,4 +1,4 @@
-// Main Menu 1: ---
+// Main Menu 1: LOOP
 
 // Main function
 void mainMenu_1(int *m)

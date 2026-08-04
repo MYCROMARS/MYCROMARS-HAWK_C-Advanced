@@ -1,4 +1,4 @@
-// Main Menu 4: --- 
+// Main Menu 4: BITS
 
 // Main function
 void mainMenu_4(int *m)

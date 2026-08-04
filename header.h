@@ -40,11 +40,6 @@
 
     #include "header/loop_a.h"
     #include "header/loop_b.h"
-    #include "header/loop_c.h"
-    #include "header/loop_d.h"
-    #include "header/loop_e.h"
-    #include "header/loop_f.h"
-    #include "header/loop_g.h"
     
     #include "header/data_a.h"
     #include "header/data_b.h"
@@ -88,11 +83,6 @@
 
     #include "source/loop_a.c"
     #include "source/loop_b.c"
-    #include "source/loop_c.c"
-    #include "source/loop_d.c"
-    #include "source/loop_e.c"
-    #include "source/loop_f.c"
-    #include "source/loop_g.c"
 
     #include "source/data_a.c"
     #include "source/data_b.c"

@@ -1,4 +1,4 @@
-// Main Menu 2: DELAY
+// Main Menu 2: ENUM
 
 // Main function
 void mainMenu_2(int *m)

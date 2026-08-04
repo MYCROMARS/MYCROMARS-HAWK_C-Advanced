@@ -1,7 +1,7 @@
-// if it's not working acivate this (on macOS):
+// if it's not working acivate this:
 // #include <stdio.h>
 
-// Main Menu 5: 
+// Main Menu 5: DATA
 
 // Main function
 void mainMenu_5(int *m)
@@ -9,7 +9,7 @@ void mainMenu_5(int *m)
         // Output
         printf("\n*** DATA MENU ***\n");
         printf("Press: (0) EXIT\n");
-        printf("Press: (1) A | (2) B | (3) C | (4) D\n");
+        printf("Press: (1) A | (2) B | (3) C | (4) D | (5) E\n");
         //printf("Press: (1) A | (2) B | (3) C | (4) D | (5) E | (6) F | (7) G\n");
         printf("Your Input: ");
 
@@ -18,12 +18,6 @@ void mainMenu_5(int *m)
 
         // Output
         printf("\n");
-
-        // create
-        // int value_1;
-        // int value_2;
-        // int value_3;
-        // int value_4;
 
         // Switch-case statement
         switch (*m)
@@ -65,12 +59,12 @@ void mainMenu_5(int *m)
 
                 case 6:
                         // Function: F
-                        data_f();
+                        //data_f();
                        break;
 
                 case 7:
                         // Function: G
-                        data_g();
+                        //data_g();
                        break;
                         
                 default:
