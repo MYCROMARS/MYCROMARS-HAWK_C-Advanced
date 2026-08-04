@@ -30,7 +30,6 @@
         char *fname, size_t fnameNumberOfElements,
         char *ext,   size_t extNumberOfElements
     );
-
     #else
         #include <unistd.h>
         #include <libgen.h>     // POSIX-Version Dateinamen basename(), dirname()
