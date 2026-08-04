@@ -47,13 +47,13 @@ void data_b(void)
     printf("### DATE B: SHOW DIRECTORY & CURRENT FOLDER ###\n\n");
     
     // Create 
-    char path_b1[1024];
-
+    char path_b1[100]; // 100 byte
+   
     // Show Directory ------------------------
     if (CURRENT_path(path_b1, sizeof(path_b1)) != NULL) 
     {
         // Output: size of
-        printf("sizeof char path: %lu\n\n", sizeof(path_b1));
+        printf("sizeof char path: %lu byte\n\n", sizeof(path_b1));
 
         // Output: path
         printf("Show current path: %s\n\n", path_b1);
@@ -73,8 +73,8 @@ void data_b(void)
     }
 
 
-    // 2. Method, output path & Lengh
-    printf("Method 2\n");
+    // 2. Method, output path & Length
+    printf("Method 2, output path\n");
 
     // Create
     char *path_b2;
@@ -126,7 +126,7 @@ void data_b(void)
 
 
         // 2. Method, Output path split
-        printf("\nMethod 2:\n");
+        printf("\nMethod 2, output Filename\n");
 
         const char *path_b1_2 = path_b1;
         //const char* full_path = "C:\\Users\\Admin\\Documents\\text.txt";
@@ -142,12 +142,6 @@ void data_b(void)
 
         printf("Filename:  %s\n", filename); 
 
-        // Output Length
-        printf("path_b1_2 lenght:  %d\n", path_b1_2); 
-        printf("filename lenght:   %d\n", filename); 
-        printf("Name Length:       %d\n", filename-path_b1_2+1); 
-        int a = filename-path_b1_2;
-        printf("Char:              %c\n", path_b1[a]); 
         
         // Extension
         const char *Extension = strrchr(filename, '.');
@@ -157,7 +151,16 @@ void data_b(void)
         {
             printf("Extension: %s\n", Extension);  
         }
-  
+        
+        /*
+        // Output Length
+        printf("path_b1_2 length:  %d\n", path_b1_2); 
+        printf("filename length:   %d\n", filename); 
+        printf("Name Length:       %d\n", filename-path_b1_2+1); 
+        int a = filename-path_b1_2;
+        printf("Char:              %c\n", path_b1[a]); 
+        
+        */
 }
 
 /*
