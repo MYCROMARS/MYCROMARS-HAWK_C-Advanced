@@ -117,10 +117,10 @@ void data_b(void)
 
         // Check if the function succeeded (returns 0)
         if (spPath == 0) {
-            //printf("Drive:     %s\n", drive);  // Outputs: Drive
-            //printf("Directory: %s\n", dir);    // Outputs: path
-            printf("Filename:  %s\n", fname);    // Outputs: name
-            //printf("Extension: %s\n", ext);    // Outputs: Extension
+            //printf("Drive:     %s\n\n", drive);  // Outputs: Drive
+            //printf("Directory: %s\n\n", dir);    // Outputs: path
+            printf("Filename:  %s\n\n", fname);    // Outputs: name
+            //printf("Extension: %s\n\n", ext);    // Outputs: Extension
         } else {
             printf("ERROR: %d\n\n", spPath);
         }
@@ -128,7 +128,7 @@ void data_b(void)
 
 
     // 2. Method, Output path split
-    printf("\nMethod 2, output Filename\n");
+    printf("Method 2, output Filename\n");
 
     const char *path_b1_2 = path_b1;
     //const char* full_path = "C:\\Users\\Admin\\Documents\\text.txt";
