@@ -50,8 +50,8 @@ void data_b(void)
     char path_b1[1024];
 
     // Show Directory ------------------------
-    if (CURRENT_path(path_b1, sizeof(path_b1)) != NULL) {
-
+    if (CURRENT_path(path_b1, sizeof(path_b1)) != NULL) 
+    {
         // Output: size of
         printf("sizeof char path: %lu\n\n", sizeof(path_b1));
 
@@ -67,86 +67,96 @@ void data_b(void)
         #elif __linux__
 
         #endif
-
-        // 2. Method, output path & Lengh
-        printf("Method 2\n");
-
-        // Create
-        char *path_b2;
-
-        if ((path_b2 = CURRENT_path(NULL, 0)) == NULL)
-            perror("ERROR!");
-        else{
-            // Output: path
-            printf("show current path: %s\n", path_b2);
-
-            // Output: Length
-            printf("String length: %zu\n\n", strlen(path_b2));
-
-            free(path_b2);
-        }
-        
-    } else {
+    }
+    else {
         perror("ERROR!");
     }
 
 
-    // 1. Method, Output path split
-    // const char* full_path = "C:\\Users\\Admin\\Documents";
-    const char* path_b1_1 = path_b1;
+    // 2. Method, output path & Lengh
+    printf("Method 2\n");
 
-    // Allocate buffers using standard size constants
     // Create
-    char drive[_MAX_DRIVE];
-    char dir[_MAX_DIR];
-    char fname[_MAX_FNAME];
-    char ext[_MAX_EXT];
+    char *path_b2;
 
-    // Split the path securely
-    int spPath = _splitpath_s(
-        path_b1_1, 
-        drive, _MAX_DRIVE, 
-        dir, _MAX_DIR, 
-        fname, _MAX_FNAME, 
-        ext, _MAX_EXT
-    );
+    if ((path_b2 = CURRENT_path(NULL, 0)) == NULL)
+        perror("ERROR!");
+    else{
+        // Output: path
+        printf("show current path: %s\n", path_b2);
 
-    // Check if the function succeeded (returns 0)
-    if (spPath == 0) {
-        //printf("Drive:     %s\n", drive);  // Outputs: Drive
-        //printf("Directory: %s\n", dir);    // Outputs: path
-        printf("Filename:  %s\n", fname);    // Outputs: name
-        //printf("Extension: %s\n", ext);    // Outputs: Extension
-    } else {
-        printf("Error splitting path. Error code: %d\n\n", spPath);
-    }
+        // Output: Length
+        printf("String length: %zu\n\n", strlen(path_b2));
+
+        free(path_b2);
+    } 
+   
+
+    #ifdef _WIN32
+        // 1. Method, Output path split
+        // const char* full_path = "C:\\Users\\Admin\\Documents";
+        const char* path_b1_1 = path_b1;
+
+        // Allocate buffers using standard size constants
+        // Create
+        char drive[_MAX_DRIVE];
+        char dir[_MAX_DIR];
+        char fname[_MAX_FNAME];
+        char ext[_MAX_EXT];
+
+        // Split the path securely
+        int spPath = _splitpath_s(
+            path_b1_1, 
+            drive, _MAX_DRIVE, 
+            dir, _MAX_DIR, 
+            fname, _MAX_FNAME, 
+            ext, _MAX_EXT
+        );
+
+        // Check if the function succeeded (returns 0)
+        if (spPath == 0) {
+            //printf("Drive:     %s\n", drive);  // Outputs: Drive
+            //printf("Directory: %s\n", dir);    // Outputs: path
+            printf("Filename:  %s\n", fname);    // Outputs: name
+            //printf("Extension: %s\n", ext);    // Outputs: Extension
+        } else {
+            printf("ERROR: %d\n\n", spPath);
+        }
+    #endif
 
 
-    // 2. Method, Output path split
-    printf("\nMethod 2:\n");
+        // 2. Method, Output path split
+        printf("\nMethod 2:\n");
 
-    const char *path_b1_2 = path_b1;
-    //const char* full_path = "C:\\Users\\Admin\\Documents\\text.txt";
+        const char *path_b1_2 = path_b1;
+        //const char* full_path = "C:\\Users\\Admin\\Documents\\text.txt";
 
-    // 1. Find the last separator (handles both Windows backslash and Linux forward slash)
-    const char *filename = strrchr(path_b1_2, '\\');
+        // 1. Find the last separator (handles both Windows backslash and Linux forward slash)
+        const char *filename = strrchr(path_b1_2, '\\');
 
-    if (!filename) filename = strrchr(path_b1_2, '/');
-    
-    // If no slash found, the entire path is the filename
-    if (!filename) filename = path_b1_2; 
-    else filename++; // Step past the slash pointer
+        if (!filename) filename = strrchr(path_b1_2, '/');
+        
+        // If no slash found, the entire path is the filename
+        if (!filename) filename = path_b1_2; 
+        else filename++; // Step past the slash pointer
 
-    printf("Filename:  %s\n", filename); 
-    
-    // Extension
-    const char *Extension = strrchr(filename, '.');
-    
-    // 2. Find the extension dot
-    if (Extension !=NULL)
-    {
-        printf("Extension: %s\n", Extension);  
-    }
+        printf("Filename:  %s\n", filename); 
+
+        // Output Length
+        printf("path_b1_2 lenght:  %d\n", path_b1_2); 
+        printf("filename lenght:   %d\n", filename); 
+        printf("Name Length:       %d\n", filename-path_b1_2+1); 
+        int a = filename-path_b1_2;
+        printf("Char:              %c\n", path_b1[a]); 
+        
+        // Extension
+        const char *Extension = strrchr(filename, '.');
+        
+        // 2. Find the extension dot
+        if (Extension !=NULL)
+        {
+            printf("Extension: %s\n", Extension);  
+        }
   
 }
 
