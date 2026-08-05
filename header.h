@@ -41,7 +41,6 @@
     #include "header/data_b.h"
     #include "header/data_c.h"
     #include "header/data_d.h"
-    #include "header/data_e.h"
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -77,6 +76,5 @@
     #include "source/data_b.c"
     #include "source/data_c.c"
     #include "source/data_d.c"
-    #include "source/data_e.c"
 
 #endif
