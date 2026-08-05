@@ -1,4 +1,4 @@
-// if it's not working acivate this:
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include <string.h>
 // #include "../header/bit_g.h"
@@ -60,10 +60,10 @@ void bit_g(void)
         // Output
         printf("\nInput is not a number!\n\n");
         
-        // function: Catch invalid input
+        // Function call: Catch invalid input
         scanString_bit_g();
         
-        // Jump to start
+        // Go to
         goto main_1;
     }
     else if (menu <0 || menu>1)
@@ -71,7 +71,7 @@ void bit_g(void)
         // Output
         printf("\nInput is not 0 or 1!\n\n");
                 
-        // Jump to start
+        // Go to
         goto main_1;
     }
     // Start input a number
@@ -88,7 +88,7 @@ void bit_g(void)
             // function: Catch invalid input
             scanString_bit_g();
             
-            // Jump to start
+            // Go to
             goto main_1;
         }
         else if (value_g1 < -max_g || value_g1 > max_g)
@@ -96,20 +96,20 @@ void bit_g(void)
             // Output
             printf("\nInput is not a number -%d...%d!\n\n", max_g, max_g);
             
-            // Jump to start
+            // Go to
             goto main_1;
         }
         else
         { 
-            // Pass value
+            // Assign: Pass value
             value_g1_1 = value_g1;
         
-            // Negative to positive
+            // Statement: Negative to positive
             if (value_g1_1 < 0){
                 // Assign
                 negative_g = 1;
                 
-                // Function: negative to positive value
+                // Function call: negative to positive value
                 function_negative(&value_g1_1);
             }
         
@@ -119,15 +119,17 @@ void bit_g(void)
             // Function: write array number to string 
             negative_g = array_to_string(negative_g, array_bits_g1);
 
-            // Output
+            // Statement
             if ( negative_g == 2){
+                // Output
                 printf("\nBinary String: %s\n", bit_string_g1);
             }
             else{
+                // Output
                 printf("\nBinary String:  %s\n", bit_string_g1);
             }
             
-            // Decimal to Binary with: bitwise shift right
+            // Function call: Decimal to Binary with bitwise shift right
             decimal_to_binary(bit_size_g1, value_g1, bit_g2);
             
             // Assign: reset
@@ -138,41 +140,49 @@ void bit_g(void)
             bit_size_g1 = 0;
             negative_g = 0;
 
+            // Statement: Delate
             for (int i = 0; i<BITS_G; i++){
+                // Assign
                 array_bits_g1[i] = 0; 
             }
 
             // Delate string
             bit_string_g1[0] = '\0';
 
-            // Jump to start
+            // Go to
             goto main_1;
         }
     }
     else if (menu == 0){
+        // Output
         printf("\n### EXIT ###\n");
     } 
 }
 
 // -----------------------------------------------------
-// Catch invalid input 
+// Function: Catch invalid input 
 void scanString_bit_g(void){
     // Input
     scanf("%s", &buffer_bit_g[0]);
+
+    // Delate
     buffer_bit_g[0] = '\0';
 }
 
-// Function: switch negative to positive 
+// Function: Switch negative to positive 
 void function_negative(int *value){
     *value = *value * -1;
 }
 
-// Function: write binary numbers to array
+// Function: Write binary numbers to array
 int binary_to_array(int count, int value, int array[]){
+    // Create
     int bit;
     
+    // Loop
     while (value > 0)
     {
+        // Assign
         bit = value % 2; 
         value = value/2;  
         array[count] = bit;
@@ -182,23 +192,28 @@ int binary_to_array(int count, int value, int array[]){
     return array[0];
 }
 
-// Function: write array number to string 
+// Function: Write array number to string 
 int array_to_string(int negative, int array[]){
 
+    // Loop
     for (int i = 0; i < BITS_G; i++)
     {
-        // Function input minus
+        // Statement: Input minus
         if (negative == 1){
+            // Function call
             input_minus_g();
+
+            // Assign
             negative = 2;
         }
-
-        // Function input zero
+        
+        // Statement: Input 0 / 1
         if (array[i] == 0){
+            // Function call
             input_zero_g1();
         }
-        // Function input one
         else if (array[i] == 1){
+            // Function call
             input_one_g1();
         }
     }
@@ -208,17 +223,20 @@ int array_to_string(int negative, int array[]){
 
 // Function: Input zero ----------------
 void input_zero_g1(){
-        strcat(bit_string_g1, zero_g1);
+    // Function: Append a string 
+    strcat(bit_string_g1, zero_g1);
 }
 
 // Function: Input one
 void input_one_g1(){
-        strcat(bit_string_g1, one_g1);
+    // Function: Append a string 
+    strcat(bit_string_g1, one_g1);
 }
 
 // Function: Input minus 
 void input_minus_g(){
-        strcat(bit_string_g1, minus_g);
+    // Function: Append a string 
+    strcat(bit_string_g1, minus_g);
 }
 
 
@@ -239,6 +257,8 @@ void decimal_to_binary(int bit_size, int value, int bit){
     
         // Output
         printf("%d", bit);
+
+        // Statement
         //if (i % 8 == 0) printf(" "); // spacing after 8 bits
     }
 

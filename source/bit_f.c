@@ -1,4 +1,4 @@
-// if it's not working acivate this:
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include <string.h>
 // #include "../header/bit_f.h"
@@ -25,6 +25,8 @@ const char minus_f[2] = "-";
 void scanString_bit_f(void){
     // Input
     scanf("%s", &buffer_bit_f[0]);
+
+    // Delate
     buffer_bit_f[0] = '\0';
 }
 
@@ -32,8 +34,7 @@ void scanString_bit_f(void){
 void bit_f(void)
 {
     // Output
-    printf("### BIT OPERATION F ###\n");
-    printf("Bitwise shift right '>>'\n\n");
+    printf("### BIT F: Bitwise shift right '>>' ###\n");
 
     // Create & assign
     int value_f1;
@@ -54,7 +55,8 @@ void bit_f(void)
     #define BITS_F 16   // 16 bit
     int count_f = BITS_F-1;
 
-    int array_bits_f1[BITS_F] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};  // String 1 Placeholder for bit's
+    // String 1 Placeholder for bit's
+    int array_bits_f1[BITS_F] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};  
 
     long binary_to_int_f1;
     long binary_to_int_f2;
@@ -72,10 +74,10 @@ void bit_f(void)
         // Output
         printf("\nInput is not a number!\n\n");
         
-        // function: Catch invalid input
+        // Function call: Catch invalid input
         scanString_bit_f();
         
-        // Jump to start
+        // Go to
         goto main_1;
     }
     else if (value_f1 < -max_f || value_f1 > max_f)
@@ -83,7 +85,7 @@ void bit_f(void)
         // Output
         printf("\nInput is not a number -%d...%d!\n\n", max_f, max_f);
         
-        // Jump to start
+        // Go to
         goto main_1;
     }
 
@@ -97,10 +99,10 @@ void bit_f(void)
         // Output
         printf("\nInput is not a number!\n\n");
         
-        // function: Catch invalid input
+        // Function all: Catch invalid input
         scanString_bit_f();
         
-        // Jump to start
+        // Go to
         goto main_2;
     }
     else if (value_f2 < 1 || value_f2 > BITS_F/2)
@@ -108,45 +110,49 @@ void bit_f(void)
         // Output
         printf("\nInput is not a number 1...%d!\n\n", BITS_F/2);
         
-        // Jump to start
+        // Go to
         goto main_2;
     }
     else
     { 
-        // Pass value
+        // Assign: Pass value
         value_f1_1 = value_f1;
     
-        // Bitwise shift right >>
+        // Assign: Bitwise shift right >>
         value_f2_1 = value_f1 >> value_f2;
 
-        // Negative to positive
+        // Statement: Negative to positive
         if (value_f1_1 < 0){
             value_f1_1 = value_f1_1 * -1;
             negative_f = 1;
         }
     
-        // write 1. Binary numbers to array
+        // Loop: Write 1. Binary numbers to array
         while (value_f1_1 > 0)
         {
+            // Assign
             bit_f1 = value_f1_1 % 2; 
             value_f1_1 = value_f1_1/2;  
             array_bits_f1[count_f] = bit_f1;
             count_f--;
         }
 
-        // Loop: write Array number to string 1
+        // Loop: Write Array number to string 1
         for (int i = 0; i < BITS_F; i++)
         {
+            // Statement: Input minus
             if (negative_f == 1){
                 input_minus_f();
                 negative_f = 0;
             }
+
+            // Statement: Input 0 / 1
             if (array_bits_f1[i] == 0){
-                // Function
+                // Function call
                 input_zero_f1();
             }
             else if (array_bits_f1[i] == 1){
-                // Function
+                // Function call
                 input_one_f1();
             }
         }
@@ -154,7 +160,7 @@ void bit_f(void)
         // Output
         printf("\nInput to Binary String: %s\n", bit_string_f1);
 
-        // Delate string
+        // Delate 
         bit_string_f1[0] = '\0';
         
         // Assign
@@ -171,6 +177,8 @@ void bit_f(void)
 
             // Output
             printf("%d", bit_f2);
+
+            // Statement
             if (i % 8 == 0) printf(" "); // spacing after 8 bits
         }
         
@@ -193,6 +201,8 @@ void bit_f(void)
 
             // Output
             printf("%d", bit_f3);
+
+            // Statement
             if (i % 8 == 0) printf(" "); // spacing after 8 bits
         }
 
@@ -202,15 +212,18 @@ void bit_f(void)
 
 // Function: Input zero ----------------
 void input_zero_f1(){
-        strcat(bit_string_f1, zero_f1);
+    // Function: Append a string 
+    strcat(bit_string_f1, zero_f1);
 }
 
 // Function: Input one
 void input_one_f1(){
-        strcat(bit_string_f1, one_f1);
+    // Function: Append a string 
+    strcat(bit_string_f1, one_f1);
 }
 
 // Function: Input minus ----------------
 void input_minus_f(){
-        strcat(bit_string_f1, minus_f);
+    // Function: Append a string 
+    strcat(bit_string_f1, minus_f);
 }

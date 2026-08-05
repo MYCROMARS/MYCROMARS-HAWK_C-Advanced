@@ -1,28 +1,24 @@
-// if it's not working acivate this:
+// Integrate libraries direct:
 #include <stdio.h>
 #include <stdlib.h>
 // #include "../header/data_b.h"
 
+// Windows
 #ifdef _WIN32
-    #include <direct.h>
+    #include <direct.h>     // for _getcwd()
     //#include <errno.h>
-    #include <string.h>   // GNU-Version basename(), verändert nicht den String
+    #include <string.h>  
     #define CURRENT_path _getcwd
 
-    // Manually define 
+    // Define 
     #ifndef _MAX_DRIVE
-        #define _MAX_DRIVE 3    // Drive letter + ':' + '\0'
+        #define _MAX_DRIVE 3    
         #define _MAX_DIR 256
         #define _MAX_FNAME 256
         #define _MAX_EXT 256
     #endif
 
-    // #ifndef _ERRNO_T_DEFINED
-    //     #define _ERRNO_T_DEFINED
-    //     typedef int errno_t;
-    // #endif
-
-    // 2. FORWARD DECLARATION: This fixes the "implicit declaration" GCC error
+    // DECLARATION: fixes "implicit declaration" GCC error
     extern int _splitpath_s(
         const char *path,
         char *drive, size_t driveNumberOfElements,
@@ -30,9 +26,9 @@
         char *fname, size_t fnameNumberOfElements,
         char *ext,   size_t extNumberOfElements
     );
-    #else
-        #include <unistd.h>
-        #include <libgen.h>     // POSIX-Version Dateinamen basename(), dirname()
+    #else // macOS, Linux
+        #include <unistd.h>     // for getcwd()
+        #include <libgen.h>     // for basename(), dirname()
         #define CURRENT_path getcwd
         #define CURRENT_folder(path) basename(path)
 #endif
@@ -57,27 +53,33 @@ void data_b(void)
         // Output: path
         printf("Show current path: %s\n\n", path_b1);
 
-        // Current folder
+        // Windows
         #ifdef _WIN32
 
-        #else 
+        #else // macOS, Linux
+            // Create: Current folder
             char *folder = CURRENT_folder(path_b1);
+
+            // Output
             printf("On macOS, Linux\n");
             printf("Current folder: %s\n\n", folder);
         #endif
     }
     else {
+        // Output: Error
         perror("ERROR!");
     }
 
-
     // 2. Method, output path & Length
+    // Output
     printf("Method 2, output path\n");
 
     // Create
     char *path_b2;
 
+    // Pass path
     if ((path_b2 = CURRENT_path(NULL, 0)) == NULL)
+        // Output: Error
         perror("ERROR!");
     else{
         // Output: path
@@ -86,18 +88,19 @@ void data_b(void)
         // Output: Length
         printf("String length: %zu\n\n", strlen(path_b2));
 
+        // Clear storage
         free(path_b2);
     } 
    
-
+    // Windows
     #ifdef _WIN32
+        // Output
         printf("Only on Windows, output path\n");
 
         // 1. Method, Output path split
         // const char* full_path = "C:\\Users\\Admin\\Documents";
         const char* path_b1_1 = path_b1;
 
-        // Allocate buffers using standard size constants
         // Create
         char drive[_MAX_DRIVE];
         char dir[_MAX_DIR];
@@ -113,94 +116,59 @@ void data_b(void)
             ext, _MAX_EXT
         );
 
-        // Check if the function succeeded (returns 0)
+        // Check (returns 0)
         if (spPath == 0) {
             //printf("Drive:     %s\n\n", drive);  // Outputs: Drive
             //printf("Directory: %s\n\n", dir);    // Outputs: path
             printf("Filename:  %s\n\n", fname);    // Outputs: name
             //printf("Extension: %s\n\n", ext);    // Outputs: Extension
         } else {
+            // Output
             printf("ERROR: %d\n\n", spPath);
         }
     #endif
 
 
     // 2. Method, Output path split
-    printf("Method 2, output Filename\n");
+    // Output
+    printf("Method 2, Output Filename or Foldername\n");
 
+    // Pass path
     const char *path_b1_2 = path_b1;
-    //const char* full_path = "C:\\Users\\Admin\\Documents\\text.txt";
+    // or (test this path)
+    // const char* full_path = "C:\\Users\\Admin\\Documents\\text.txt";
 
-    // 1. Find the last separator (handles both Windows backslash and Linux forward slash)
+    // Find the last separator (Windows backslash)
     const char *filename = strrchr(path_b1_2, '\\');
-
+    
+    // Find the last separator (Linux forward slash)
     if (!filename) filename = strrchr(path_b1_2, '/');
     
-    // If no slash found, the entire path is the filename
+    // entire path is the filename
     if (!filename) filename = path_b1_2; 
     else filename++; // Step past the slash pointer
 
+    // Output
     printf("Filename:  %s\n\n", filename); 
 
-    
-    // Extension
+    // Extension dot
     const char *Extension = strrchr(filename, '.');
     
-    // 2. Find the extension dot
+    // Extension 
     if (Extension !=NULL)
     {
+        // Output
         printf("Extension: %s\n", Extension);  
     }
     
-    /*
     // Output Length
-    printf("path_b1_2 length:  %d\n", path_b1_2); 
-    printf("filename length:   %d\n", filename); 
-    printf("Name Length:       %d\n", filename-path_b1_2+1); 
+    printf("path_b1_2 length:     %s\n", path_b1_2); 
+    printf("filename length:      %s\n", filename); 
+    printf("filename-path_b1_2+1: %ld\n", filename-path_b1_2+1); 
+
+    // Assign
     int a = filename-path_b1_2;
-    printf("Char:              %c\n", path_b1[a]); 
-    
-    */          
-}
 
-/*
-
-void data_b(void)
-{
     // Output
-    printf("### DATE B: File open/create for writing/overwriting. ###\n\n");
-    
-    // Create & assign
-    int value_1 = 100;
-    
-    // Create a pointer for the file data: need <stdio.h> 
-    FILE *save;
-    
-    // Open file
-    save = fopen("save.dat", "w");
-
-    // Conditional statement
-    if(save == NULL)
-    {
-        // Output
-        puts("! error !");
-        
-        // Exit: need <stdlib.h> 
-        exit (EXIT_FAILURE);
-    }
-    else{
-        
-        // save
-        fprintf(save, "%d", value_1);
-
-        // Output
-        puts("! successful !");
-        
-        // close
-        fclose(save);
-        
-        // Output
-        puts("File closed.");
-    }
-} 
-*/
+    printf("First Character:      %c\n", path_b1[a]);        
+}

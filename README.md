@@ -1,5 +1,5 @@
 *** MYCROMARS HAWK ***
-*** C Programming Advanced V0.5.0***
+*** C Programming Advanced V0.5.1 ***
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -29,59 +29,35 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 *** CONTENT ***
 
 Chapter 0
-            0.0 Main Menu 0:    EXIT 
+            0.0 Main Menu 0:    EXIT        Program End
             
 Chapter 1
-            1.1 Main Menu 1:    LOOP A 
-            1.2 ------------    LOOP B 
+            1.1 Main Menu 1:    LOOP A      Do while loop 
+            1.2 ------------    LOOP B      While loop with continue
             
 Chapter 2
-            2.1 Main Menu 2:    ENUM A 
-            2.2 ------------    ENUM B 
-            2.3 ------------    ENUM C 
-            2.4 ------------    ENUM D 
-            2.5 ------------    ENUM E 
-            2.6 ------------    ENUM F 
+            2.1 Main Menu 2:    ENUM A      List
+            2.2 ------------    ENUM B      Pass value
+            2.3 ------------    ENUM C      Boolean 
+            2.4 ------------    ENUM D      Pass & switch value
+            2.5 ------------    ENUM E      Enum to function
+            2.6 ------------    ENUM F      Typedef Enum to function
 
 Chapter 3
-            3.1 Main Menu 3:    OUTPUT A 
-            3.2 ------------    OUTPUT B 
+            3.1 Main Menu 3:    OUTPUT A    Character, Tab, Return
+            3.2 ------------    OUTPUT B    Array and Pointer of Array
 
 Chapter 4
-            4.1 Main Menu 4:    BIT A 
-            4.2 ------------    BIT B
-            4.3 ------------    BIT C
-            4.4 ------------    BIT D
-            4.5 ------------    BIT E
-            4.6 ------------    BIT F
+            4.1 Main Menu 4:    BIT A       Decimal to Binary to Decimal
+            4.2 ------------    BIT B       Bitwise AND '&'
+            4.3 ------------    BIT C       Bitwise OR '|'
+            4.4 ------------    BIT D       Bitwise NOT '~'
+            4.5 ------------    BIT E       Bitwise shift left '<<'
+            4.6 ------------    BIT F       Bitwise shift right '>>'
 
 Chapter 5
-            5.1 Main Menu 5:    A 
-            5.2 ------------    B 
-            5.3 ------------    C 
-    
-Chapter 6
-            6.1 Main Menu 6:    A 
-            6.2 ------------    B 
-            6.3 ------------    C 
-   
-Chapter 7
-            7.1 Main Menu 7:    A 
-            7.2 ------------    B 
-            7.3 ------------    C 
-     
-Chapter 8
-            8.1 Main Menu 8:    A 
-            8.2 ------------    B  
-            8.3 ------------    C 
-
-Chapter 9
-            9.1 Main Menu 9:    A 
-            9.2 ------------    B  
-            9.3 ------------    C  
-
-Chapter 10
-            10.1 Main Menu 10:  A 
-            10.2 ------------   B 
-            10.3 ------------   C 
-         
+            5.1 Main Menu 5:    DATA A      SHOW DIRECTORY
+            5.2 ------------    DATA B      SHOW DIRECTORY & CURRENT FOLDER
+            5.3 ------------    DATA C      CREATE FOLDER 
+            5.3 ------------    DATA D      CREATE FOLDER, GO TO FOLDER & GO UP
+ 

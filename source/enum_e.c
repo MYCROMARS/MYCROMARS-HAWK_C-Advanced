@@ -1,4 +1,4 @@
-// if it's not working activate this (on macOS):
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include "../header/enum_e.h"
 
@@ -16,7 +16,7 @@ void ItemList(enum LIST item);
 void enum_e(void)
 {
     // Output
-    printf("\n### ENUM E ###\n");
+    printf("\n### ENUM E: Enum to function ###\n");
        
 	// Create & assign Enum Item
     enum LIST ITEM = ITEM_1;
@@ -39,7 +39,7 @@ void ItemList(enum LIST item){
     printf("ITEM in Funktion: %d\n", item);
     printf("In switch case: ");
 
-	// Switch statement 
+	// Switch case statement 
 	switch(item){
 
 		case ITEM_1:

@@ -6,7 +6,7 @@ void mainMenu_4(int *m)
         main_1:
 
         // Output
-        printf("\n*** BIT OPERATION MENU ***\n");
+        printf("\n*** BITS MENU ***\n");
         printf("Press: (0) EXIT | (1) A | (2) B | (3) C | (4) D | (5) E | (6) F | (7) G\n");
         printf("Your Input: ");
 

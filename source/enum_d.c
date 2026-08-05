@@ -1,4 +1,4 @@
-// if it's not working activate this (on macOS):
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include "../header/enum_d.h"
 
@@ -8,7 +8,7 @@
 void enum_d(void)
 {
     // Output
-    printf("\n### ENUM D ###\n");
+    printf("\n### ENUM D: Pass & switch value ###\n");
        
     // Create Enum Boolean 
     enum BOOLEAN{
@@ -16,7 +16,7 @@ void enum_d(void)
         true_
     };
 
-    // Create Enum Item
+    // Create: Enum Item
     enum BOOLEAN button;
 
     // Assign
@@ -40,31 +40,41 @@ void enum_d(void)
     // Input
     if((scanf("%d", &input)) == false_)
     {
+        // Output
         printf("Input is not a number! \n\n");
 
+        // function: Catch invalid input (Letters instead of numbers)
         scanf("%s", &buffer[0]);
         
+        // Go to
         goto start;
     }
     else if (input == 1)
     {
+        // Output
         printf("Correct, your input was: %d\n", input);
 
+        // Conditional statment
         if (button == false_)
         {
+            // Assign
             button = true_;
         }
         else if (button == true_)
         {
+            // Assign
             button = false_;
         }
 
+        // Output
         printf("button is now: %d\n\n", button);
 
+        // Go to
         goto start;
     }
     else
     {
+        // Output
         printf("The number is not 1, Program END! \n");
     }
 }

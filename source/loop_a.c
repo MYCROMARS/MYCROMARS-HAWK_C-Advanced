@@ -1,4 +1,4 @@
-// if it's not working acivate this (on macOS):
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include "../header/loop_a.h"
 
@@ -8,7 +8,7 @@
 void loop_a(void)
 {
     // Output
-    printf("\n### Loop A: Do while loop ###\n\n");
+    printf("\n### LOOP A: Do while loop ###\n\n");
 
     // Create & assign
     int value = 1;

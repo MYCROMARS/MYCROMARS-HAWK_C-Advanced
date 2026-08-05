@@ -1,4 +1,4 @@
-// if it's not working acivate this:
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include <string.h>
 // #include "../header/bit_c.h"
@@ -30,6 +30,8 @@ char buffer_bit_c[50];
 void scanString_bit_c(void){
     // Input
     scanf("%s", &buffer_bit_c[0]);
+
+    // Delate
     buffer_bit_c[0] = '\0';
 }
 
@@ -37,8 +39,7 @@ void scanString_bit_c(void){
 void bit_c(void)
 {
     // Output
-    printf("### BIT OPERATION C ###\n");
-    printf("Bitwise OR '|'\n\n");
+    printf("### BIT C: Bitwise OR '|' ###\n");
 
     // Create & assign
     int value_c1;
@@ -52,16 +53,17 @@ void bit_c(void)
     long binary_to_int_c1;
     long binary_to_int_c2;
     
-    int bit_c;    // placeholder for bit
+    int bit_c;          // placeholder for bit
     char *hold_bits;
     int max_c = 255;
 
     #define BITS_C 8    // 8 bit
     int count_c = BITS_C-1;
 
-    int array_bits_c1[BITS_C] = {0,0,0,0,0,0,0,0};  // String 1 Placeholder for bit's
-    int array_bits_c2[BITS_C] = {0,0,0,0,0,0,0,0};  // String 2 Placeholder for bit's
-    int array_bits_c3[BITS_C] = {0,0,0,0,0,0,0,0};  // String 3 Placeholder for bit's
+    // Placeholder for bit's
+    int array_bits_c1[BITS_C] = {0,0,0,0,0,0,0,0};  
+    int array_bits_c2[BITS_C] = {0,0,0,0,0,0,0,0};  
+    int array_bits_c3[BITS_C] = {0,0,0,0,0,0,0,0};  
     
     // Go here
     main_1:
@@ -128,22 +130,26 @@ void bit_c(void)
         // Pass value
         value_c3_1 = value_c3;
     
-        // write 1. Binary number to array
+        // Loop: Write 1. Binary number to array
         while (value_c1_1 > 0)
         {
+            // Assign
             bit_c = value_c1_1 % 2;            
             value_c1_1 = value_c1_1/2;     
             array_bits_c1[count_c] = bit_c;
             count_c--;
+
+            // Output
             //printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
         }
     
         // Assign
         count_c = 7;
     
-        // write 2. Binary number to array
+        // Loop: Write 2. Binary number to array
         while (value_c2_1 > 0)
         {
+            // Assign
             bit_c = value_c2_1 % 2;            
             value_c2_1 = value_c2_1/2;     
             array_bits_c2[count_c] = bit_c;
@@ -153,9 +159,10 @@ void bit_c(void)
         // Assign
         count_c = 7;
     
-        // write 3. Binary number to array
+        // Loop: Write 3. Binary number to array
         while (value_c3_1 > 0)
         {
+            // Assign
             bit_c = value_c3_1 % 2;            
             value_c3_1 = value_c3_1/2;     
             array_bits_c3[count_c] = bit_c;
@@ -191,12 +198,13 @@ void bit_c(void)
         // Loop: write Binary number to string 3
         for (int i = 0; i < BITS_C; i++)
         {
+            // Statement: Input zero
             if (array_bits_c3[i] == 0){
-                // Function
+                // Function call
                 input_zero_c3();
             }
             else if (array_bits_c3[i] == 1){
-                 // Function
+                 // Function call
                 input_one_c3();
             }
         }
@@ -217,32 +225,38 @@ void bit_c(void)
 
 // Function: Input zero ----------------
 void input_zero_c1(){
-        strcat(bit_string_c1, zero_c1);
+    // Function: Append a string 
+    strcat(bit_string_c1, zero_c1);
 }
 
 // Function: Input one
 void input_one_c1(){
-        strcat(bit_string_c1, one_c1);
+    // Function: Append a string 
+    strcat(bit_string_c1, one_c1);
 }
 
 
 // Function: Input zero ----------------
 void input_zero_c2(){
-        strcat(bit_string_c2, zero_c1);
+    // Function: Append a string 
+    strcat(bit_string_c2, zero_c1);
 }
 
 // Function: Input one
 void input_one_c2(){
-        strcat(bit_string_c2, one_c1);
+    // Function: Append a string 
+    strcat(bit_string_c2, one_c1);
 }
 
 
 // Function: Input zero ----------------
 void input_zero_c3(){
-        strcat(bit_string_c3, zero_c1);
+    // Function: Append a string 
+    strcat(bit_string_c3, zero_c1);
 }
 
 // Function: Input one
 void input_one_c3(){
-        strcat(bit_string_c3, one_c1);
+    // Function: Append a string 
+    strcat(bit_string_c3, one_c1);
 }

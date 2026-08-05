@@ -1,6 +1,6 @@
 /*
 MYCROMARS HAWK 
-C Programming Advanced v0.5.0
+C Programming Advanced v0.5.1
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -48,7 +48,7 @@ int main()
     // Output
     printf("\n");
     printf("MYCROMARS HAWK\n");
-    printf("C Programming Advanced v0.5.0\n\n");
+    printf("C Programming Advanced v0.5.1\n\n");
 
     printf("MYCROMARS HAWK Copyright (C) 2026 Alexander Rudi\n");
     printf("This program comes with ABSOLUTELY NO WARRANTY\n");
@@ -76,7 +76,7 @@ int main()
         // Output
         printf("\nInput is not a number!\n\n");
 
-        // function: Catch invalid input
+        // function: Catch invalid input (Letters instead of numbers)
         scanString0();
 
         // Jump to start
@@ -107,7 +107,7 @@ int main()
                 break;
         
         case 4:
-                /* Function: BIT OPERATION */
+                /* Function: BITS */
                 mainMenu_4(&menuB);
                 break;
 
@@ -115,31 +115,6 @@ int main()
                 /* Function: DATA */
                 mainMenu_5(&menuB);
                 break;
-
-        //case 6:
-                /* Function:  */
-                //mainMenu_6(&menuB);
-                //break;
-
-        //case 7:
-                /* Function:  */
-                //mainMenu_7(&menuB);
-                //break;
-
-        //case 8:
-                /* Function:  */
-                //mainMenu_8(&menuB);
-                //break;
-
-        //case 9: 
-                /* Function:  */
-                //mainMenu_9(&menuB);
-                //break;
-
-        //case 10:
-                /* Function:  */
-                //mainMenu_10(&menuB);
-                //break;
          
         default:
                 // Output

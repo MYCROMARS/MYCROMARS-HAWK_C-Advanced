@@ -1,4 +1,4 @@
-// if it's not working activate this (on macOS):
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include "../header/enum_c.h"
 
@@ -8,12 +8,12 @@
 void enum_c(void)
 {
     // Output
-    printf("\n### ENUM C ###\n");
+    printf("\n### ENUM C: Enum Boolean ###\n");
     
     // Create Enum Boolean 
     enum BOOLEAN{
-        false_,
-        true_
+        false_,     // 0
+        true_       // 1
     };
 
     // Create Enum Item
@@ -34,16 +34,21 @@ void enum_c(void)
     // Input
     if((scanf("%d", &number)) != isNumber)
     {
+        // Output
         printf("Input is not a number! \n\n");
     }
     else if (number >=1 && number <=5)
     {
+        // Output
         printf("correct!\n");
         printf("Your input was: %d\n", number);
     }
     else
     {
+        // Output
         printf("The number is not 1...5 \n\n");
+
+        // Go to
         goto start;
     }
 }

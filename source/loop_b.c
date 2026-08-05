@@ -1,4 +1,4 @@
-// if it's not working acivate this (on macOS):
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include "../header/loop_b.h"
 
@@ -8,7 +8,7 @@
 void loop_b(void)
 {
     // Output
-    printf("### Loop B ###\n\n");
+    printf("\n### LOOP B: While loop with continue ###\n\n");
 
     // Create & assign
     int value = 1;
@@ -22,9 +22,12 @@ void loop_b(void)
         // Assign
         value++;
 
+        // Conditional statment
         if (value >= 5)
+            // Skip the rest and start next loop
             continue;
+
+            // Output
             printf("++\n");
-    
     } 
 } 

@@ -1,4 +1,4 @@
-// if it's not working acivate this:
+// Integrate libraries direct:
 // #include <stdio.h>
 
 // Main Menu 5: DATA
@@ -10,7 +10,7 @@ void mainMenu_5(int *m)
         printf("\n*** DATA MENU ***\n");
         printf("Press: (0) EXIT\n");
         printf("Press: (1) A | (2) B | (3) C | (4) D | (5) E\n");
-        //printf("Press: (1) A | (2) B | (3) C | (4) D | (5) E | (6) F | (7) G\n");
+        //printf("Press: (1) A | (2) B | (3) C | (4) D\n");
         printf("Your Input: ");
 
         // Input
@@ -54,18 +54,8 @@ void mainMenu_5(int *m)
                 
                 case 5:
                         // Function: E
-                        data_e();
+                        //data_e();
                         break;
-
-                case 6:
-                        // Function: F
-                        //data_f();
-                       break;
-
-                case 7:
-                        // Function: G
-                        //data_g();
-                       break;
                         
                 default:
                         // Assign

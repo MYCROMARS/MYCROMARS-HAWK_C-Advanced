@@ -1,4 +1,4 @@
-// if it's not working activate this (on macOS):
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include "../header/enum_b.h"
 
@@ -8,17 +8,17 @@
 void enum_b(void)
 {
     // Output
-    printf("\n### ENUM B ###\n");
+    printf("\n### ENUM B: Pass value ###\n");
 
     // Create Enum list (identifier)
     enum LIST {
         WATCH = 2, 
         CANDIES = 4, 
         BOTTLE = 0,
-        NEXT      // startet weiterzählung nach 0
+        NEXT      // starts counting
     }ITEM;
 
-     // Output
+    // Output
     printf("WATCH: %d\n", WATCH);       // 2
     printf("CANDIES: %d\n", CANDIES);   // 4
     printf("BOTTLE: %d\n", BOTTLE);     // 0
@@ -26,17 +26,25 @@ void enum_b(void)
 
     // Assign
     ITEM = WATCH;
-    printf("ITEM WATCH: %d\n", ITEM);     // 2
+
+    // Output
+    printf("ITEM WATCH: %d\n", ITEM);   // 2
 
     // Assign
     ITEM = CANDIES;
-    printf("ITEM CANDYS: %d\n", ITEM);    // 4
 
+    // Output
+    printf("ITEM CANDYS: %d\n", ITEM);  // 4
+    
     // Assign
     ITEM = BOTTLE;
-    printf("ITEM BOTTLE: %d\n", ITEM);    // 0
 
+    // Output
+    printf("ITEM BOTTLE: %d\n", ITEM);  // 0
+    
     // Assign
     ITEM = NEXT;
-    printf("ITEM NEXT: %d\n\n", ITEM);    // 1 
+
+    // Output
+    printf("ITEM NEXT: %d\n\n", ITEM);  // 1 
 }

@@ -1,4 +1,4 @@
-// if it's not working acivate this:
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include <string.h>
 // #include "../header/bit_d.h"
@@ -32,8 +32,7 @@ void scanString_bit_d(void){
 void bit_d(void)
 {
     // Output
-    printf("### BIT OPERATION D ###\n");
-    printf("Bitwise NOT '~'\n\n");
+    printf("### BIT D: Bitwise NOT '~' ###\n");
 
     // Create & assign
     int value_d1;
@@ -67,7 +66,7 @@ void bit_d(void)
     // Output
     printf("Input a number -%d...%d (%d bit): ", max_d, max_d, BITS_D);
     
-    // Conditional statement: value 1
+    // Statement: Input
     if (scanf("%d", &value_d1) == 0)  {
         // Output
         printf("\nInput is not a number!\n\n");
@@ -75,7 +74,7 @@ void bit_d(void)
         // function: Catch invalid input
         scanString_bit_d();
         
-        // Jump to start
+        // Go to
         goto main_1;
     }
     else if (value_d1 < -max_d || value_d1 > max_d)
@@ -83,7 +82,7 @@ void bit_d(void)
         // Output
         printf("\nInput is not a number -%d...%d!\n\n", max_d, max_d);
         
-        // Jump to start
+        // Go to
         goto main_1;
     }
     else
@@ -94,13 +93,13 @@ void bit_d(void)
         // Bitwise NOT
         value_d2 = ~value_d1;
 
-        // Negative to positive
+        // Statement: Negative to positive
         if (value_d1_1 < 0){
             value_d1_1 = value_d1_1 * -1;
             negative_d = 1;
         }
     
-        // write 1. Binary numbers to array
+        // Loop: Write 1. Binary numbers to array
         while (value_d1_1 > 0)
         {
             bit_d1 = value_d1_1 % 2; 
@@ -109,19 +108,22 @@ void bit_d(void)
             count_d--;
         }
 
-        // Loop: write Array number to string 1
+        // Loop: Write Array number to string 1
         for (int i = 0; i < BITS_D; i++)
         {
+            // Statement: Input minus
             if (negative_d == 1){
                 input_minus_d();
                 negative_d = 0;
             }
+
+            // Statement: Input zero
             if (array_bits_d1[i] == 0){
-                // Function
+                // Function call
                 input_zero_d1();
             }
             else if (array_bits_d1[i] == 1){
-                // Function
+                // Function call
                 input_one_d1();
             }
         }
@@ -129,10 +131,10 @@ void bit_d(void)
         // Output
         printf("\nInput to Binary String: %s\n", bit_string_d1);
         
-        // Pass Binary string to int
+        // Assign: Pass Binary string to int
         binary_to_int_d1 = strtol(bit_string_d1, &hold_bits, 2);
 
-        // Delate string
+        // Delate 
         bit_string_d1[0] = '\0';
 
         // Output
@@ -174,9 +176,11 @@ void bit_d(void)
             // Assign: odd number, bit= 1 
             bit_d2 = (value_d1 >> i) & 1;   
 
+            // Statement: Output
+            if (i % 8 == 0) printf(" "); // spacing after 8 bits
+
             // Output
             printf("%d", bit_d2);
-            if (i % 8 == 0) printf(" "); // spacing after 8 bits
         }
         
         // Output
@@ -198,6 +202,8 @@ void bit_d(void)
 
             // Output
             printf("%d", bit_d3);
+
+            // Statement
             if (i % 8 == 0) printf(" "); // spacing after 8 bits
         }
 
@@ -207,15 +213,18 @@ void bit_d(void)
 
 // Function: Input zero ----------------
 void input_zero_d1(){
-        strcat(bit_string_d1, zero_d1);
+    // Function: Append a string 
+    strcat(bit_string_d1, zero_d1);
 }
 
 // Function: Input one
 void input_one_d1(){
-        strcat(bit_string_d1, one_d1);
+    // Function: Append a string 
+    strcat(bit_string_d1, one_d1);
 }
 
 // Function: Input minus ----------------
 void input_minus_d(){
-        strcat(bit_string_d1, minus_d);
+    // Function: Append a string 
+    strcat(bit_string_d1, minus_d);
 }

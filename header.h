@@ -6,16 +6,12 @@
     #include <stdlib.h>
     #include <string.h>
 
-    #include <math.h>
-    #include <time.h>
+    //#include <math.h>
+    //#include <time.h>
 
     // WindowsOS
     //#include <dir.h>
-    //#include <unistd.h>
     //#include <synchapi.h>
-
-    // macOS:
-    //#include <dient.h>
 
     // ********** Include header files
     #include "header/mainMenu.h"
@@ -46,8 +42,6 @@
     #include "header/data_c.h"
     #include "header/data_d.h"
     #include "header/data_e.h"
-    #include "header/data_f.h"
-    #include "header/data_g.h"
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -56,11 +50,6 @@
     #include "source/mainMenu_3.c"
     #include "source/mainMenu_4.c"
     #include "source/mainMenu_5.c"
-    #include "source/mainMenu_6.c"
-    #include "source/mainMenu_7.c"
-    #include "source/mainMenu_8.c"
-    #include "source/mainMenu_9.c"
-    #include "source/mainMenu_10.c"
 
     // ********** Include source files
     #include "source/enum_a.c"
@@ -89,7 +78,5 @@
     #include "source/data_c.c"
     #include "source/data_d.c"
     #include "source/data_e.c"
-    #include "source/data_f.c"
-    #include "source/data_g.c"
 
 #endif

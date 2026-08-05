@@ -1,6 +1,6 @@
-// If it's not working acivate this (on macOS):
+// Integrate libraries direct:
 // #include <stdio.h>
-// #include <stdlib.h>
+#include <stdlib.h>
 
 // Main Menu 0: EXIT 
 

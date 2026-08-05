@@ -1,4 +1,4 @@
-// if it's not working acivate this:
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include <string.h>
 // #include "../header/bit_e.h"
@@ -25,6 +25,8 @@ const char minus_e[2] = "-";
 void scanString_bit_e(void){
     // Input
     scanf("%s", &buffer_bit_e[0]);
+
+    // Delate
     buffer_bit_e[0] = '\0';
 }
 
@@ -32,8 +34,7 @@ void scanString_bit_e(void){
 void bit_e(void)
 {
     // Output
-    printf("### BIT OPERATION E ###\n");
-    printf("Bitwise shift left '<<'\n\n");
+    printf("### BIT E: Bitwise shift left '<<' ###\n");
 
     // Create & assign
     int value_e1;
@@ -54,7 +55,8 @@ void bit_e(void)
     #define BITS_E 16   // 16 bit
     int count_e = BITS_E-1;
 
-    int array_bits_e1[BITS_E] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};  // String 1 Placeholder for bit's
+    // Placeholder for bit's
+    int array_bits_e1[BITS_E] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};  
 
     long binary_to_int_e1;
     long binary_to_int_e2;
@@ -72,10 +74,10 @@ void bit_e(void)
         // Output
         printf("\nInput is not a number!\n\n");
         
-        // function: Catch invalid input
+        // Function call: Catch invalid input
         scanString_bit_e();
         
-        // Jump to start
+        // Go to
         goto main_1;
     }
     else if (value_e1 < -max_e || value_e1 > max_e)
@@ -83,7 +85,7 @@ void bit_e(void)
         // Output
         printf("\nInput is not a number -%d...%d!\n\n", max_e, max_e);
         
-        // Jump to start
+        // Go to
         goto main_1;
     }
 
@@ -97,10 +99,10 @@ void bit_e(void)
         // Output
         printf("\nInput is not a number!\n\n");
         
-        // function: Catch invalid input
+        // Function call: Catch invalid input
         scanString_bit_e();
         
-        // Jump to start
+        // Go to
         goto main_2;
     }
     else if (value_e2 < 1 || value_e2 > BITS_E/2)
@@ -108,15 +110,15 @@ void bit_e(void)
         // Output
         printf("\nInput is not a number 1...%d!\n\n", BITS_E/2);
         
-        // Jump to start
+        // Go to
         goto main_2;
     }
     else
     { 
-        // Pass value
+        // Assign: Pass value
         value_e1_1 = value_e1;
     
-        // Bitwise shift left <<
+        // Assign: Bitwise shift left <<
         value_e2_1 = value_e1 << value_e2;
 
         // Negative to positive
@@ -125,28 +127,32 @@ void bit_e(void)
             negative_e = 1;
         }
     
-        // write 1. Binary numbers to array
+        // Loop: Write 1. Binary numbers to array
         while (value_e1_1 > 0)
         {
+            // Assign
             bit_e1 = value_e1_1 % 2; 
             value_e1_1 = value_e1_1/2;  
             array_bits_e1[count_e] = bit_e1;
             count_e--;
         }
 
-        // Loop: write Array number to string 1
+        // Loop: Write Array number to string 1
         for (int i = 0; i < BITS_E; i++)
         {
+            // Statement: Input minus
             if (negative_e == 1){
                 input_minus_e();
                 negative_e = 0;
             }
+
+            // Statement: Input 0 / 1
             if (array_bits_e1[i] == 0){
-                // Function
+                // Function call
                 input_zero_e1();
             }
             else if (array_bits_e1[i] == 1){
-                // Function
+                // Function call
                 input_one_e1();
             }
         }
@@ -154,7 +160,7 @@ void bit_e(void)
         // Output
         printf("\nInput to Binary String: %s\n", bit_string_e1);
 
-        // Delate string
+        // Delate 
         bit_string_e1[0] = '\0';
         
         // Assign
@@ -171,6 +177,8 @@ void bit_e(void)
 
             // Output
             printf("%d", bit_e2);
+
+            // Statement 
             if (i % 8 == 0) printf(" "); // spacing after 8 bits
         }
         
@@ -193,6 +201,8 @@ void bit_e(void)
 
             // Output
             printf("%d", bit_e3);
+
+            // Statement
             if (i % 8 == 0) printf(" "); // spacing after 8 bits
         }
 
@@ -202,15 +212,18 @@ void bit_e(void)
 
 // Function: Input zero ----------------
 void input_zero_e1(){
-        strcat(bit_string_e1, zero_e1);
+    // Function: Append a string 
+    strcat(bit_string_e1, zero_e1);
 }
 
 // Function: Input one
 void input_one_e1(){
-        strcat(bit_string_e1, one_e1);
+    // Function: Append a string 
+    strcat(bit_string_e1, one_e1);
 }
 
 // Function: Input minus ----------------
 void input_minus_e(){
-        strcat(bit_string_e1, minus_e);
+    // Function: Append a string 
+    strcat(bit_string_e1, minus_e);
 }

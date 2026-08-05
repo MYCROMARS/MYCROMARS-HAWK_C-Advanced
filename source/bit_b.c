@@ -1,4 +1,4 @@
-// if it's not working acivate this:
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include <string.h>
 // #include "../header/bit_b.h"
@@ -30,7 +30,8 @@ char buffer_bit_b[50];
 void scanString_bit_b(void){
     // Input
     scanf("%s", &buffer_bit_b[0]);
-    // delate string
+
+    // delate 
     buffer_bit_b[0] = '\0';
 }
 
@@ -38,8 +39,7 @@ void scanString_bit_b(void){
 void bit_b(void)
 {
     // Output
-    printf("### BIT OPERATION B ###\n");
-    printf("Bitwise AND '&'\n\n");
+    printf("### BIT B: Bitwise AND '&' ###\n");
 
     // Create & assign
     int value_b1;
@@ -52,16 +52,18 @@ void bit_b(void)
 
     long binary_to_int_b1;
     long binary_to_int_b2;
-    int bit_b;      // placeholder for bit
+
+    int bit_b;              // placeholder for bit
     char *hold_bits;
     int max_b = 255;
 
-    #define BITS_B 8    // 8 bit
+    #define BITS_B 8        // 8 bit
     int count_b = BITS_B-1;
 
-    int array_bits_b1[BITS_B] = {0,0,0,0,0,0,0,0};  // String 1 Placeholder for bit's
-    int array_bits_b2[BITS_B] = {0,0,0,0,0,0,0,0};  // String 2 Placeholder for bit's
-    int array_bits_b3[BITS_B] = {0,0,0,0,0,0,0,0};  // String 3 Placeholder for bit's
+    // Placeholder for bit's
+    int array_bits_b1[BITS_B] = {0,0,0,0,0,0,0,0};  
+    int array_bits_b2[BITS_B] = {0,0,0,0,0,0,0,0};  
+    int array_bits_b3[BITS_B] = {0,0,0,0,0,0,0,0};  
     
     // Go here
     main_1:
@@ -77,7 +79,7 @@ void bit_b(void)
         // function: Catch invalid input
         scanString_bit_b();
         
-        // Jump to start
+        // Go to
         goto main_1;
     }
     else if (value_b1 < 0 || value_b1 > max_b)
@@ -85,7 +87,7 @@ void bit_b(void)
         // Output
         printf("\nInput is not a number 0...%d!\n\n", max_b);
         
-        // Jump to start
+        // Go to
         goto main_1;
     }
 
@@ -103,7 +105,7 @@ void bit_b(void)
         // function: Catch invalid input
         scanString_bit_a();
         
-        // Jump to start
+        // Go to
         goto main_2;
     }
     else if (value_b2 < 0 || value_b2 > max_b)
@@ -128,22 +130,26 @@ void bit_b(void)
         // Pass value
         value_b1_3 = value_b3;
     
-        // write 1. Binary number to array
+        // Loop: Write Binary number to array
         while (value_b1_1 > 0)
         {
+            // Assign
             bit_b = value_b1_1 % 2;            
             value_b1_1 = value_b1_1/2;     
             array_bits_b1[count_b] = bit_b;
             count_b--;
+
+            // Output
             //printf("value %d : 2 = %d R %d\n", (value_a*2) + v_bit, value_a, v_bit);
         }
     
         // Assign
         count_b = 7;
     
-        // write 2. Binary number to array
+        // Loop: Write Binary number to array
         while (value_b1_2 > 0)
         {
+            // Assign
             bit_b = value_b1_2 % 2;            
             value_b1_2 = value_b1_2/2;     
             array_bits_b2[count_b] = bit_b;
@@ -153,9 +159,10 @@ void bit_b(void)
         // Assign
         count_b = 7;
     
-        // write 3. Binary number to array
+        // Loop: Write Binary number to array
         while (value_b1_3 > 0)
         {
+            // Assign
             bit_b = value_b1_3 % 2;            
             value_b1_3 = value_b1_3/2;     
             array_bits_b3[count_b] = bit_b;
@@ -165,12 +172,13 @@ void bit_b(void)
         // Loop: write Binary number to string 1
         for (int i = 0; i < BITS_B; i++)
         {
+            // Conditional statement: Input 0 / 1
             if (array_bits_b1[i] == 0){
-                // Function
+                // Function call
                 input_zero_b1();
             }
             else if (array_bits_b1[i] == 1){
-                // Function
+                // Function call
                 input_one_b1();
             }
         }
@@ -178,12 +186,13 @@ void bit_b(void)
         // Loop: write Binary number to string 2
         for (int i = 0; i < BITS_B; i++)
         {
+            // Conditional statement: Input 0 / 1
             if (array_bits_b2[i] == 0){
-                // Function
+                // Function call
                 input_zero_b2();
             }
             else if (array_bits_b2[i] == 1){
-                 // Function
+                 // Function call
                 input_one_b2();
             }
         }
@@ -191,12 +200,13 @@ void bit_b(void)
         // Loop: write Binary number to string 3
         for (int i = 0; i < BITS_B; i++)
         {
+            // Conditional statement: Input 0 / 1
             if (array_bits_b3[i] == 0){
-                // Function
+                // Function call
                 input_zero_b3();
             }
             else if (array_bits_b3[i] == 1){
-                 // Function
+                 // Function call
                 input_one_b3();
             }
         }
@@ -217,32 +227,38 @@ void bit_b(void)
 
 // Function: Input zero ----------------
 void input_zero_b1(){
-        strcat(bit_string_b1, zero_b);
+    // Function: Append a string 
+    strcat(bit_string_b1, zero_b);
 }
 
 // Function: Input one
 void input_one_b1(){
-        strcat(bit_string_b1, one_b);
+    // Function: Append a string 
+    strcat(bit_string_b1, one_b);
 }
 
 
 // Function: Input zero ----------------
 void input_zero_b2(){
-        strcat(bit_string_b2, zero_b);
+    // Function: Append a string 
+    strcat(bit_string_b2, zero_b);
 }
 
 // Function: Input one
 void input_one_b2(){
-        strcat(bit_string_b2, one_b);
+    // Function: Append a string 
+    strcat(bit_string_b2, one_b);
 }
 
 
 // Function: Input zero ----------------
 void input_zero_b3(){
-        strcat(bit_string_b3, zero_b);
+    // Function: Append a string 
+    strcat(bit_string_b3, zero_b);
 }
 
 // Function: Input one
 void input_one_b3(){
-        strcat(bit_string_b3, one_b);
+    // Function: Append a string 
+    strcat(bit_string_b3, one_b);
 }

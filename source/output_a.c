@@ -1,51 +1,25 @@
-// if it's not working acivate this (on macOS):
+// Integrate libraries direct:
 // #include <stdio.h>
 // #include "../header/output_a.h"
 
 // Output A
 // Main function
 void output_a(void) {
-    // Output character, tab, return: 
+    // Output
+    printf("\n### OUTPUT A: Character, Tab, Return ###\n\n");
 
-    printf("Character with: \\\\= \\\n\n");
-
-    printf("Character with: \\\'= \'\n\n");
-
-    printf("Character with: \\\"= \"\n\n");
-
-    printf("Character with: \\\?= \?\n\n");
+    printf("Backslash: \\\n\n");                // ( \ )
+    printf("Quotation marks: \'\n");            // ( ' )
+    printf("Quotation marks: \"\n\n");          // ( " )
+    printf("Question marks: \?\n\n");           // ( ? )
     
-    printf("Backspace with: \\b= \bTest\n\n");
+    printf("Backspace with: \bTest\n\n");       // Backspace
+    printf("Next Line with: \nTest\n\n");       // Next Line
+    printf("Carriage Return\rTest----\n\n");    // Carriage Return, overright from start
     
-    printf("V Tab with: \\f= \fTest\n\n");
+    printf("H Tab with: \\t= \tTest\n\n");      // Horizontal Tab
+    printf("V Tab with: \\v= \vTest\n");        // Vertical Tab
+    printf("V Tab with: \fTest\n\n");           // Vertical Tab
     
-    printf("Next Line with: \\n= \nTest\n\n");
-    
-    printf("Carriage Return with: \\rTest---- =\n");
-    printf("Carriage Return\rTest----\n\n");    // Test---- = 8 characters, overright at start
-    
-    printf("H Tab with: \\t= \tTest\n\n");
-    printf("V Tab with: \\v= \vTest\n");
-    
-    //printf("Alert with: \a\n");
-
-
-    // Output: not working: 
-    /*
-    printf("Character with: ??<= {\n\n");
-    printf("Character with: ??>= }\n\n");
-
-    printf("Character with: ??-= ~\n\n");
-
-    printf("Character with: ??!= |\n\n");
-
-    printf("Character with: ??'= ^\n\n");
-
-    printf("Character with: ??(= [\n\n");
-    printf("Character with: ??)= ]\n\n");
-
-    printf("Character with: ??/= \\n\n");
-
-    printf("Character with: ??= #\n\n");
-    */
+    //printf("Alert with: \a\n");               // Sound
 }
