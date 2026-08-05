@@ -8,7 +8,7 @@
 void enum_a(void)
 {
     // Output
-    printf("\n### ENUM A: Enum List ###\n");
+    printf("\n### ENUM A: Enum List ###\n\n");
 
     // Create Enum list (identifier), Enumeration constants (int)
     enum LIST {

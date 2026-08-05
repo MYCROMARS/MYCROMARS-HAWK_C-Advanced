@@ -8,7 +8,7 @@
 void enum_d(void)
 {
     // Output
-    printf("\n### ENUM D: Pass & switch value ###\n");
+    printf("\n### ENUM D: Pass & switch value ###\n\n");
        
     // Create Enum Boolean 
     enum BOOLEAN{

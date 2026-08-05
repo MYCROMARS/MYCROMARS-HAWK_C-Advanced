@@ -11,11 +11,11 @@ void output_b(void) {
     // Array
     int x[] = {1,2};
     
-    // Output
+    // Output: some are deactivated, they have compiler warnings, but you can activate them
     printf("Array x[0]: %d\n", x[0]);          // 1
     printf("Array x[1]: %d\n", x[1]);          // 2
-    printf("Array x[0]: %p\n", x[0]);          // 0x1
-    printf("Array x[1]: %d\n", &x[1]);         // 1862347652
+    //printf("Array x[0]: %p\n", x[0]);          // 0x1
+    //printf("Array x[1]: %d\n", &x[1]);         // 1862347652
     printf("Array x[0]: %p\n", &x[0]);         // 0x16f012b80
     
     printf("\n");
@@ -39,9 +39,9 @@ void output_b(void) {
     printf("Pointer &p[0]:  %p\n", &p[0]);       // 6156790648
     printf("Pointer &p[1]:  %p\n\n", &p[1]);     // 6156790652
         
-    printf("Pointer p:      %d\n", p);           // 1861823352
-    printf("Pointer &p[0]:  %d\n", &p[0]);       // 1861823352
-    printf("Pointer &p[1]:  %d\n", &p[1]);       // 1861823356
+    //printf("Pointer p:      %d\n", p);           // 1861823352
+    //printf("Pointer &p[0]:  %d\n", &p[0]);       // 1861823352
+    //printf("Pointer &p[1]:  %d\n", &p[1]);       // 1861823356
 
     printf("\n");
 }

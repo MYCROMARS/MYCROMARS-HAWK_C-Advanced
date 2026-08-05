@@ -8,7 +8,7 @@
 void enum_b(void)
 {
     // Output
-    printf("\n### ENUM B: Pass value ###\n");
+    printf("\n### ENUM B: Pass value ###\n\n");
 
     // Create Enum list (identifier)
     enum LIST {
