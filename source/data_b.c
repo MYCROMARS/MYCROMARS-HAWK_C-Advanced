@@ -49,6 +49,7 @@ void data_b(void)
     {
         // Output: size of
         printf("sizeof char path: %lu byte\n\n", sizeof(path_b1));
+        printf("sizeof char path: %zu byte\n\n", sizeof(path_b1));
 
         // Output: path
         printf("Show current path: %s\n\n", path_b1);
@@ -162,13 +163,13 @@ void data_b(void)
     }
     
     // Output Length
-    printf("path_b1_2 length:     %s\n", path_b1_2); 
-    printf("filename length:      %s\n", filename); 
-    printf("filename-path_b1_2+1: %ld\n", filename-path_b1_2+1); 
-
+    //printf("path_b1_2 length:       %d\n", path_b1); 
+    //printf("filename length:        %d\n", filename); 
+    printf("filename - path_b1_2+1: %ld\n", filename-path_b1_2+1); 
+    
     // Assign
     int a = filename-path_b1_2;
-
+    
     // Output
     printf("First Character:      %c\n", path_b1[a]);        
 }

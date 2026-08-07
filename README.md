@@ -60,4 +60,3 @@ Chapter 5
             5.2 ------------    DATA B      SHOW DIRECTORY & CURRENT FOLDER
             5.3 ------------    DATA C      CREATE FOLDER 
             5.3 ------------    DATA D      CREATE FOLDER, GO TO FOLDER & GO UP
- 

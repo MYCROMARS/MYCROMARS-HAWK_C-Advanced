@@ -29,9 +29,6 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 // header file
 #include "header.h"
 
-// useful:
-//#include <windows.h>
-
 // Create 
 char buffer[50];
 
@@ -59,7 +56,7 @@ int main()
     // Create & assign (initialize)
     int menu = 0;
     int menuB = 0;
-    const int menuMax = 5;
+    const int menuMax = 6;
 
     // Jump mark: start
     mainMenu:
@@ -68,6 +65,7 @@ int main()
     printf("\n*** MAIN MENU ***\n");
     printf("Press (0) EXIT \n");
     printf("Press (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT | (5) DATA\n");
+    printf("Press (6) MACRO \n");
    
     printf("Your input: ");
 
@@ -114,6 +112,11 @@ int main()
         case 5:
                 /* Function: DATA */
                 mainMenu_5(&menuB);
+                break;
+       
+         case 6:
+                /* Function: MACRO */
+                mainMenu_6(&menuB);
                 break;
          
         default:

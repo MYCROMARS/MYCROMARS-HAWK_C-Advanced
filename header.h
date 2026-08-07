@@ -12,6 +12,7 @@
     // WindowsOS
     //#include <dir.h>
     //#include <synchapi.h>
+    //#include <windows.h>
 
     // ********** Include header files
     #include "header/mainMenu.h"
@@ -42,6 +43,8 @@
     #include "header/data_c.h"
     #include "header/data_d.h"
 
+    #include "header/macro_a.h"
+
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
     #include "source/mainMenu_1.c"
@@ -49,6 +52,7 @@
     #include "source/mainMenu_3.c"
     #include "source/mainMenu_4.c"
     #include "source/mainMenu_5.c"
+    #include "source/mainMenu_6.c"
 
     // ********** Include source files
     #include "source/enum_a.c"
@@ -76,5 +80,9 @@
     #include "source/data_b.c"
     #include "source/data_c.c"
     #include "source/data_d.c"
+    
+    #include "source/macro_a.c"
+
+
 
 #endif
