@@ -9,7 +9,7 @@ void mainMenu_6(int *m)
         // Output
         printf("\n*** MACRO MENU ***\n");
         printf("Press: (0) EXIT\n");
-        printf("Press: (1) A \n");
+        printf("Press: (1) A | (2) B | (3) C\n");
         printf("Your Input: ");
 
         // Input
@@ -38,12 +38,12 @@ void mainMenu_6(int *m)
 
                 case 2: 
                         // Function: B
-                        
+                        macro_b();
                         break;
                 
                 case 3: 
                         // Function: C
-                        
+                        macro_c();
                         break;
 
                 case 4: 
