@@ -46,6 +46,7 @@
     #include "header/macro_a.h"
     #include "header/macro_b.h"
     #include "header/macro_c.h"
+    #include "header/macro_d.h"
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -86,5 +87,6 @@
     #include "source/macro_a.c"
     #include "source/macro_b.c"
     #include "source/macro_c.c"
+    #include "source/macro_d.c"
 
 #endif
