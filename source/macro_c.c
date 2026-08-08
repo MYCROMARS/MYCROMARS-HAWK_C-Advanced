@@ -1,10 +1,12 @@
 // MACRO C
 
 // Define: Constant for Array
-#define F1(a, b) ((a) < (b) ? (a) : (b))
+#define F1(a, b) ((a) < (b) ? (b) : (a))
 
 // Main Function
 void macro_c(void){
+    // Output
+    printf("### MACRO C: Function ###\n\n");
 
     // Create & assign
     int a = 10;
@@ -15,9 +17,9 @@ void macro_c(void){
     c = F1(a, b);
 
     // Output
-    printf("if a < b than result is a\n\n");
-
+    
     printf("a: %d\n", a);
-    printf("b: %d\n", b);
+    printf("b: %d\n\n", b);
+    printf("Output the larger value:\n");
     printf("c: %d\n", c);
 }

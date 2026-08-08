@@ -8,6 +8,8 @@
 
 // Main Function
 void macro_b(void){
+    // Output
+    printf("### MACRO B: Array ###\n\n");
 
     // Create: Array
     int array[] = {A1};
