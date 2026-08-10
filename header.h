@@ -48,6 +48,8 @@
     #include "header/macro_c.h"
     #include "header/macro_d.h"
 
+    #include "header/math_a.h"
+
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
     #include "source/mainMenu_1.c"
@@ -56,6 +58,7 @@
     #include "source/mainMenu_4.c"
     #include "source/mainMenu_5.c"
     #include "source/mainMenu_6.c"
+    #include "source/mainMenu_7.c"
 
     // ********** Include source files
     #include "source/enum_a.c"
@@ -88,5 +91,7 @@
     #include "source/macro_b.c"
     #include "source/macro_c.c"
     #include "source/macro_d.c"
+
+    #include "source/math_a.c"
 
 #endif

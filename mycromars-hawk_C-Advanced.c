@@ -56,7 +56,7 @@ int main()
     // Create & assign (initialize)
     int menu = 0;
     int menuB = 0;
-    const int menuMax = 6;
+    const int menuMax = 7;
 
     // Jump mark: start
     mainMenu:
@@ -65,7 +65,7 @@ int main()
     printf("\n*** MAIN MENU ***\n");
     printf("Press (0) EXIT \n");
     printf("Press (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT | (5) DATA\n");
-    printf("Press (6) MACRO \n");
+    printf("Press (6) MACRO | (7) MATH \n");
    
     printf("Your input: ");
 
@@ -117,6 +117,11 @@ int main()
          case 6:
                 /* Function: MACRO */
                 mainMenu_6(&menuB);
+                break;
+
+         case 7:
+                /* Function: MATH */
+                mainMenu_7(&menuB);
                 break;
          
         default:
