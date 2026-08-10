@@ -49,6 +49,7 @@
     #include "header/macro_d.h"
 
     #include "header/math_a.h"
+    #include "header/math_b.h"
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -93,5 +94,6 @@
     #include "source/macro_d.c"
 
     #include "source/math_a.c"
+    #include "source/math_b.c"
 
 #endif

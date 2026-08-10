@@ -3,61 +3,68 @@
 #define PI 3.14159265
 
 
-// MATH A
+// MATH B
 
 void math_a(void){
     // Output
-    printf("### MATH A: From Degree to Sine, Cosine, tangent  ###\n\n");
+    printf("### MATH A: From Degree to Radiant to Sine, Cosine & tangent  ###\n\n");
     
-    double a, rad, sin1, cos1, tan1;
-    double x, y, radius, alpha;
+    // Create
+    double angle, rad, sin1, cos1, tan1;
     
-    a = 45.0;
+    // Assign
+    angle = 45.0;
     
-    // Halbkreis PI / 180 Grad, 1 ° = v
+    // Semicircle (Radius = 1) PI/180° = 1 rad
     rad = PI / 180;
     
-    printf("PI: %.8f\n", PI);
+    // Output: PI
+    printf("PI: %.8f (semicircle)\n\n", PI);
+
+    // Output: Radiant
     printf("1 Rad = PI/180: %f\n\n", rad);
     
-    // benötigt den PI/180 wert
-    sin1 = sin(a*rad);
-    cos1 = cos(a*rad);
-    tan1 = tan(a*rad);
+    //Assign: sin(Angle * 1 Radiant)
+    sin1 = sin(angle*rad);
+    cos1 = cos(angle*rad);
+    tan1 = tan(angle*rad);
     
-    printf("%.2f° * rad: %f = %f sin(rad): %f\n", a, rad, a*rad, sin1);
-    printf("%.2f° * rad: %f = %f cos(rad): %f\n", a, rad, a*rad, cos1);
-    printf("%.2f° * rad: %f = %f tan(rad): %f\n\n", a, rad, a*rad, tan1);
+    // Output: sin, cos, tan
+    printf("%.2f° * rad = %f sin(rad): %f\n", angle, angle*rad, sin1);
+    printf("%.2f° * rad = %f cos(rad): %f\n", angle, angle*rad, cos1);
+    printf("%.2f° * rad = %f tan(rad): %f\n\n", angle, angle*rad, tan1);
     
-    // 1°
+
+    //Assign
     rad = PI/180; 
     sin1 = sin(rad);
-    printf("1°  = rad: %f sin: %f\n", rad, sin1);
+
+    // Output sin at 1°
+    printf("1°  =   1 rad: %f sin(rad): %f\n", rad, sin1);
     
-    // 45°
+
+    // Assign
     rad = PI/4; 
     sin1 = sin(rad);
-    printf("45° = rad: %f sin: %f\n", rad, sin1);
+
+    // Output: sin at 45°
+    printf("45° = 1/4 rad: %f sin(rad): %f\n", rad, sin1);
     
-    //  90°
+
+    //  Assign
     rad = PI/2; 
     sin1 = sin(rad);
-    printf("90° = rad: %f sin: %f\n\n", rad, sin1);
+    
+    // Output: sin at 90°
+    printf("90° = 1/2 rad: %f sin(rad): %f\n\n", rad, sin1);
     
     
-    printf("\n### From Sine to Degree  ###\n\n");
-    //  asin(sinus), gives the rad, * PI/180 = degree°
-    sin1 = 1; 
-    rad = asin(sin1);
-    printf("sine: %.1f\n", sin1);
-    printf("Rad: %f\n", rad);
-    printf("Angle = %f/(PI/180): %.2f°\n\n", rad, rad/(PI/180));
-    
-    sin1 = 0.5; 
-    rad = asin(sin1);
-    printf("sine: %.1f\n", sin1);
-    printf("Rad: %f\n", rad);
-    printf("Angle = %f/(PI/180): %.2f°\n", rad, rad/(PI/180));
-   
+    //  Assign
+    rad = PI/180; 
+    rad = rad * 25;
+    sin1 = sin(rad);
 
+    // Output: sin at 90°
+    printf("25° = 25 rad:  %f sin: %f\n", rad, sin1);
+    
 }
