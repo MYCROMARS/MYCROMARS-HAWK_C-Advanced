@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/rgs/MMO/Projects/C-Program/MYCROMARS-HAWK_C-Advanced/mycromars-hawk_C-Advanced'
+relocations:     []
+...
