@@ -51,6 +51,7 @@
 
     #include "header/math_a.h"
     #include "header/math_b.h"
+    #include "header/math_c.h"
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -97,5 +98,6 @@
 
     #include "source/math_a.c"
     #include "source/math_b.c"
+    #include "source/math_c.c"
 
 #endif
