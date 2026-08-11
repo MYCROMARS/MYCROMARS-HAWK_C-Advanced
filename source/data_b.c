@@ -19,13 +19,13 @@
     #endif
 
     // DECLARATION: fixes "implicit declaration" GCC error
-    extern int _splitpath_s(
-        const char *path,
-        char *drive, size_t driveNumberOfElements,
-        char *dir,   size_t dirNumberOfElements,
-        char *fname, size_t fnameNumberOfElements,
-        char *ext,   size_t extNumberOfElements
-    );
+    // extern int _splitpath_s(
+    //     const char *path,
+    //     char *drive, size_t driveNumberOfElements,
+    //     char *dir,   size_t dirNumberOfElements,
+    //     char *fname, size_t fnameNumberOfElements,
+    //     char *ext,   size_t extNumberOfElements
+    // );
     #else // macOS, Linux
         #include <unistd.h>     // for getcwd()
         #include <libgen.h>     // for basename(), dirname()

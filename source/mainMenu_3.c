@@ -6,7 +6,7 @@ void mainMenu_3(int *m)
     // Output
         printf("\n*** OUTPUT MENU ***\n");
         printf("Press: (0) EXIT\n");
-        printf("Press: (1) A | (2) B \n");
+        printf("Press: (1) A | (2) B | (3) C \n");
         printf("Your Input: ");
 
         // Input
@@ -35,6 +35,11 @@ void mainMenu_3(int *m)
                 case 2:
                         // Function: B
                         output_b();
+                        break;
+
+                case 3:
+                        // Function: C
+                        output_c();
                         break;
 
                 default:

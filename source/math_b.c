@@ -1,11 +1,22 @@
 #include <math.h>
 
+// Windows
+#ifdef _WIN32 
+    #include <windows.h>    // UTF-8
+#endif
+
 #define PI 3.14159265
 
 
 // MATH A
 
 void math_b(void){
+    // Windows
+    #ifdef _WIN32 
+        // Terminal auf UTF-8 
+        SetConsoleOutputCP(65001);
+    #endif
+
     // Output
     printf("### MATH A: From Sine to Degree ###\n\n");
     

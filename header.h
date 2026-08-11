@@ -34,6 +34,7 @@
 
     #include "header/output_a.h"
     #include "header/output_b.h"
+    #include "header/output_c.h"
 
     #include "header/loop_a.h"
     #include "header/loop_b.h"
@@ -79,6 +80,7 @@
 
     #include "source/output_a.c"
     #include "source/output_b.c"
+    #include "source/output_c.c"
 
     #include "source/loop_a.c"
     #include "source/loop_b.c"

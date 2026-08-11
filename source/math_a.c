@@ -1,11 +1,21 @@
 #include <math.h>
 
-#define PI 3.14159265
+// Windows
+#ifdef _WIN32 
+    #include <windows.h>    // UTF-8 for (° degree)
+#endif
 
+#define PI 3.14159265
 
 // MATH B
 
 void math_a(void){
+    // Windows
+    #ifdef _WIN32 
+        // Terminals auf UTF-8 (° degree)
+        SetConsoleOutputCP(65001);
+    #endif
+
     // Output
     printf("### MATH A: From Degree to Radiant to Sine, Cosine & tangent  ###\n\n");
     
@@ -66,5 +76,4 @@ void math_a(void){
 
     // Output: sin at 90°
     printf("25° = 25 rad:  %f sin: %f\n", rad, sin1);
-    
 }
