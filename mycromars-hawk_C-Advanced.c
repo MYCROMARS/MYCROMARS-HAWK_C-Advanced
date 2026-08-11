@@ -77,7 +77,7 @@ int main()
         // function: Catch invalid input (Letters instead of numbers)
         scanString0();
 
-        // Jump to start
+        // Go to
         goto mainMenu;
     }
     else if (menu >= 0 && menu <= menuMax){
@@ -131,11 +131,11 @@ int main()
         }
     }
     else {
-        // Wrong number, not 1...menuMax
+        // Wrong number, not 9...menuMax
         // Output
-        printf("\nInput is wrong, not 1...%d\n\n", menuMax);
+        printf("\nInput is wrong, not 0...%d\n\n", menuMax);
 
-        // Jump to start
+        // Go to
         goto mainMenu;
     }
 
@@ -143,6 +143,6 @@ int main()
     menu = 0;
     menuB = 0;
 
-    // Jump to start
+    // Go to
     goto mainMenu;
 }

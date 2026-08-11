@@ -74,6 +74,6 @@ void math_a(void){
     rad = rad * 25;
     sin1 = sin(rad);
 
-    // Output: sin at 90°
+    // Output: sin at 25°
     printf("25° = 25 rad:  %f sin: %f\n", rad, sin1);
 }
