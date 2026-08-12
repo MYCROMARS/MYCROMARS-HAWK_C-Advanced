@@ -21,21 +21,21 @@ void scanString_math_c(void){
 
 // Main Function
 void math_c(void){
+    // Output
+    printf("### MATH C: Input Sine to Degree ###\n\n");
+  
     // Windows
     #ifdef _WIN32 
         // Terminal auf UTF-8 
         SetConsoleOutputCP(65001);
     #endif
-
-    // Output
-    printf("### MATH A: Input Sine to Degree ###\n\n");
     
     // Create
     double rad_1, rad_2, sin1;
     int input = 0;
     
     // Semicircle (Radius = 1) PI/180° = 1 rad
-    rad_1 = PI / 180;
+    rad_1 = PI/180;
 
     // Output: PI
     printf("PI: %.8f (semicircle)\n", PI);

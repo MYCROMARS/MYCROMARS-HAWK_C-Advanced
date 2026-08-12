@@ -10,14 +10,15 @@
 // MATH B
 
 void math_a(void){
+    
+    // Output
+    printf("### MATH A: From Degree to Radiant to Sine, Cosine & tangent  ###\n\n");
+    
     // Windows
     #ifdef _WIN32 
         // Terminals auf UTF-8 (° degree)
         SetConsoleOutputCP(65001);
     #endif
-
-    // Output
-    printf("### MATH A: From Degree to Radiant to Sine, Cosine & tangent  ###\n\n");
     
     // Create
     double angle, rad, sin1, cos1, tan1;
@@ -26,7 +27,7 @@ void math_a(void){
     angle = 45.0;
     
     // Semicircle (Radius = 1) PI/180° = 1 rad
-    rad = PI / 180;
+    rad = PI/180;
     
     // Output: PI
     printf("PI: %.8f (semicircle)\n\n", PI);
@@ -45,35 +46,35 @@ void math_a(void){
     printf("%.2f° * rad = %f tan(rad): %f\n\n", angle, angle*rad, tan1);
     
 
-    //Assign
+    //Assign --------------------------------------------
     rad = PI/180; 
     sin1 = sin(rad);
 
     // Output sin at 1°
     printf("1°  =   1 rad: %f sin(rad): %f\n", rad, sin1);
-    
+ 
 
-    // Assign
+    // Assign --------------------------------------------
     rad = PI/4; 
     sin1 = sin(rad);
-
+    
     // Output: sin at 45°
     printf("45° = 1/4 rad: %f sin(rad): %f\n", rad, sin1);
-    
 
-    //  Assign
+
+    //  Assign --------------------------------------------
     rad = PI/2; 
     sin1 = sin(rad);
     
     // Output: sin at 90°
     printf("90° = 1/2 rad: %f sin(rad): %f\n\n", rad, sin1);
-    
-    
-    //  Assign
+ 
+
+    //  Assign --------------------------------------------
     rad = PI/180; 
     rad = rad * 25;
     sin1 = sin(rad);
-
+    
     // Output: sin at 25°
     printf("25° = 25 rad:  %f sin: %f\n", rad, sin1);
 }
