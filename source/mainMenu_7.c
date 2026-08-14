@@ -6,7 +6,7 @@ void mainMenu_7(int *m)
         // Output
         printf("\n*** MATH MENU ***\n");
         printf("Press: (0) EXIT\n");
-        printf("Press: (1) A | (2) B | (3) C | (4) D\n");
+        printf("Press: (1) A | (2) B | (3) C | (4) D | (5) E\n");
         printf("Your Input: ");
 
         // Input
@@ -47,10 +47,10 @@ void mainMenu_7(int *m)
                         // Function: D
                         math_d();
                         break;
-                
+                        
                 case 5:
                         // Function: E
-                      
+                        math_e();
                         break;
                         
                 default:

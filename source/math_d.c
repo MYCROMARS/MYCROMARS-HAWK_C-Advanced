@@ -5,7 +5,7 @@
     #include <windows.h>    // UTF-8
 #endif
 
-#define PI_d 3.14159265358979323846
+#define PI_d 3.141592653589793 
 
 // MATH D
 
@@ -14,6 +14,13 @@ void math_d(void){
   
     // Output
     printf("### MATH D: float, double, long double ###\n\n");
+    
+    // Windows
+    #ifdef _WIN32 
+    // Terminals auf UTF-8 (° degree)
+    SetConsoleOutputCP(65001);
+    #endif
+    
     printf("Here you can see the point at which the computer can no longer represent the numbers accurately.\n");
     printf("For `float`, after the 5th digit.\n");
     printf("For `double`, after the 14th digit.\n");
@@ -21,18 +28,12 @@ void math_d(void){
 
     printf("PI as string: 3.1415926535897932384626433832795\n\n");
 
-    // Windows
-    #ifdef _WIN32 
-        // Terminals auf UTF-8 (° degree)
-        SetConsoleOutputCP(65001);
-    #endif
-
-    long double PI_d3 = 3.1415926535897932384626433832795;
+    long double PI_d2 = 3.1415926535897932384626433832795;
 
     // Output: 15 digits after the decimal point are fine.
-    printf("PI: %.15Lf\n", PI_d3);
-    printf("PI: %.19Lf\n", PI_d3);
-    printf("PI: %.31Lf\n\n", PI_d3);
+    printf("PI: %.15Lf\n", PI_d2);
+    printf("PI: %.19Lf\n", PI_d2);
+    printf("PI: %.31Lf\n\n", PI_d2);
 
        // Create
     float rad_1;
