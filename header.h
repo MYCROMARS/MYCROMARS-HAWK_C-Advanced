@@ -54,6 +54,8 @@
     #include "header/math_c.h"
     #include "header/math_d.h"
     #include "header/math_e.h"
+    #include "header/math_f.h"
+    #include "header/math_g.h"
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -103,5 +105,7 @@
     #include "source/math_c.c"
     #include "source/math_d.c"
     #include "source/math_e.c"
+    #include "source/math_f.c"
+    #include "source/math_g.c"
 
 #endif
