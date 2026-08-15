@@ -13,7 +13,7 @@
 void math_d(void){
   
     // Output
-    printf("### MATH D: float, double, long double ###\n\n");
+    printf("### MATH D: Float, double, long double ###\n");
     
     // Windows
     #ifdef _WIN32 
@@ -49,9 +49,7 @@ void math_d(void){
     // double sinh(double x);            Medium-Precision .15 decimal places
     // long double sinhl(long double x); High-Precision   .19 decimal places
     
-
     //Assign
-    
     float sin1 = 0.5f;
     double sin2 = sin1;
     long double sin3 = sin1;
@@ -61,7 +59,6 @@ void math_d(void){
     double result_2 = asin(sin2);
     long double result_3 = asinl(sin3);
     
-  
     // Output
     printf("Sine:                %f\n\n", sin1);
 
@@ -80,8 +77,8 @@ void math_d(void){
 
 
     long double winkel = result_3/rad_3; // Ihr berechnetes Ergebnis
-
     long double digit_1 = 1e-15L; // Permissible deviation (0.000000000001)
+
     printf("digit .14 %.19Lf\n", digit_1);
 
     if (fabsl(winkel - 30.0) < digit_1) {
@@ -92,12 +89,13 @@ void math_d(void){
     }
    
     long double digit_3 = 1e-16L; // Permissible deviation (0.000000000000001)
+
     printf("digit .16 %.19Lf\n", digit_3);
 
     if (fabsl(winkel - 30.0) < digit_3) {
         printf("Close enough.\n\n");
     }
     else{
-        printf("Not close enough.\n\n");
+        printf("Not close enough.\n");
     }
 }

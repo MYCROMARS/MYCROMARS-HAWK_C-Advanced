@@ -22,7 +22,7 @@ void scanString_math_c(void){
 // Main Function
 void math_c(void){
     // Output
-    printf("### MATH C: Input Sine to Degree ###\n\n");
+    printf("### MATH C: Input Sine to Degree ###\n");
   
     // Windows
     #ifdef _WIN32 

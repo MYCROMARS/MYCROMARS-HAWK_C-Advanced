@@ -12,7 +12,7 @@
 
 void math_b(void){
     // Output
-    printf("### MATH B: From Sine to Degree ###\n\n");
+    printf("### MATH B: From Sine to Degree ###\n");
     
     // Windows
     #ifdef _WIN32 

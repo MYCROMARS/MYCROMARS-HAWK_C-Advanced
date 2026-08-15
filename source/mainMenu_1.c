@@ -5,8 +5,7 @@ void mainMenu_1(int *m)
 {
         // Output
         printf("\n*** LOOP MENU ***\n");
-        printf("Press: (0) EXIT\n");
-        printf("Press: (1) A | (2) B\n");
+        printf("Press: (0) EXIT | (1) A | (2) B\n");
         printf("Your Input: ");
 
         // Input

@@ -12,7 +12,7 @@
 void math_g(void){
   
     // Output
-    printf("### MATH E: Test, long int, long long, float ###\n\n");
+    printf("### MATH E: Test, long int, long long, float ###\n");
 
     // Windows
     #ifdef _WIN32 
@@ -53,5 +53,5 @@ void math_g(void){
     
     // Test Calculation
     x2 = x2 + x2;
-    printf("Output Adition x2 + x2 : %e\n\n", x2);
+    printf("Output Adition x2 + x2 : %e\n", x2);
 }

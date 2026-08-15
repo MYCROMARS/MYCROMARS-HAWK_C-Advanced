@@ -5,8 +5,7 @@ void mainMenu_7(int *m)
 {
         // Output
         printf("\n*** MATH MENU ***\n");
-        printf("Press: (0) EXIT\n");
-        printf("Press: (1) A | (2) B | (3) C | (4) D | (5) E | (6) F | (7) G\n");
+        printf("Press: (0) EXIT | (1) A | (2) B | (3) C | (4) D | (5) E | (6) F | (7) G\n");
         printf("Your Input: ");
 
         // Input

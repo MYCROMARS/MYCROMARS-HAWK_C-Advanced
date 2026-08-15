@@ -8,8 +8,7 @@ void mainMenu_6(int *m)
 {
         // Output
         printf("\n*** MACRO MENU ***\n");
-        printf("Press: (0) EXIT\n");
-        printf("Press: (1) A | (2) B | (3) C | (4) D\n");
+        printf("Press: (0) EXIT | (1) A | (2) B | (3) C | (4) D\n");
         printf("Your Input: ");
 
         // Input

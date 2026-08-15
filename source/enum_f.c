@@ -16,7 +16,7 @@ void ItemList_A(TypEnum item);
 void enum_f(void)
 {
     // Output
-    printf("\n### ENUM E: Typedef Enum to function ###\n\n");
+    printf("### ENUM E: Typedef Enum to function ###\n\n");
        
 	// Create & assign: Enum Item
 	TypEnum ITEM_A = ITEM_A1;	

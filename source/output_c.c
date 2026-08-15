@@ -6,7 +6,7 @@
 // Main function
 void output_c(void) {
     // Output
-    printf("\n### OUTPUT C: C Standard ###\n\n");
+    printf("### OUTPUT C: C Standard ###\n\n");
 
    
      #ifdef __STDC_VERSION__

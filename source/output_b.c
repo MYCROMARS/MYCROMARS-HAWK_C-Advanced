@@ -6,7 +6,7 @@
 // Main function
 void output_b(void) {
     // Output
-    printf("\n### OUTPUT B: Array and Pointer of Array ###\n\n");
+    printf("### OUTPUT B: Array and Pointer of Array ###\n\n");
 
     // Array
     int x[] = {1,2};
@@ -37,11 +37,9 @@ void output_b(void) {
     
     printf("Pointer p:      %p\n", p);           // 6156790648
     printf("Pointer &p[0]:  %p\n", &p[0]);       // 6156790648
-    printf("Pointer &p[1]:  %p\n\n", &p[1]);     // 6156790652
+    printf("Pointer &p[1]:  %p\n", &p[1]);     // 6156790652
         
     //printf("Pointer p:      %d\n", p);           // 1861823352
     //printf("Pointer &p[0]:  %d\n", &p[0]);       // 1861823352
     //printf("Pointer &p[1]:  %d\n", &p[1]);       // 1861823356
-
-    printf("\n");
 }

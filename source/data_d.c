@@ -86,7 +86,7 @@ void data_d(void)
     // Show Directory --------------------------------
     if (CURRENT_path(path, sizeof(path)) != NULL) {
         // Output
-        printf("Show current path: %s\n\n", path);
+        printf("Show current path: %s\n", path);
     } else {
         // Output: Error
         perror("error!");

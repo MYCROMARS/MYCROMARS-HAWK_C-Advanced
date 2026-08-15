@@ -5,8 +5,7 @@ void mainMenu_2(int *m)
 {
     // Output
     printf("\n*** ENUM MENU ***\n");
-    printf("Press: (0) EXIT\n");
-    printf("Press: (1) A | (2) B | (3) C | (4) D | (5) E | (6) F\n");
+    printf("Press: (0) EXIT | (1) A | (2) B | (3) C | (4) D | (5) E | (6) F\n");
     printf("Your Input: ");
 
     // Input

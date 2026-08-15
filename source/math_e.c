@@ -13,7 +13,7 @@
 void math_e(void){
   
     // Output
-    printf("### MATH E: To the power & root of a number ###\n\n");
+    printf("### MATH E: To the power & root of a number ###\n");
 
     // Windows
     #ifdef _WIN32 
@@ -78,5 +78,5 @@ void math_e(void){
 
     // Output
     printf("Number x: %.f\n", x);
-    printf("Qube root of sqrt(%.f): %.2f\n\n", x, y);
+    printf("Qube root of sqrt(%.f): %.2f\n", x, y);
 }

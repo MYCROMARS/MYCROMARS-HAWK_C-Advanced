@@ -8,7 +8,7 @@
 void loop_a(void)
 {
     // Output
-    printf("\n### LOOP A: Do while loop ###\n\n");
+    printf("### LOOP A: Do while loop ###\n\n");
 
     // Create & assign
     int value = 1;

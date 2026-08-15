@@ -6,7 +6,7 @@
 // Main function
 void output_a(void) {
     // Output
-    printf("\n### OUTPUT A: Character, Tab, Return ###\n\n");
+    printf("### OUTPUT A: Character, Tab, Return ###\n\n");
 
     printf("Backslash: \\\n\n");                // ( \ )
     printf("Quotation marks: \'\n");            // ( ' )
@@ -19,7 +19,7 @@ void output_a(void) {
     
     printf("H Tab with: \\t= \tTest\n\n");      // Horizontal Tab
     printf("V Tab with: \\v= \vTest\n");        // Vertical Tab
-    printf("V Tab with: \fTest\n\n");           // Vertical Tab
+    printf("V Tab with: \fTest\n");           // Vertical Tab
     
     //printf("Alert with: \a\n");               // Sound
 }

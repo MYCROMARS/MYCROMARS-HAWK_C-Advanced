@@ -1,5 +1,5 @@
 *** MYCROMARS HAWK ***
-*** C Programming Advanced V0.5.1 ***
+*** C Programming Advanced V0.5.2 ***
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -59,4 +59,20 @@ Chapter 5
             5.1 Main Menu 5:    DATA A      SHOW DIRECTORY
             5.2 ------------    DATA B      SHOW DIRECTORY & CURRENT FOLDER
             5.3 ------------    DATA C      CREATE FOLDER 
-            5.3 ------------    DATA D      CREATE FOLDER, GO TO FOLDER & GO UP
+            5.4 ------------    DATA D      CREATE FOLDER, GO TO FOLDER & GO UP
+
+Chapter 6
+            6.1 Main Menu 5:    MACRO A      Calculation
+            6.2 ------------    MACRO B      Array
+            6.3 ------------    MACRO C      Function
+            6.4 ------------    MACRO D      Create variable in define
+
+Chapter 7
+            7.1 Main Menu 5:    MATH A      From Degree to Radiant to Sine, Cosine & tangent
+            7.2 ------------    MATH B      From Sine to Degree
+            7.3 ------------    MATH C      Input Sine to Degree
+            7.4 ------------    MATH D      Float, double, long double
+            7.5 ------------    MATH E      To the power & root of a number
+            7.6 ------------    MATH F      Round down and up
+            7.7 ------------    MATH G      Test, long int, long long, float
+                

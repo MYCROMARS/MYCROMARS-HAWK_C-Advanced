@@ -16,7 +16,7 @@ void ItemList(enum LIST item);
 void enum_e(void)
 {
     // Output
-    printf("\n### ENUM E: Enum to function ###\n\n");
+    printf("### ENUM E: Enum to function ###\n\n");
        
 	// Create & assign Enum Item
     enum LIST ITEM = ITEM_1;

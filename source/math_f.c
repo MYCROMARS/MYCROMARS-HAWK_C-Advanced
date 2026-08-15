@@ -11,7 +11,7 @@
 void math_f(void){
   
     // Output
-    printf("### MATH E: Round down and up ###\n");
+    printf("### MATH F: Round down and up ###\n");
 
     // Windows
     #ifdef _WIN32 
@@ -165,5 +165,5 @@ void math_f(void){
 
     // Output
     printf("llrint(x) rounded nearby: %.1Lf\n", x2);
-    printf("Result long long int:     %lld\n\n", (long long int)y2);
+    printf("Result long long int:     %lld\n", (long long int)y2);
 }

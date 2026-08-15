@@ -8,7 +8,7 @@
 void enum_c(void)
 {
     // Output
-    printf("\n### ENUM C: Enum Boolean ###\n\n");
+    printf("### ENUM C: Enum Boolean ###\n\n");
     
     // Create Enum Boolean 
     enum BOOLEAN{

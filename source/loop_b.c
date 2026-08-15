@@ -8,7 +8,7 @@
 void loop_b(void)
 {
     // Output
-    printf("\n### LOOP B: While loop with continue ###\n\n");
+    printf("### LOOP B: While loop with continue ###\n\n");
 
     // Create & assign
     int value = 1;

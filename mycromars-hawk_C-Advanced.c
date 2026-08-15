@@ -1,6 +1,6 @@
 /*
 MYCROMARS HAWK 
-C Programming Advanced v0.5.1
+C Programming Advanced v0.5.2
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -45,7 +45,7 @@ int main()
     // Output
     printf("\n");
     printf("MYCROMARS HAWK\n");
-    printf("C Programming Advanced v0.5.1\n\n");
+    printf("C Programming Advanced v0.5.2\n\n");
 
     printf("MYCROMARS HAWK Copyright (C) 2026 Alexander Rudi\n");
     printf("This program comes with ABSOLUTELY NO WARRANTY\n");
@@ -63,9 +63,8 @@ int main()
 
     // Output
     printf("\n*** MAIN MENU ***\n");
-    printf("Press (0) EXIT \n");
-    printf("Press (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT | (5) DATA\n");
-    printf("Press (6) MACRO | (7) MATH \n");
+    printf("Press (0) EXIT | (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT | (5) DATA | (6) MACRO | (7) MATH \n");
+    //printf("Press (8) TIME\n");
    
     printf("Your input: ");
 

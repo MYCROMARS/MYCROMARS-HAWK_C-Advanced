@@ -8,9 +8,7 @@ void mainMenu_5(int *m)
 {
         // Output
         printf("\n*** DATA MENU ***\n");
-        printf("Press: (0) EXIT\n");
-        printf("Press: (1) A | (2) B | (3) C | (4) D | (5) E\n");
-        //printf("Press: (1) A | (2) B | (3) C | (4) D\n");
+        printf("Press: (0) EXIT | (1) A | (2) B | (3) C | (4) D \n");
         printf("Your Input: ");
 
         // Input
@@ -50,11 +48,6 @@ void mainMenu_5(int *m)
                 case 4: 
                         // Function: D
                         data_d();
-                        break;
-                
-                case 5:
-                        // Function: E
-                        //data_e();
                         break;
                         
                 default:

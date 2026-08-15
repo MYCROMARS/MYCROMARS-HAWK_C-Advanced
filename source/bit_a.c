@@ -30,7 +30,7 @@ void scanString_bit_a(void){
 void bit_a(void)
 {
     // Output
-    printf("### BIT A: Decimal to Binary to Decimal ###\n");
+    printf("### BIT A: Decimal to Binary to Decimal ###\n\n");
 
     // Create & assign
     int value_a1;
