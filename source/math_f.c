@@ -11,7 +11,7 @@
 void math_f(void){
   
     // Output
-    printf("### MATH F: Round down and up ###\n");
+    printf("### MATH F: Round down and up ###\n\n");
 
     // Windows
     #ifdef _WIN32 
@@ -24,13 +24,21 @@ void math_f(void){
     long double x2, y2;
     
 
-    // Rounded down to its nearest int ------------------------
+    // Rounded down to its nearest int ----------------------
     x = 1.7;
     y = floor(x);
 
     // Output
-    printf("\nRounded down: %.1f\n", x);
-    printf("Result:         %d\n\n", (int)y);
+    printf("floor(x) rounded down: %.1f\n", x);
+    printf("Result:                %d\n\n", (int)y);
+ 
+    // Rounded up to its nearest int ------------------------
+    x = 1.4;
+    y = ceil(x);
+
+    // Output
+    printf("ceil(x) rounded up: %.1f\n", x);
+    printf("Result:             %d\n\n", (int)y);
     
    
     // Rounds to the nearest int, result long int ------------------
@@ -64,8 +72,7 @@ void math_f(void){
     // ***************************************************************
     // FPU rounding mode (Floating Point Unit) 
     // lrint(x) & llrint(x) Uses the current CPU rounding instruction
-    printf("\nFloating Point Unit:\n");
-    printf("Uses the current CPU rounding instruction:\n");
+    printf("\nUses the current CPU rounding instruction:\n");
     printf("It rounds alternately down and up at .5\n");
     printf("It rounds down for the number 0 and for even numbers. And it rounds up for even numbers.\n\n");
     
