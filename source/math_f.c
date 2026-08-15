@@ -11,7 +11,7 @@
 void math_f(void){
   
     // Output
-    printf("### MATH E: Round down ###\n\n");
+    printf("### MATH E: Round down and up ###\n");
 
     // Windows
     #ifdef _WIN32 
@@ -20,48 +20,150 @@ void math_f(void){
     #endif
 
     // Create & assign    
-    double x3, y3;
+    double x, y;
+    long double x2, y2;
+    
 
     // Rounded down to its nearest int ------------------------
-    x3 = 1.7;
-    y3 = floor(x3);
+    x = 1.7;
+    y = floor(x);
 
     // Output
-    printf("\nRounded down: %.1f\n", x3);
-    printf("Result:         %d\n\n", (int)y3);
+    printf("\nRounded down: %.1f\n", x);
+    printf("Result:         %d\n\n", (int)y);
     
-    
-    // Rounds to the nearest int, result long long int
-    x3 = 100000000000011.40000;
-    y3 = llround(x3);
+   
+    // Rounds to the nearest int, result long int ------------------
+    //x3 = 50001.4;
+    x = 1111111111.4;
+    y = lround(x);
 
     // Output
-    printf("Rounded nearest:      %.5f\n", x3);
-    printf("Result long long int: %lld\n\n", (long long int)y3);
+    printf("lround(x) rounded nearest: %.1f\n", x);
+    printf("Result long int:           %ld\n\n", (long int)y);
+    
+
+    // Rounds to the nearest int, result long long int --------------
+    x2 = 911222333444555.1;
+    y2 = llround(x2);
+
+    // Output
+    printf("llround(x) rounded nearest: %.1Lf\n", x2);
+    printf("Result long long int:       %lld\n\n", (long long int)y2);
    
 
-    // Rounds to the nearest int, result long long int
-    x3 = 100000000000011.50000;
-    y3 = llround(x3);
+    // Rounds to the nearest int, result long long int ---------------
+    x2 = 911222333444555.5;
+    y2 = llround(x2);
 
     // Output
-    printf("Rounded nearest:      %f\n", x3);
-    printf("Result long long int: %lld\n\n", (long long int)y3);
+    printf("llround(x) rounded nearest: %.1Lf\n", x2);
+    printf("Result long long int:       %lld\n\n", (long long int)y2);
+
     
+    // ***************************************************************
+    // FPU rounding mode (Floating Point Unit) 
+    // lrint(x) & llrint(x) Uses the current CPU rounding instruction
+    printf("\nFloating Point Unit:\n");
+    printf("Uses the current CPU rounding instruction:\n");
+    printf("It rounds alternately down and up at .5\n");
+    printf("It rounds down for the number 0 and for even numbers. And it rounds up for even numbers.\n\n");
     
-    // Rounds to the nearby int, result long int
-    x3 = 20001.4;
-    y3 = lrint(x3);
+    // Rounds to the nearby int, result long int --------------------
+    x = 1000000000.5;
+    y = lrint(x);
+    
+    // Output
+    printf("lrint(x) rounded nearby: %.1f\n", x);
+    printf("Result long int:         %ld\n\n", (long int)y);
+
+    // Rounds to the nearby int, result long int --------------------
+    x = 1.5;
+    y = lrint(x);
+    
+    // Output
+    printf("lrint(x) rounded nearby: %.1f\n", x);
+    printf("Result long int:         %ld\n\n", (long int)y);
+    
+
+    // Rounds to the nearby int, result long int -------------------
+    x = 2.5;
+    y = lrint(x);
+    
+    // Output
+    printf("lrint(x) rounded nearby: %.1f\n", x);
+    printf("Result long int:         %ld\n\n", (long int)y);
+
+    // Rounds to the nearby int, result long int -------------------
+    x = 3.5;
+    y = lrint(x);
+    
+    // Output
+    printf("lrint(x) rounded nearby: %.1f\n", x);
+    printf("Result long int:         %ld\n\n", (long int)y);
+
+    // Rounds to the nearby int, result long int -------------------
+    x = 4.5;
+    y = lrint(x);
+    
+    // Output
+    printf("lrint(x) rounded nearby: %.1f\n", x);
+    printf("Result long int:         %ld\n\n", (long int)y);
+
+    // Rounds to the nearby int, result long int -------------------
+    x = 5.5;
+    y = lrint(x);
+    
+    // Output
+    printf("lrint(x) rounded nearby: %.1f\n", x);
+    printf("Result long int:         %ld\n\n", (long int)y);
+
+    // Rounds to the nearby int, result long int -------------------
+    x = 6.5;
+    y = lrint(x);
+    
+    // Output
+    printf("lrint(x) rounded nearby: %.1f\n", x);
+    printf("Result long int:         %ld\n\n", (long int)y);
+
+    // Rounds to the nearby int, result long int -------------------
+    x = 7.5;
+    y = lrint(x);
+    
+    // Output
+    printf("lrint(x) rounded nearby: %.1f\n", x);
+    printf("Result long int:         %ld\n\n", (long int)y);
+
+    // Rounds to the nearby int, result long int -------------------
+    x = 8.5;
+    y = lrint(x);
+    
+    // Output
+    printf("lrint(x) rounded nearby: %.1f\n", x);
+    printf("Result long int:         %ld\n\n", (long int)y);
+
+    // Rounds to the nearby int, result long int -------------------
+    x = 9.5;
+    y = lrint(x);
+    
+    // Output
+    printf("lrint(x) rounded nearby: %.1f\n", x);
+    printf("Result long int:         %ld\n\n\n", (long int)y);
+
+
+    // Rounds to the nearby int, result long long int --------------
+    x2 = 911222333444555.5;
+    y2 = llrint(x2);
 
     // Output
-    printf("Rounded nearby:   %f\n", x3);
-    printf("Result long int:  %ld\n\n", (long int)y3);
-   
-    // Rounds to the nearby int, result long int
-    x3 = 20001.5;
-    y3 = lrint(x3);
+    printf("llrint(x) rounded nearby: %.1Lf\n", x2);
+    printf("Result long long int:     %lld\n\n", (long long int)y2);
+
+    // Rounds to the nearby int, result long long int --------------
+    x2 = 911222333444888.5;
+    y2 = llrint(x2);
 
     // Output
-    printf("Rounded nearby:   %f\n", x3);
-    printf("Result long int:  %ld\n\n", (long int)y3);
+    printf("llrint(x) rounded nearby: %.1Lf\n", x2);
+    printf("Result long long int:     %lld\n\n", (long long int)y2);
 }
