@@ -1,4 +1,5 @@
 #include <math.h>
+#include <float.h> // FLT_ROUNDS
 
 // Windows
 #ifdef _WIN32 
@@ -72,9 +73,11 @@ void math_f(void){
     // ***************************************************************
     // FPU rounding mode (Floating Point Unit) 
     // lrint(x) & llrint(x) Uses the current CPU rounding instruction
-    printf("\nUses the current CPU rounding instruction:\n");
+    printf("\nMy operating system uses the current CPU rounding instruction:\n");
+    printf("Rounding mode FLT_ROUNDS: %d\n\n", FLT_ROUNDS);
     printf("It rounds alternately down and up at .5\n");
     printf("It rounds down for the number 0 and for even numbers. And it rounds up for even numbers.\n\n");
+
     
     // Rounds to the nearby int, result long int --------------------
     x = 1000000000.5;
