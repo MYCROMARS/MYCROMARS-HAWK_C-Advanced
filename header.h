@@ -6,13 +6,12 @@
     #include <stdlib.h>
     #include <string.h>
 
-    //#include <math.h>
+    #include <math.h>
     //#include <time.h>
 
     // WindowsOS
     //#include <dir.h>
     //#include <synchapi.h>
-    //#include <windows.h>
 
     // ********** Include header files
     #include "header/mainMenu.h"

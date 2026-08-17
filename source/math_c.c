@@ -1,4 +1,4 @@
-#include <math.h>
+// MATH C
 
 // Windows
 #ifdef _WIN32 
@@ -16,8 +16,6 @@ void scanString_math_c(void){
         scanf("%s", &buffer_math_c[0]);
         buffer_math_c[0] = '\0';
 }
-
-// MATH C
 
 // Main Function
 void math_c(void){

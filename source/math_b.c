@@ -1,4 +1,4 @@
-#include <math.h>
+// MATH B
 
 // Windows
 #ifdef _WIN32 
@@ -7,9 +7,7 @@
 
 #define PI 3.14159265
 
-
-// MATH B
-
+// Main function
 void math_b(void){
     // Output
     printf("### MATH B: From Sine to Degree ###\n");

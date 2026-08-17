@@ -1,7 +1,3 @@
-// Integrate libraries direct:
-// #include <stdio.h>
-// #include "../header/loop_a.h"
-
 // LOOP A
 
 // Main function

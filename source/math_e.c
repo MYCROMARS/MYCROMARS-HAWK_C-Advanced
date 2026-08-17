@@ -1,13 +1,9 @@
-#include <math.h>
+// MATH E
 
 // Windows
 #ifdef _WIN32 
     #include <windows.h>    // UTF-8
 #endif
-
-
-
-// MATH E
 
 // Main Function
 void math_e(void){

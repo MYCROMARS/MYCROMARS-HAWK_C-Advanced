@@ -1,12 +1,11 @@
-#include <math.h>
+// MATH F
+
 #include <float.h> // FLT_ROUNDS
 
 // Windows
 #ifdef _WIN32 
     #include <windows.h>    // UTF-8
 #endif
-
-// MATH F
 
 // Main Function
 void math_f(void){

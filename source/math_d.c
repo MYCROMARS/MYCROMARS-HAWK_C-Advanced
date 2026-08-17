@@ -1,4 +1,4 @@
-#include <math.h>
+// MATH D
 
 // Windows
 #ifdef _WIN32 
@@ -6,8 +6,6 @@
 #endif
 
 #define PI_d 3.141592653589793 
-
-// MATH D
 
 // Main Function
 void math_d(void){

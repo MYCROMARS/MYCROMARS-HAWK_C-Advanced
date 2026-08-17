@@ -1,12 +1,11 @@
-#include <math.h>
+// MATH G
+
 #include <float.h> // FLT_MAX
 
 // Windows
 #ifdef _WIN32 
     #include <windows.h>    // UTF-8
 #endif
-
-// MATH G
 
 // Main Function
 void math_g(void){

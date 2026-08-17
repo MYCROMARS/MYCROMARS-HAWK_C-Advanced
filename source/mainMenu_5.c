@@ -1,6 +1,3 @@
-// Integrate libraries direct:
-// #include <stdio.h>
-
 // Main Menu 5: DATA
 
 // Main function

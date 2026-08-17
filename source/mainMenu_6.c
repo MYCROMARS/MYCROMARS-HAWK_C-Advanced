@@ -1,6 +1,3 @@
-// Integrate libraries direct:
-// #include <stdio.h>
-
 // Main Menu 6: MACRO
 
 // Main function

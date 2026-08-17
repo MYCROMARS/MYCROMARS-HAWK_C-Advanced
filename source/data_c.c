@@ -1,7 +1,8 @@
+// Data C
+
 // Integrate libraries direct:
 #include <stdio.h>
 #include <stdlib.h>
-// #include "../header/data_c.h"
 
 #ifdef _WIN32
     #include <direct.h>
@@ -13,8 +14,6 @@
     #define MODUS ,0755)
     #define MakeFolder(path) mkdir(path)
 #endif
-
-// Data C
 
 // Main function
 void data_c(void)

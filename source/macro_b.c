@@ -19,5 +19,4 @@ void macro_b(void){
     printf("Array 1: %d\n", array[1]);
     printf("Array 2: %d\n", array[2]);
     printf("Array 3: %d\n", array[3]);
-  
 }
