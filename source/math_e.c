@@ -3,6 +3,8 @@
 // Windows
 #ifdef _WIN32 
     #include <windows.h>    // UTF-8
+    // Terminals auf UTF-8 (° degree)
+    SetConsoleOutputCP(65001);
 #endif
 
 // Main Function
@@ -10,13 +12,6 @@ void math_e(void){
   
     // Output
     printf("### MATH E: To the power & root of a number ###\n");
-
-    // Windows
-    #ifdef _WIN32 
-        // Terminals auf UTF-8 (° degree)
-        SetConsoleOutputCP(65001);
-    #endif
-
 
     // Create & assign
     int e = 1;

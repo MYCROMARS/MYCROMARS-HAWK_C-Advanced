@@ -3,6 +3,8 @@
 // Windows
 #ifdef _WIN32 
     #include <windows.h>    // UTF-8 for (° degree)
+    // Terminals auf UTF-8 (° degree)
+    SetConsoleOutputCP(65001);
 #endif
 
 #define PI 3.14159265
@@ -12,12 +14,6 @@ void math_a(void){
     
     // Output
     printf("### MATH A: From Degree to Radiant to Sine, Cosine & tangent ###\n");
-    
-    // Windows
-    #ifdef _WIN32 
-        // Terminals auf UTF-8 (° degree)
-        SetConsoleOutputCP(65001);
-    #endif
     
     // Create
     double angle, rad, sin1, cos1, tan1;

@@ -3,6 +3,8 @@
 // Windows
 #ifdef _WIN32 
     #include <windows.h>    // UTF-8
+    // Terminal auf UTF-8 
+    SetConsoleOutputCP(65001);
 #endif
 
 #define PI 3.14159265
@@ -22,12 +24,6 @@ void math_c(void){
     // Output
     printf("### MATH C: Input Sine to Degree ###\n");
   
-    // Windows
-    #ifdef _WIN32 
-        // Terminal auf UTF-8 
-        SetConsoleOutputCP(65001);
-    #endif
-    
     // Create
     double rad_1, rad_2, sin1;
     int input = 0;
