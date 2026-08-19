@@ -73,7 +73,7 @@ void math_f(void){
     // ***************************************************************
     // FPU rounding mode (Floating Point Unit) 
     // lrint(x) & llrint(x) Uses the current CPU rounding instruction
-    printf("\nMy operating system uses the current CPU rounding instruction:\n");
+    printf("\nMy operating system uses the current CPU rounding instruction: mode 1\n");
     printf("Rounding mode FLT_ROUNDS: %d\n\n", FLT_ROUNDS);
     printf("It rounds alternately down and up at .5\n");
     printf("It rounds down for the number 0 and for even numbers. And it rounds up for even numbers.\n\n");
