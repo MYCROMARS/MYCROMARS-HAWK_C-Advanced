@@ -1,11 +1,9 @@
 // MATH B
 
 // Windows
-#ifdef _WIN32 
-    #include <windows.h>    // UTF-8
-    // Terminal auf UTF-8 
-    SetConsoleOutputCP(65001);
-#endif
+// #ifdef _WIN32 
+//     #include <windows.h>    // UTF-8
+// #endif
 
 #define PI 3.14159265
 
@@ -13,6 +11,12 @@
 void math_b(void){
     // Output
     printf("### MATH B: From Sine to Degree ###\n");
+
+    // Windows
+    // #ifdef _WIN32 
+    //     // Set terminal to UTF-8 (° degree)
+    //     SetConsoleOutputCP(65001);
+    // #endif
     
     // Create
     double rad, rad_2, sin1;

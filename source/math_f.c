@@ -3,11 +3,9 @@
 #include <float.h> // FLT_ROUNDS
 
 // Windows
-#ifdef _WIN32 
-    #include <windows.h>    // UTF-8
-    // Terminals auf UTF-8 (° degree)
-    SetConsoleOutputCP(65001);
-#endif
+// #ifdef _WIN32 
+//     #include <windows.h>    // UTF-8
+// #endif
 
 // Main Function
 void math_f(void){
@@ -15,6 +13,12 @@ void math_f(void){
     // Output
     printf("### MATH F: Round down and up ###\n\n");
 
+    // Windows
+    // #ifdef _WIN32 
+    //     // Set terminal to UTF-8 (° degree)
+    //     SetConsoleOutputCP(65001);
+    // #endif
+    
     // Create & assign    
     double x, y;
     long double x2, y2;

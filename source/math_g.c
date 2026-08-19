@@ -3,17 +3,21 @@
 #include <float.h> // FLT_MAX
 
 // Windows
-#ifdef _WIN32 
-    #include <windows.h>    // UTF-8
-    // Terminals auf UTF-8 (° degree)
-    SetConsoleOutputCP(65001);
-#endif
+// #ifdef _WIN32 
+//     #include <windows.h>    // UTF-8
+// #endif
 
 // Main Function
 void math_g(void){
   
     // Output
     printf("### MATH E: Test, long int, long long, float ###\n");
+
+    // Windows
+    // #ifdef _WIN32 
+    //     // Set terminal to UTF-8 (° degree)
+    //     SetConsoleOutputCP(65001);
+    // #endif
 
     // Create & assign
     long int x1;
