@@ -1,8 +1,3 @@
-// Integrate libraries direct:
-// #include <stdio.h>
-// #include <string.h>
-// #include "../header/bit_f.h"
-
 // Bit F
 
 // Function definition

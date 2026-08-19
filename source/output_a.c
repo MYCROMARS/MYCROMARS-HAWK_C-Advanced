@@ -3,6 +3,7 @@
 // #include "../header/output_a.h"
 
 // Output A
+
 // Main function
 void output_a(void) {
     // Output

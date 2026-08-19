@@ -1,7 +1,8 @@
+// Data A
+
 // Integrate libraries direct:
 #include <stdio.h>
 #include <stdlib.h>
-// #include "../header/data_a.h"
 
 // Windows
 #ifdef _WIN32 
@@ -11,8 +12,6 @@
     #include <unistd.h> // for getcwd()
     #define CURRENT_path getcwd
 #endif
-
-// Data A
 
 // Main function
 void data_a(void)

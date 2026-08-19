@@ -1,12 +1,13 @@
-#include <math.h>
+// MATH F
+
 #include <float.h> // FLT_ROUNDS
 
 // Windows
 #ifdef _WIN32 
     #include <windows.h>    // UTF-8
+    // Terminals auf UTF-8 (° degree)
+    SetConsoleOutputCP(65001);
 #endif
-
-// MATH F
 
 // Main Function
 void math_f(void){
@@ -14,17 +15,10 @@ void math_f(void){
     // Output
     printf("### MATH F: Round down and up ###\n\n");
 
-    // Windows
-    #ifdef _WIN32 
-        // Terminals auf UTF-8 (° degree)
-        SetConsoleOutputCP(65001);
-    #endif
-
     // Create & assign    
     double x, y;
     long double x2, y2;
     
-
     // Rounded down to its nearest int ----------------------
     x = 1.7;
     y = floor(x);

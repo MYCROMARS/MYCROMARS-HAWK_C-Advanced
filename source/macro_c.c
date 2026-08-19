@@ -17,7 +17,6 @@ void macro_c(void){
     c = F1(a, b);
 
     // Output
-    
     printf("a: %d\n", a);
     printf("b: %d\n\n", b);
     printf("Output the larger value:\n");

@@ -1,11 +1,11 @@
-// Main Menu 6: MACRO
+// Main Menu 8: TIME
 
 // Main function
-void mainMenu_6(int *m)
+void mainMenu_8(int *m)
 {
         // Output
-        printf("\n*** MACRO MENU ***\n");
-        printf("Press: (0) EXIT | (1) A | (2) B | (3) C | (4) D\n");
+        printf("\n*** MATH MENU ***\n");
+        printf("Press: (0) EXIT | (1) A \n");
         printf("Your Input: ");
 
         // Input
@@ -29,27 +29,37 @@ void mainMenu_6(int *m)
 
                 case 1:
                         // Function: A
-                        macro_a();
+                        time_a();
                         break;
 
                 case 2: 
                         // Function: B
-                        macro_b();
+                        
                         break;
                 
                 case 3: 
                         // Function: C
-                        macro_c();
+                        
                         break;
 
                 case 4: 
                         // Function: D
-                        macro_d();
+                        
                         break;
-                
+                        
                 case 5:
                         // Function: E
-                      
+                        
+                        break;
+
+                case 6:
+                        // Function: F
+                        
+                        break;
+
+                case 7:
+                        // Function: F
+                     
                         break;
                         
                 default:
@@ -62,6 +72,6 @@ void mainMenu_6(int *m)
         }
 
         // Output
-        printf("\n### MACRO END ###\n");
+        printf("\n### TIME END ###\n");
         printf(".......................\n");
 }  

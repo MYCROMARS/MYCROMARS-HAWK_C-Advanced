@@ -6,13 +6,12 @@
     #include <stdlib.h>
     #include <string.h>
 
-    //#include <math.h>
+    #include <math.h>
     //#include <time.h>
 
     // WindowsOS
     //#include <dir.h>
     //#include <synchapi.h>
-    //#include <windows.h>
 
     // ********** Include header files
     #include "header/mainMenu.h"
@@ -57,6 +56,8 @@
     #include "header/math_f.h"
     #include "header/math_g.h"
 
+    #include "header/time_a.h"
+
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
     #include "source/mainMenu_1.c"
@@ -66,6 +67,7 @@
     #include "source/mainMenu_5.c"
     #include "source/mainMenu_6.c"
     #include "source/mainMenu_7.c"
+    #include "source/mainMenu_8.c"
 
     // ********** Include source files
     #include "source/enum_a.c"
@@ -107,5 +109,7 @@
     #include "source/math_e.c"
     #include "source/math_f.c"
     #include "source/math_g.c"
+
+    #include "source/time_a.c"
 
 #endif

@@ -1,7 +1,8 @@
+// Data D
+
 // Integrate libraries direct:
 #include <stdio.h>
 #include <stdlib.h>
-// #include "../header/data_d.h"
 
 #ifdef _WIN32
     #include <direct.h>     // for _getcwd()
@@ -16,8 +17,6 @@
     #define MakeFolder_(path) mkdir(path, 0755)
     #define CHANGE_folder chdir
 #endif
-
-// Data D
 
 // Main function
 void data_d(void)

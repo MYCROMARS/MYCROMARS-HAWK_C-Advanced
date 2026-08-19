@@ -1,8 +1,3 @@
-// Integrate libraries direct:
-// #include <stdio.h>
-// #include <string.h>
-// #include "../header/bit_g.h"
-
 // Bit G
 
 // Create global variables --------------------
@@ -28,7 +23,7 @@ int array_to_string(int negative, int array[]);
 void decimal_to_binary(int bit_size, int value, int bit);
 
 
-// Main function ------------------------------
+// Main function 
 void bit_g(void)
 {
     // Output

@@ -1,5 +1,4 @@
 // Integrate libraries direct:
-// #include <stdio.h>
 #include <stdlib.h>
 
 // Main Menu 0: EXIT 

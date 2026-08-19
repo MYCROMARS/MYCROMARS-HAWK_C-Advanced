@@ -1,7 +1,3 @@
-// Integrate libraries direct:
-// #include <stdio.h>
-// #include "../header/enum_e.h"
-
 // ENUM E
 
 // Create Enum List

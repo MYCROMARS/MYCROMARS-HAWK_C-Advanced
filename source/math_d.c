@@ -1,25 +1,19 @@
-#include <math.h>
+// MATH D
 
 // Windows
 #ifdef _WIN32 
     #include <windows.h>    // UTF-8
+    // Terminals auf UTF-8 (° degree)
+    SetConsoleOutputCP(65001);
 #endif
 
 #define PI_d 3.141592653589793 
-
-// MATH D
 
 // Main Function
 void math_d(void){
   
     // Output
     printf("### MATH D: Float, double, long double ###\n");
-    
-    // Windows
-    #ifdef _WIN32 
-    // Terminals auf UTF-8 (° degree)
-    SetConsoleOutputCP(65001);
-    #endif
     
     printf("Here you can see the point at which the computer can no longer represent the numbers accurately.\n");
     printf("For `float`, after the 5th digit.\n");

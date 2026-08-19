@@ -1,7 +1,8 @@
+// Data B
+
 // Integrate libraries direct:
 #include <stdio.h>
 #include <stdlib.h>
-// #include "../header/data_b.h"
 
 // Windows
 #ifdef _WIN32
@@ -32,8 +33,6 @@
         #define CURRENT_path getcwd
         #define CURRENT_folder(path) basename(path)
 #endif
-
-// Data B
 
 // Main function
 void data_b(void)

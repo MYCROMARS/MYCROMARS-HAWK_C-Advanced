@@ -1,7 +1,3 @@
-// Integrate libraries direct:
-// #include <stdio.h>
-// #include "../header/enum_f.h"
-
 // ENUM F
 
 // Create Typedef Enum List

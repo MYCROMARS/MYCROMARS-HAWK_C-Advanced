@@ -1,7 +1,3 @@
-// Integrate libraries direct:
-// #include <stdio.h>
-// #include "../header/enum_a.h"
-
 // ENUM A
 
 // Main function
