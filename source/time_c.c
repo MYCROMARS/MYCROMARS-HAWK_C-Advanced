@@ -25,4 +25,5 @@ void time_c(void){
     strftime(buffer, 80, "Time is %I:%M %p.", pointer_a);
      
     puts(buffer);
+    printf("%s", buffer);
 }
