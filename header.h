@@ -57,6 +57,7 @@
     #include "header/math_g.h"
 
     #include "header/time_a.h"
+    #include "header/time_b.h"
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -111,5 +112,6 @@
     #include "source/math_g.c"
 
     #include "source/time_a.c"
+    #include "source/time_b.c"
 
 #endif

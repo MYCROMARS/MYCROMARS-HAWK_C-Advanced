@@ -1,10 +1,11 @@
 // TIME A
+//#include <time.h>
 
 // Main Function
 void time_a(void){
   
     // Output
-    printf("### TIME A: -- ###\n\n");
+    printf("### TIME A: Get current Time & Date ###\n\n");
     
     // 00:00:00, 1. Januar 1970 Universal Coordinate Time (UTC)
     // If timeptr is NULL, the return value is not stored. 
@@ -16,7 +17,7 @@ void time_a(void){
     // Statement: not available
     if (time(&saveTime) == -1)
     {
-        printf("Calendar time not available.\n");
+        printf("Time not available.\n");
         exit(1);
     }
     

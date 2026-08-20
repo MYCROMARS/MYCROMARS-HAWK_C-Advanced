@@ -5,7 +5,7 @@ void mainMenu_8(int *m)
 {
         // Output
         printf("\n*** MATH MENU ***\n");
-        printf("Press: (0) EXIT | (1) A \n");
+        printf("Press: (0) EXIT | (1) A | (2) B\n");
         printf("Your Input: ");
 
         // Input
@@ -34,7 +34,7 @@ void mainMenu_8(int *m)
 
                 case 2: 
                         // Function: B
-                        
+                        time_b();
                         break;
                 
                 case 3: 
