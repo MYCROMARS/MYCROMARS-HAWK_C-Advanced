@@ -1,5 +1,5 @@
 // TIME B
-//s#include <time.h>
+#include <time.h>
 
 // Main Function
 void time_b(void){

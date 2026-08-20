@@ -12,35 +12,35 @@ void time_a(void){
     // If the calendar time is not available, the value (time_t) (-1) is returned.
 
     // Create: store current Time & Date -----------------------s
-    time_t saveTime;
+    time_t time_a;
     
     // Statement: not available
-    if (time(&saveTime) == -1)
+    if (time(&time_a) == -1)
     {
         printf("Time not available.\n");
         exit(1);
     }
-    
+    // Output
+    printf("Time with ctime: %s\n\n", ctime(&time_a));
 
     // Create: store current Time & Date -------------------------
-    time_t saveTime_a;
+    time_t time_b;
     
     // Assign: current Time
-    saveTime_a = time(NULL);
+    time_b = time(NULL);
     
     // Create: store Local time
     struct tm* pointer_a;
     struct tm* pointer_b;
     
     // Assign: Convert to Local Time
-    pointer_a = localtime(&saveTime_a);
+    pointer_a = localtime(&time_b);
 
     // Convert it to UTC time
-    pointer_b = gmtime(&saveTime_a);
+    pointer_b = gmtime(&time_b);
     
     // Output
-    printf("Time with ctime:              %s\n", ctime(&saveTime));
     printf("Time with localtime, asctime: %s\n", asctime(pointer_a));
-    printf("Time with gmtime, asctime:    %s\n", asctime(pointer_a));
+    printf("Time with gmtime, asctime:    %s\n", asctime(pointer_b));
     
 }
