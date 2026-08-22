@@ -1,5 +1,5 @@
 *** MYCROMARS HAWK ***
-*** C Programming Advanced V0.8.3 ***
+*** C Programming Advanced V0.8.4 ***
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -80,3 +80,4 @@ Chapter 8
             8.1 Main Menu 8:    TIME A      Get current Time & Date
             8.2 ------------    TIME B      Time difference
             8.3 ------------    TIME C      Time zone, date & time in detail
+            8.4 ------------    TIME D      Full years, months, days as Integer

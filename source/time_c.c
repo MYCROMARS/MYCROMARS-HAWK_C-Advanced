@@ -27,10 +27,17 @@ void time_c(void){
     
     // Create: store current Time & Date -----------------------s
     time_t time_a;
+  
+    // Current time
+    time(&time_a);
 
     // Create: store Local time
-    struct tm* pointer_a;
+    struct tm *pointer_a;
 
+    // Assign: Convert to Local Time
+    pointer_a = localtime(&time_a);
+
+    // Create Char Array
     char save_a[80];
     char save_b[80];
 
@@ -47,12 +54,6 @@ void time_c(void){
     char save_j[80];
     
     char save_k[80];
-
-    // Current time
-    time(&time_a);
-
-    // Assign: Convert to Local Time
-    pointer_a = localtime(&time_a);
 
 
     // #####################################
@@ -76,7 +77,11 @@ void time_c(void){
     
     // Year with century 
     strftime(save_a, 80, "Year (Y): %Y", pointer_a);
-    printf("%s\n\n", save_a);
+    printf("%s\n", save_a);
+
+     // Days in this year 1...366
+    strftime(save_h, 80, "Days in this year (j): %j", pointer_a);
+    printf("%s\n\n", save_h);
 
 
     // Month name
@@ -95,7 +100,7 @@ void time_c(void){
     // Day of the Month  1...31
     strftime(save_d, 80, "Day of the Month (d): %d", pointer_a);
     printf("%s\n\n", save_d);
-    
+
     
     // Weekday
     strftime(save_e, 80, "Weekday (a): %a", pointer_a);
@@ -117,11 +122,6 @@ void time_c(void){
     // Calendar week, 1. Day: Monday
     strftime(save_g, 80, "Calendar week (W): %W", pointer_a);
     printf("%s\n\n", save_g);
-
-
-    // Days in this year 1...366
-    strftime(save_h, 80, "Days in this year (j): %j", pointer_a);
-    printf("%s\n\n", save_h);
 
 
 
@@ -147,5 +147,11 @@ void time_c(void){
     printf("%s\n", save_k);
    
 
+    // create: Full past Month as integer
+    int num1 = pointer_a->tm_mon;
 
+    printf("int: %02d\n", num1);
+    printf("int: %d\n", num1);
+
+    printf("int: %d\n", num1+1);
 }
