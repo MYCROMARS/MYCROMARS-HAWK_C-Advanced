@@ -1,5 +1,5 @@
 *** MYCROMARS HAWK ***
-*** C Programming Advanced V0.5.2 ***
+*** C Programming Advanced V0.8.3 ***
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -62,13 +62,13 @@ Chapter 5
             5.4 ------------    DATA D      CREATE FOLDER, GO TO FOLDER & GO UP
 
 Chapter 6
-            6.1 Main Menu 5:    MACRO A      Calculation
+            6.1 Main Menu 6:    MACRO A      Calculation
             6.2 ------------    MACRO B      Array
             6.3 ------------    MACRO C      Function
             6.4 ------------    MACRO D      Create variable in define
 
 Chapter 7
-            7.1 Main Menu 5:    MATH A      From Degree to Radiant to Sine, Cosine & tangent
+            7.1 Main Menu 7:    MATH A      From Degree to Radiant to Sine, Cosine & tangent
             7.2 ------------    MATH B      From Sine to Degree
             7.3 ------------    MATH C      Input Sine to Degree
             7.4 ------------    MATH D      Float, double, long double
@@ -76,3 +76,7 @@ Chapter 7
             7.6 ------------    MATH F      Round down and up
             7.7 ------------    MATH G      Test, long int, long long, float
                 
+Chapter 8
+            8.1 Main Menu 8:    TIME A      Get current Time & Date
+            8.2 ------------    TIME B      Time difference
+            8.3 ------------    TIME C      Time zone, date & time in detail

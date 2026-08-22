@@ -29,7 +29,7 @@ void time_b(void){
         // Statement 
          if (a < b) {
              // Output
-             printf("Input is less than %d\n", b);
+             printf("Input is less than %d\n\n", b);
          }
          else if (a>b){
              // Output
@@ -37,7 +37,7 @@ void time_b(void){
             }
             else 
             // Output
-            printf("Input is equals %d\n", b);
+            printf("Input is equals %d\n\n", b);
     }
     
     // Assign: current time

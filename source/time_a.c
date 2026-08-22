@@ -11,7 +11,7 @@ void time_a(void){
     // If timeptr is NULL, the return value is not stored. 
     // If the calendar time is not available, the value (time_t) (-1) is returned.
 
-    // Create: store current Time & Date -----------------------s
+    // Create: store current Time & Date ----------------------- Method 1
     time_t time_a;
     
     // Statement: not available
@@ -21,9 +21,10 @@ void time_a(void){
         exit(1);
     }
     // Output
-    printf("Time with ctime: %s\n\n", ctime(&time_a));
+    printf("Time with ctime: %s\n", ctime(&time_a));
 
-    // Create: store current Time & Date -------------------------
+
+    // Create: store current Time & Date ----------------------- Method 2
     time_t time_b;
     
     // Assign: current Time
@@ -40,7 +41,6 @@ void time_a(void){
     pointer_b = gmtime(&time_b);
     
     // Output
-    printf("Time with localtime, asctime: %s\n", asctime(pointer_a));
-    printf("Time with gmtime, asctime:    %s\n", asctime(pointer_b));
-    
+    printf("Time with localtime, asctime: %s", asctime(pointer_a));
+    printf("Time with gmtime, asctime:    %s", asctime(pointer_b));
 }
