@@ -60,6 +60,7 @@
     #include "header/time_b.h"
     #include "header/time_c.h"
     #include "header/time_d.h"
+    #include "header/time_e.h"
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -117,5 +118,6 @@
     #include "source/time_b.c"
     #include "source/time_c.c"
     #include "source/time_d.c"
+    #include "source/time_e.c"
 
 #endif

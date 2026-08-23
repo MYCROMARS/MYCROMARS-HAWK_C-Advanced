@@ -81,3 +81,4 @@ Chapter 8
             8.2 ------------    TIME B      Time difference
             8.3 ------------    TIME C      Time zone, date & time in detail
             8.4 ------------    TIME D      Full years, months, days as Integer
+            8.5 ------------    TIME E      Days in Month
