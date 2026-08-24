@@ -32,9 +32,9 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 // Create 
 char buffer[50];
 
-// Catch invalid input
+// Function: Catch invalid input
 void scanString0(void){
-    // Input
+        // Input
         scanf("%s", &buffer[0]);
         buffer[0] = '\0';
 }

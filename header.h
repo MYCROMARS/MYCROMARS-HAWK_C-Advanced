@@ -16,12 +16,19 @@
     // ********** Include header files
     #include "header/mainMenu.h"
 
+    #include "header/loop_a.h"
+    #include "header/loop_b.h"
+
     #include "header/enum_a.h"
     #include "header/enum_b.h"
     #include "header/enum_c.h"
     #include "header/enum_d.h"
     #include "header/enum_e.h"
     #include "header/enum_f.h"
+
+    #include "header/output_a.h"
+    #include "header/output_b.h"
+    #include "header/output_c.h"
 
     #include "header/bit_a.h"
     #include "header/bit_b.h"
@@ -31,13 +38,6 @@
     #include "header/bit_f.h"
     #include "header/bit_g.h"
 
-    #include "header/output_a.h"
-    #include "header/output_b.h"
-    #include "header/output_c.h"
-
-    #include "header/loop_a.h"
-    #include "header/loop_b.h"
-    
     #include "header/data_a.h"
     #include "header/data_b.h"
     #include "header/data_c.h"
@@ -62,6 +62,7 @@
     #include "header/time_d.h"
     #include "header/time_e.h"
 
+
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
     #include "source/mainMenu_1.c"
@@ -73,13 +74,21 @@
     #include "source/mainMenu_7.c"
     #include "source/mainMenu_8.c"
 
+    
     // ********** Include source files
+    #include "source/loop_a.c"
+    #include "source/loop_b.c"
+
     #include "source/enum_a.c"
     #include "source/enum_b.c"
     #include "source/enum_c.c"
     #include "source/enum_d.c"
     #include "source/enum_e.c"
     #include "source/enum_f.c"
+
+    #include "source/output_a.c"
+    #include "source/output_b.c"
+    #include "source/output_c.c"
 
     #include "source/bit_a.c"
     #include "source/bit_b.c"
@@ -88,13 +97,6 @@
     #include "source/bit_e.c"
     #include "source/bit_f.c"
     #include "source/bit_g.c"
-
-    #include "source/output_a.c"
-    #include "source/output_b.c"
-    #include "source/output_c.c"
-
-    #include "source/loop_a.c"
-    #include "source/loop_b.c"
 
     #include "source/data_a.c"
     #include "source/data_b.c"
