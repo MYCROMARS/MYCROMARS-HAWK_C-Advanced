@@ -16,12 +16,19 @@
     // ********** Include header files
     #include "header/mainMenu.h"
 
+    #include "header/loop_a.h"
+    #include "header/loop_b.h"
+
     #include "header/enum_a.h"
     #include "header/enum_b.h"
     #include "header/enum_c.h"
     #include "header/enum_d.h"
     #include "header/enum_e.h"
     #include "header/enum_f.h"
+
+    #include "header/output_a.h"
+    #include "header/output_b.h"
+    #include "header/output_c.h"
 
     #include "header/bit_a.h"
     #include "header/bit_b.h"
@@ -31,13 +38,6 @@
     #include "header/bit_f.h"
     #include "header/bit_g.h"
 
-    #include "header/output_a.h"
-    #include "header/output_b.h"
-    #include "header/output_c.h"
-
-    #include "header/loop_a.h"
-    #include "header/loop_b.h"
-    
     #include "header/data_a.h"
     #include "header/data_b.h"
     #include "header/data_c.h"
@@ -62,7 +62,10 @@
     #include "header/time_d.h"
     #include "header/time_e.h"
 
+<<<<<<< HEAD
     #include "header/malloc_a.h"
+=======
+>>>>>>> bc29e294288a15e1d62e37f7c3c1dd4074d09a75
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -76,13 +79,21 @@
     #include "source/mainMenu_8.c"
     #include "source/mainMenu_9.c"
 
+    
     // ********** Include source files
+    #include "source/loop_a.c"
+    #include "source/loop_b.c"
+
     #include "source/enum_a.c"
     #include "source/enum_b.c"
     #include "source/enum_c.c"
     #include "source/enum_d.c"
     #include "source/enum_e.c"
     #include "source/enum_f.c"
+
+    #include "source/output_a.c"
+    #include "source/output_b.c"
+    #include "source/output_c.c"
 
     #include "source/bit_a.c"
     #include "source/bit_b.c"
@@ -91,13 +102,6 @@
     #include "source/bit_e.c"
     #include "source/bit_f.c"
     #include "source/bit_g.c"
-
-    #include "source/output_a.c"
-    #include "source/output_b.c"
-    #include "source/output_c.c"
-
-    #include "source/loop_a.c"
-    #include "source/loop_b.c"
 
     #include "source/data_a.c"
     #include "source/data_b.c"
