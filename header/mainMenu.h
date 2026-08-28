@@ -10,4 +10,5 @@
     void mainMenu_5(int *m);
     void mainMenu_6(int *m);
     void mainMenu_8(int *m);
+    void mainMenu_9(int *m);
 #endif

@@ -21,10 +21,10 @@ void time_e(void){
     mktime(&target_date);
 
     // Assign
-    strftime(b, sizeof(b), "%d.%m.%Y", &target_date);
+    strftime(b, sizeof(b), "%Y", &target_date);
 
     // Output
-    printf("Days in every Month from: %s\n\n", b);
+    printf("Days in every Month in: %s\n\n", b);
 
    
     // Loop: Months

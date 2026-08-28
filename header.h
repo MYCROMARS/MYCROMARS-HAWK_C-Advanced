@@ -62,6 +62,8 @@
     #include "header/time_d.h"
     #include "header/time_e.h"
 
+    #include "header/malloc_a.h"
+
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
     #include "source/mainMenu_1.c"
@@ -72,6 +74,7 @@
     #include "source/mainMenu_6.c"
     #include "source/mainMenu_7.c"
     #include "source/mainMenu_8.c"
+    #include "source/mainMenu_9.c"
 
     // ********** Include source files
     #include "source/enum_a.c"
@@ -119,5 +122,7 @@
     #include "source/time_c.c"
     #include "source/time_d.c"
     #include "source/time_e.c"
+
+    #include "source/malloc_a.c"
 
 #endif

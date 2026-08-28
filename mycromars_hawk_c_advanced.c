@@ -56,7 +56,7 @@ int main()
     // Create & assign (initialize)
     int menu = 0;
     int menuB = 0;
-    const int menuMax = 8;
+    const int menuMax = 9;
 
     // Jump mark: start
     mainMenu:
@@ -64,7 +64,7 @@ int main()
     // Output
     printf("\n*** MAIN MENU ***\n");
     printf("Press (0) EXIT | (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT | (5) DATA | (6) MACRO | (7) MATH \n");
-    printf("Press (8) TIME\n");
+    printf("Press (8) TIME | (9) MALLOC A\n");
    
     printf("Your input: ");
 
@@ -126,6 +126,11 @@ int main()
         case 8:
                 /* Function: TIME */
                 mainMenu_8(&menuB);
+                break;
+        
+        case 9:
+                /* Function: MALLOC */
+                mainMenu_9(&menuB);
                 break;
          
         default:
