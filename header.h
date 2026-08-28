@@ -62,10 +62,7 @@
     #include "header/time_d.h"
     #include "header/time_e.h"
 
-<<<<<<< HEAD
     #include "header/malloc_a.h"
-=======
->>>>>>> bc29e294288a15e1d62e37f7c3c1dd4074d09a75
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
