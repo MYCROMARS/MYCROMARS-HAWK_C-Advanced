@@ -62,7 +62,9 @@
     #include "header/time_d.h"
     #include "header/time_e.h"
 
-    #include "header/malloc_a.h"
+    #include "header/memory_a.h"
+    #include "header/memory_b.h"
+    #include "header/memory_c.h"
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -124,6 +126,8 @@
     #include "source/time_d.c"
     #include "source/time_e.c"
 
-    #include "source/malloc_a.c"
+    #include "source/memory_a.c"
+    #include "source/memory_b.c"
+    #include "source/memory_c.c"
 
 #endif

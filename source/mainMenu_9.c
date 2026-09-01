@@ -4,8 +4,8 @@
 void mainMenu_9(int *m)
 {
         // Output
-        printf("\n*** MALLOC MENU ***\n");
-        printf("Press: (0) EXIT | (1) A \n");
+        printf("\n*** MEMORY MENU ***\n");
+        printf("Press: (0) EXIT | (1) A | (2) B | (3) C \n");
         printf("Your Input: ");
 
         // Input
@@ -29,7 +29,17 @@ void mainMenu_9(int *m)
 
                 case 1:
                         // Function: A
-                        malloc_a();
+                        memory_a();
+                        break;
+
+                case 2:
+                        // Function: B
+                        memory_b();
+                        break;
+
+                case 3:
+                        // Function: C
+                        memory_c();
                         break;
 
                 
@@ -43,6 +53,6 @@ void mainMenu_9(int *m)
         }
 
         // Output
-        printf("\n### MALLOC END ###\n");
+        printf("\n### MEMORY END ###\n");
         printf(".......................\n");
 }  

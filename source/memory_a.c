@@ -2,16 +2,14 @@
 #include <stdio.h>
 
 // Main Function
-void malloc_a(void){
+void memory_a(void){
     // Output
-    printf("### MALLOC A: Memory ###\n\n");
-    printf("**** Welcome ****\n");
+    printf("### MEMORY A: Allocate Memory with malloc() ###\n\n");
 
     // Create & assign
     int a = 3;
     
-    // Allocate Address to Pointer
-    //int *pointer = (int *)malloc(12);
+    // Allocate 3 Address's to Pointer with the size of int
     int *pointer = (int *)malloc(sizeof(int)*a);
     
     // Check
@@ -22,8 +20,7 @@ void malloc_a(void){
     }
     else {
         // Output
-        printf("Memory is allocated successfully.\n");
-        printf("Assign values:\n\n");
+        printf("Memory is allocated successfully.\n\n");
         
         // Assign value to Pointer
         pointer[0] = 1;
@@ -31,11 +28,12 @@ void malloc_a(void){
         pointer[2] = 3;
         
         // Output
-        printf("pointer 0: %d\n", pointer[0]);
-        printf("pointer 1: %d\n", pointer[1]);
-        printf("pointer 2: %d\n", pointer[2]);
+        printf("Values:\n");
+        printf("Pointer 0: %d\n", pointer[0]);
+        printf("Pointer 1: %d\n", pointer[1]);
+        printf("Pointer 2: %d\n", pointer[2]);
         
-        printf("\nAddress of Pointer: %p\n", &pointer);
+        printf("\nAddress of Pointer:     %p\n", &pointer);
         printf("Address of Pointer Var: %p\n\n", pointer);
         
         printf("Address of Pointer Var 0: %p\n", &pointer[0]);
@@ -45,10 +43,14 @@ void malloc_a(void){
         // Free memory
         free(pointer);
         
+        // Assign
         pointer = NULL;
 
         // Output
-        printf("\nMemory is free now and set to NULL.\n");
-        printf("Address of Pointer Var: %d\n", pointer);
+        printf("\nMemory is free now.\n");
+        printf("Pointer Var is set to NULL.\n\n");
+
+        printf("Address of Pointer:     %p\n", &pointer);
+        printf("Address of Pointer Var: %p\n\n", pointer);
     }
 }
