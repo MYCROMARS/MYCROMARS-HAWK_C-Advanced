@@ -1,5 +1,5 @@
 *** MYCROMARS HAWK ***
-*** C Programming Advanced V0.8.5 ***
+*** C Programming Advanced V0.9.3 ***
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -82,3 +82,8 @@ Chapter 8
             8.3 ------------    TIME C      Time zone, date & time in detail
             8.4 ------------    TIME D      Full years, months, days as Integer
             8.5 ------------    TIME E      Days in Month
+
+Chapter 9
+            9.1 Main Menu 9:    MEMORY A    Allocate Memory with malloc()
+            9.2 ------------    MEMORY B    Re-allocation Memory with realloc()
+            9.3 ------------    MEMORY C    Allocate Memory with calloc()
