@@ -91,3 +91,4 @@ Chapter 9
 Chapter 10
             10.1 Main Menu 10:  RANDOM A    rand() & srand()
             10.2 -------------  RANDOM B    Range
+            10.3 -------------  RANDOM C    Timer 
