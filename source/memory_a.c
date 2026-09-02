@@ -1,4 +1,4 @@
-// MALLOC
+// MEMORY A
 #include <stdio.h>
 
 // Main Function

@@ -65,6 +65,10 @@
     #include "header/memory_a.h"
     #include "header/memory_b.h"
     #include "header/memory_c.h"
+    
+    #include "header/random_a.h"
+    #include "header/random_b.h"
+
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -77,6 +81,7 @@
     #include "source/mainMenu_7.c"
     #include "source/mainMenu_8.c"
     #include "source/mainMenu_9.c"
+    #include "source/mainMenu_10.c"
 
     
     // ********** Include source files
@@ -129,5 +134,8 @@
     #include "source/memory_a.c"
     #include "source/memory_b.c"
     #include "source/memory_c.c"
+
+    #include "source/random_a.c"
+    #include "source/random_b.c"
 
 #endif

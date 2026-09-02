@@ -87,3 +87,7 @@ Chapter 9
             9.1 Main Menu 9:    MEMORY A    Allocate Memory with malloc()
             9.2 ------------    MEMORY B    Re-allocation Memory with realloc()
             9.3 ------------    MEMORY C    Allocate Memory with calloc()
+
+Chapter 10
+            10.1 Main Menu 10:  RANDOM A    rand() & srand()
+            10.2 -------------  RANDOM B    Range

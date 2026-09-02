@@ -66,6 +66,6 @@ void mainMenu_2(int *m)
     }
 
     // Output
-    printf("\n### Enum END ###\n");
+    printf("\n### ENUM END ###\n");
     printf(".......................\n");
 }

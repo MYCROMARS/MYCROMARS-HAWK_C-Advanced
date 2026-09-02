@@ -46,6 +46,6 @@ void mainMenu_1(int *m)
         }
 
         // Output
-        printf("\n### Loop END ###\n");
+        printf("\n### LOOP END ###\n");
         printf(".......................\n");
 }

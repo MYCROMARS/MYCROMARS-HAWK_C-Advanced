@@ -75,6 +75,6 @@ void mainMenu_4(int *m)
         }
 
         // Output
-        printf("\n### BIT OPERATION END ###\n");
+        printf("\n### BITS END ###\n");
         printf(".......................\n");
 }
