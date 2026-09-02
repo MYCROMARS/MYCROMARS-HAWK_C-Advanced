@@ -150,8 +150,8 @@ void time_c(void){
     // create: Full past Month as integer
     int num1 = pointer_a->tm_mon;
 
-    printf("int: %02d\n", num1);
-    printf("int: %d\n", num1);
+    printf("\nFull past Month: %02d\n", num1);
+    printf("Full past Month: %d\n", num1);
 
-    printf("int: %d\n", num1+1);
+    printf("Full past Month +1: %d\n", num1+1);
 }

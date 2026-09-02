@@ -68,7 +68,8 @@
     
     #include "header/random_a.h"
     #include "header/random_b.h"
-
+    #include "header/random_c.h"
+    
 
     // ********** Include Main Menu source files
     #include "source/mainMenu_0.c"
@@ -137,5 +138,6 @@
 
     #include "source/random_a.c"
     #include "source/random_b.c"
+    #include "source/random_c.c"
 
 #endif

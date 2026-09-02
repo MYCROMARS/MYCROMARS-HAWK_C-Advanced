@@ -7,8 +7,20 @@ void random_a(void){
     // Output
     printf("### RANDOM A: srand() & rand() ###\n\n");
 
+    time_t TM1;
+    TM1 = time(NULL);
+
+    if (time(&TM1) == -1)
+    {
+        printf("Time not available.\n");
+        exit(1);
+    }
+
+    printf("1. Time: %s\n", ctime(&TM1));
+
     // set Random with current time
-    srand(time(NULL));
+    //srand(time(NULL));
+    srand((unsigned) time(&TM1));
 
     // Create: Int Array
     int randomNumber[4];
@@ -27,8 +39,20 @@ void random_a(void){
 
 
     // set Random 
-    time_t TM;
-    srand((unsigned) time(&TM));
+    time_t TM2;
+    TM2 = time(NULL);
+
+    if (time(&TM2) == -1)
+    {
+        printf("Time not available.\n");
+        exit(1);
+    }
+
+    printf("2. Time: %s\n", ctime(&TM2));
+
+    srand((unsigned) time(&TM2));
+
+  // Output
 
       // Create: Int Array
     int randomNumber_2[4];
