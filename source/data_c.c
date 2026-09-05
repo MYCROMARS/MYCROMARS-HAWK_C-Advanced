@@ -4,11 +4,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Windows
 #ifdef _WIN32
     #include <direct.h>
     #define MODUS )
     #define MakeFolder(path) _mkdir(path)
-#else
+#else // macOS, Linux
     //#include <unistd.h>
     #include <sys/stat.h>   // for mkdir()
     #define MODUS ,0755)

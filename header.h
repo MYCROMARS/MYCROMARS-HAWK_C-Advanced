@@ -10,8 +10,11 @@
     #include <time.h>
 
     // WindowsOS
-    //#include <dir.h>
-    //#include <synchapi.h>
+    #ifdef _WIN32 
+        //#include <dir.h>
+        //#include <synchapi.h>
+        //#include <windows.h>
+    #endif
 
     // ********** Include header files
     #include "header/mainMenu.h"
