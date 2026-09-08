@@ -108,8 +108,4 @@ void math_c(void){
         // Got to
         goto RESTART;
     }
-
-    
-    
-
 }

@@ -5,7 +5,7 @@
 void random_a(void){
   
     // Output
-    printf("### RANDOM A: srand() & rand() ###\n\n");
+    printf("### RANDOM A: Random with srand() & rand() ###\n\n");
 
     time_t TM1;
     TM1 = time(NULL);

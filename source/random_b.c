@@ -5,7 +5,7 @@
 void random_b(void){
   
     // Output
-    printf("### RANDOM B: Range ###\n\n");
+    printf("### RANDOM B: Random int Range ###\n\n");
 
     // set Random with current time
     srand(time(NULL));
@@ -19,5 +19,4 @@ void random_b(void){
     // Output
     printf("Random Range 1: %d\n", randomNumber[0]);
     printf("Random Range 2: %d\n", randomNumber[1]);
-
 }

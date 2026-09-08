@@ -89,6 +89,7 @@ Chapter 9
             9.3 ------------    MEMORY C    Allocate Memory with calloc()
 
 Chapter 10
-            10.1 Main Menu 10:  RANDOM A    rand() & srand()
-            10.2 -------------  RANDOM B    Range
-            10.3 -------------  RANDOM C    Timer 
+            10.1 Main Menu 10:  RANDOM A    Random with rand() & srand()
+            10.2 -------------  RANDOM B    Random int Range
+            10.3 -------------  RANDOM C    Random pause to get different Random values 
+            10.4 -------------  RANDOM D    Random float Range

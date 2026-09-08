@@ -14,13 +14,13 @@
 void random_c(void){
   
     // Output
-    printf("### RANDOM C: ---- ###\n\n");
+    printf("### RANDOM C: Random pause to get different Random values ###\n\n");
 
     // Create
     int seconds_1;
     int seconds_2;
-    int randomNumber[2];
     int pause;
+    int randomNumber[2];
     
     // Create: Time
     time_t TM1;
