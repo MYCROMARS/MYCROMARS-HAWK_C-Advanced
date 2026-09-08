@@ -5,7 +5,6 @@ void output_c(void) {
     // Output
     printf("### OUTPUT C: C Standard ###\n\n");
 
-   
      #ifdef __STDC_VERSION__
         long version = __STDC_VERSION__;
         if (version == 199409L) printf("C-Standard: C94\n");

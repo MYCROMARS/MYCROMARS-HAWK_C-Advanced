@@ -158,7 +158,6 @@ void math_f(void){
     printf("lrint(x) rounded nearby: %.1f\n", x);
     printf("Result long int:         %ld\n\n\n", (long int)y);
 
-
     // Rounds to the nearby int, result long long int --------------
     x2 = 911222333444555.5;
     y2 = llrint(x2);

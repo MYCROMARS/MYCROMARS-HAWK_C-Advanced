@@ -32,9 +32,9 @@ void output_b(void) {
     printf("Pointer *(p+0): %d\n", *(p+0));     // 10
     printf("Pointer *(p+1): %d\n\n", *(p+1));   // 20
     
-    printf("Pointer p:      %p\n", p);           // 6156790648
-    printf("Pointer &p[0]:  %p\n", &p[0]);       // 6156790648
-    printf("Pointer &p[1]:  %p\n", &p[1]);     // 6156790652
+    printf("Pointer p:      %p\n", p);          // 6156790648
+    printf("Pointer &p[0]:  %p\n", &p[0]);      // 6156790648
+    printf("Pointer &p[1]:  %p\n", &p[1]);      // 6156790652
         
     //printf("Pointer p:      %d\n", p);           // 1861823352
     //printf("Pointer &p[0]:  %d\n", &p[0]);       // 1861823352

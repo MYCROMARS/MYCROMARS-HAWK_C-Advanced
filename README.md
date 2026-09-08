@@ -1,5 +1,5 @@
 *** MYCROMARS HAWK ***
-*** C Programming Advanced V0.9.3 ***
+*** C Programming Advanced V1.0.4 ***
 
 Copyright (C) 2026 Alexander Rudi
 Licensed: GNU General Public License v3.0
@@ -26,7 +26,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 
 
-*** CONTENT ***
+*** CONTENT 45 ***
 
 Chapter 0
             0.0 Main Menu 0:    EXIT        Program End
@@ -46,6 +46,7 @@ Chapter 2
 Chapter 3
             3.1 Main Menu 3:    OUTPUT A    Character, Tab, Return
             3.2 ------------    OUTPUT B    Array and Pointer of Array
+            3.3 ------------    OUTPUT C    C Standard
 
 Chapter 4
             4.1 Main Menu 4:    BIT A       Decimal to Binary to Decimal

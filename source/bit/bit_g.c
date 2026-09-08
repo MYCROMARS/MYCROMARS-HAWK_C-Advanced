@@ -27,8 +27,7 @@ void decimal_to_binary(int bit_size, int value, int bit);
 void bit_g(void)
 {
     // Output
-    printf("### BIT OPERATION G ###\n");
-    printf("Decimal to Binary Loop\n\n");
+    printf("### BIT G: Decimal to Binary Loop ###\n");
 
     // Create & assign local variables
     int menu;
@@ -259,5 +258,3 @@ void decimal_to_binary(int bit_size, int value, int bit){
 
     printf("\n\n");
 }
-
-

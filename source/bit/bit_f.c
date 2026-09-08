@@ -177,7 +177,6 @@ void bit_f(void)
             if (i % 8 == 0) printf(" "); // spacing after 8 bits
         }
         
-
         // Output ---------------------------------------
         printf("\n\n");
         printf("Bitwise shift right %d:\t%d\n",value_f2, value_f2_1);

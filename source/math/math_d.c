@@ -73,7 +73,6 @@ void math_d(void){
     printf("With `long double`, the values ​​are incorrect after the 15th digit.\n");
     printf("result/rad Long double: %.19Lf°\n\n", result_3/rad_3);
 
-
     long double winkel = result_3/rad_3; // Ihr berechnetes Ergebnis
     long double digit_1 = 1e-15L; // Permissible deviation (0.000000000001)
 

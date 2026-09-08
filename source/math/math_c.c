@@ -41,7 +41,6 @@ void math_c(void){
     // Output: Radiant
     printf("1 Rad = PI/180: %f\n", rad_1);
     
-
     // Go here
     start:
     

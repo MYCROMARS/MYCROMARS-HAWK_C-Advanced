@@ -1,8 +1,8 @@
+// Output A
+
 // Integrate libraries direct:
 // #include <stdio.h>
 // #include "../header/output_a.h"
-
-// Output A
 
 // Main function
 void output_a(void) {

@@ -21,7 +21,6 @@ void time_c(void){
         //setlocale(LC_TIME, "de_DE.UTF-8");  // need local.h
     //#endif
 
-  
     // Output
     printf("### TIME C: Time zone, date & time in detail ###\n\n");
     
@@ -55,14 +54,12 @@ void time_c(void){
     
     char save_k[80];
 
-
     // #####################################
 
     // Time zone (z/Z)
     strftime(save_a, 80, "Time zone (z):   %z", pointer_a);
     printf("%s\n", save_a);
  
-   
     // Time & Date
     strftime(save_a, 80, "Time & Date (c): %c", pointer_a);
     printf("%s\n\n", save_a);
@@ -122,7 +119,6 @@ void time_c(void){
     // Calendar week, 1. Day: Monday
     strftime(save_g, 80, "Calendar week (W): %W", pointer_a);
     printf("%s\n\n", save_g);
-
 
 
     // Time

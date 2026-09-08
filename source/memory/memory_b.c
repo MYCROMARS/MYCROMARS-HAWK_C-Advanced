@@ -43,8 +43,6 @@ void memory_b(void){
             printf("Address of Pointer Var %d: %p\n", i, &pointer[i]);
         }
         
-
-
         // *** Re-allocation ***
         // Assign
         a = 5;

@@ -1,6 +1,6 @@
 // MACRO D
 
-// Define: Constant for Array
+// Define: Function
 #define T1(typ, a, b) {typ var1 = a; \
                         typ var2 = b; \
                         a = var2; \
