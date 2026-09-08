@@ -41,7 +41,7 @@ void random_c(void){
     // set 1. Random with current time ---------------
     srand((unsigned) time(&TM1));
 
-    // Assign: Random
+    // Assign: Random 1...10
     pause = (rand() % 10) +1;
 
     randomNumber[0] = (rand() % 100) +1;
@@ -84,6 +84,7 @@ void random_c(void){
             sleep(5);
         #endif
 
+        // No Time
         if (time(&TM1) == -1)
         {
             printf("Time not available.\n");
@@ -104,7 +105,7 @@ void random_c(void){
     printf("Current Second: %d\n", seconds_1);
     printf("Goal Second:    %d\n\n", seconds_2);
 
-
+    // No Time
     if (time(&TM1) == -1)
     {
         printf("Time not available.\n");
@@ -121,14 +122,4 @@ void random_c(void){
     // Output
     printf("Random Number 1: %d\n", randomNumber[0]);
     printf("Random Number 2: %d\n", randomNumber[1]);
-    
-
-   
-
-
-
-
- 
-
-
 }
