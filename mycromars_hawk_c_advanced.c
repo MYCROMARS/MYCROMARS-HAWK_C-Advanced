@@ -64,7 +64,7 @@ int main()
     // Output
     printf("\n*** MAIN MENU ***\n");
     printf("Press (0) EXIT | (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT | (5) DATA | (6) MACRO | (7) MATH \n");
-    printf("Press (8) TIME | (9) MEMORY | (10) Random\n");
+    printf("Press (8) TIME | (9) MEMORY | (10) RANDOM\n");
    
     printf("Your input: ");
 
@@ -73,7 +73,7 @@ int main()
         // Output
         printf("\nInput is not a number!\n\n");
 
-        // function: Catch invalid input (Letters instead of numbers)
+        // function: Catch invalid input 
         scanString0();
 
         // Go to
@@ -129,7 +129,7 @@ int main()
                 break;
         
         case 9:
-                /* Function: MALLOC */
+                /* Function: MEMORY */
                 mainMenu_9(&menuB);
                 break;
 
@@ -145,15 +145,14 @@ int main()
         }
     }
     else {
-        // Wrong number, not 9...menuMax
-        // Output
+        // Output: Wrong number, not 0...menuMax
         printf("\nInput is wrong, not 0...%d\n\n", menuMax);
 
         // Go to
         goto mainMenu;
     }
 
-    // Assign (initialize)
+    // Assign 
     menu = 0;
     menuB = 0;
 

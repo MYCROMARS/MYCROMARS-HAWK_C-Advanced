@@ -9,11 +9,17 @@
     #include <math.h>
     #include <time.h>
 
-    // WindowsOS
-    #ifdef _WIN32 
+    // Here you can add Platform-specific Libraries: 
+    // They are currently integrated into the respective programs,
+    // so you can see where they are used.
+    #ifdef _WIN32           // for Windows
+        //#include <windows.h>
         //#include <dir.h>
         //#include <synchapi.h>
-        //#include <windows.h>
+    #elifdef __APPLE__      // For macOS
+        //#include<unistd.h>
+    #elifdef __linux__      // For Linux
+        //#include<unistd.h>
     #endif
 
     // ********** Include header files
