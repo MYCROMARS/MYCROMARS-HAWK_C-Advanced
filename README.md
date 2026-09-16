@@ -36,7 +36,7 @@ Chapter 1
             1.2 ------------    LOOP B      While loop with continue
             
 Chapter 2
-            2.1 Main Menu 2:    ENUM A      List
+            2.1 Main Menu 2:    ENUM A      Enum List
             2.2 ------------    ENUM B      Pass value
             2.3 ------------    ENUM C      Boolean 
             2.4 ------------    ENUM D      Pass & switch value

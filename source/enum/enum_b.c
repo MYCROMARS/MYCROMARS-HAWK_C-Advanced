@@ -14,12 +14,16 @@ void enum_b(void)
         NEXT      // starts counting
     }ITEM;
 
+    
     // Output
     printf("WATCH: %d\n", WATCH);       // 2
     printf("CANDIES: %d\n", CANDIES);   // 4
     printf("BOTTLE: %d\n", BOTTLE);     // 0
     printf("NEXT: %d\n\n", NEXT);       // 1
-
+    
+    // Output ITEM, before it is assigned
+    printf("ITEM: %d\n\n", ITEM);  
+    
     // Assign
     ITEM = WATCH;
 

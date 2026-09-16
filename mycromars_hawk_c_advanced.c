@@ -58,13 +58,13 @@ int main()
     int menuB = 0;
     const int menuMax = 10;
 
-    // Jump mark: start
+    // Go here
     mainMenu:
 
     // Output
     printf("\n*** MAIN MENU ***\n");
-    printf("Press (0) EXIT | (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT | (5) DATA | (6) MACRO | (7) MATH \n");
-    printf("Press (8) TIME | (9) MEMORY | (10) RANDOM\n");
+    printf("Press (0) EXIT | (1) LOOP | (2) ENUM | (3) OUTPUT | (4) BIT | (5) DATA \n");
+    printf("Press (6) MACRO | (7) MATH | (8) TIME | (9) MEMORY | (10) RANDOM \n");
    
     printf("Your input: ");
 
@@ -94,6 +94,7 @@ int main()
                 break;
 
         case 2:
+        
                 /* Function: ENUM */
                 mainMenu_2(&menuB);
                 break;
