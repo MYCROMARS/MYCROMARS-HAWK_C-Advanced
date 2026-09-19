@@ -11,9 +11,9 @@ void output_c(void) {
         else if (version == 199901L) printf("C-Standard: C99\n");
         else if (version == 201112L) printf("C-Standard: C11\n");
         else if (version == 201710L) printf("C-Standard: C17\n");
-        else if (version > 201710L) printf("C-Standard: C23 oder neuer (Wert: %ld)\n", version);
-        else printf("C-Standard-Wert: %ld\n", version);
+        else if (version > 201710L) printf("C-Standard: C23 or newer (Value: %ld)\n", version);
+        else printf("C-Standard-Value: %ld\n", version);
     #else
-        printf("C-Standard: C89 / C90 (oder __STDC_VERSION__ wird vom Compiler nicht unterstüzt)\n");
+        printf("C-Standard: C89 / C90 (or __STDC_VERSION__ is not supported by the Compiler)\n");
     #endif
 }

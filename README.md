@@ -38,7 +38,7 @@ Chapter 1
 Chapter 2
             2.1 Main Menu 2:    ENUM A      Enum List
             2.2 ------------    ENUM B      Pass value
-            2.3 ------------    ENUM C      Boolean 
+            2.3 ------------    ENUM C      Enum Boolean 
             2.4 ------------    ENUM D      Pass & switch value
             2.5 ------------    ENUM E      Enum to function
             2.6 ------------    ENUM F      Typedef Enum to function
