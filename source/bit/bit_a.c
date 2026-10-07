@@ -32,13 +32,13 @@ void bit_a(void)
     int value_a2;
     long value_a3;
     
-    int bit_a;              // placeholder for bit
+    int bit_a;              // placeholder for 1 bit
     char *hold_bits;
     int max_a = 255;
     
-    #define BITS_A 8        // 8 bit
-    int count_a = BITS_A-1; // 7
-    int array_bits_a[BITS_A] = {0,0,0,0,0,0,0,0};  // String Placeholder for bit's
+    #define BITS_A 8                                // 8 
+    int count_a = BITS_A-1;                         // 7
+    int array_bits_a[BITS_A] = {0,0,0,0,0,0,0,0};   // Placeholder for 8 bit's
     
     // Go here
     main:
@@ -57,7 +57,7 @@ void bit_a(void)
         // Go to
         goto main;
     }
-    // Wrong number, not 1...menuMax
+    // Wrong number, not 0...menuMax
     else if (value_a1 < 0 || value_a1 > max_a){
         // Output
         printf("\nInput is wrong, not 0...%d\n\n", max_a);
