@@ -31,7 +31,7 @@ void bit_d(void)
 
     // Create & assign
     int value_d1;
-    int value_d2;
+    unsigned int value_d2;
 
     int value_d1_1;
    
@@ -171,17 +171,18 @@ void bit_d(void)
             // Assign: odd number, bit= 1 
             bit_d2 = (value_d1 >> i) & 1;   
 
-            // Statement: Output
-            if (i % 8 == 0) printf(" "); // spacing after 8 bits
-
             // Output
             printf("%d", bit_d2);
+
+            // Statement: Output
+            if (i % 8 == 0) printf(" "); // spacing after 8 bits
         }
         
         // Output
         printf("\n\n");
-        printf("Bitwise NOT '~':\t%d\n", value_d2);
-        //printf("Bitwise NOT '~': %b\n", value_2);     //only in C23 
+        printf("Bitwise NOT unsigned: %u\n", value_d2);
+        printf("Bitwise NOT signed:   %d\n", value_d2);
+        //printf("Bitwise NOT: %b\n", value_2);     //only in C23 
         
         // Assign
         bit_size_b2 = sizeof(value_d2) * 4; // 4*4=16
@@ -198,7 +199,7 @@ void bit_d(void)
             // Output
             printf("%d", bit_d3);
 
-            // Statement
+            // Statement: Output
             if (i % 8 == 0) printf(" "); // spacing after 8 bits
         }
 

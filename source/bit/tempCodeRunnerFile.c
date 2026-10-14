@@ -1,0 +1,1 @@
+value_c3 = value_c1|value_c2;
