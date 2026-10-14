@@ -126,7 +126,7 @@ void bit_d(void)
         // Output
         printf("\nInput to Binary String: %s\n", bit_string_d1);
         
-        // Assign: Pass Binary string to int
+        // Assign: Pass Binary string to int (decimal)
         binary_to_int_d1 = strtol(bit_string_d1, &hold_bits, 2);
 
         // Delate 
