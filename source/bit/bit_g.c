@@ -113,12 +113,14 @@ void bit_g(void)
             // Function: write array number to string 
             negative_g = array_to_string(negative_g, array_bits_g1);
 
-            // Statement
+            // Statement: is negative
             if ( negative_g == 2){
                 // Output
                 printf("\nBinary String: %s\n", bit_string_g1);
             }
-            else{
+            // is positive
+            else 
+            {
                 // Output
                 printf("\nBinary String:  %s\n", bit_string_g1);
             }
