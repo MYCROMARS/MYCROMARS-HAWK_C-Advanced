@@ -74,7 +74,8 @@ void math_f(void){
     printf("\nMy operating system uses the current CPU rounding instruction: mode 1\n");
     printf("Rounding mode FLT_ROUNDS: %d\n\n", FLT_ROUNDS);
     printf("It rounds alternately down and up at .5\n");
-    printf("It rounds down for the number 0 and for even numbers. And it rounds up for even numbers.\n\n");
+    printf("It rounds down for the number 0 and for even numbers. \
+        And it rounds up for even numbers.\n\n");
 
     
     // Rounds to the nearby int, result long int --------------------

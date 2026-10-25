@@ -51,16 +51,6 @@ void mainMenu_8(int *m)
                         // Function: E
                         time_e();
                         break;
-
-                case 6:
-                        // Function: F
-                        
-                        break;
-
-                case 7:
-                        // Function: F
-                     
-                        break;
                         
                 default:
                         // Assign

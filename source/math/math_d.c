@@ -19,7 +19,8 @@ void math_d(void){
     //     SetConsoleOutputCP(65001);
     // #endif
     
-    printf("Here you can see the point at which the computer can no longer represent the numbers accurately.\n");
+    printf("Here you can see the point at which the computer can no \
+        longer represent the numbers accurately.\n");
     printf("For `float`, after the 5th digit.\n");
     printf("For `double`, after the 14th digit.\n");
     printf("For `long double`, after the 15th digit.\n\n");
@@ -67,7 +68,8 @@ void math_d(void){
     printf("result/rad float:       %.7f°\n", result_1/rad_1);
     printf("result/rad double :     %.15f°\n", result_2/rad_2);
     printf("result/rad Long double: %.19Lf°\n", result_3/rad_3);
-    printf("\nStandard hardware cannot mathematically achieve greater precision with floating-point numbers.\n\n");
+    printf("\nStandard hardware cannot mathematically achieve greater \
+        precision with floating-point numbers.\n\n");
     
     printf("Output with 19 decimal places.\n");
     printf("With `long double`, the values ​​are incorrect after the 15th digit.\n");

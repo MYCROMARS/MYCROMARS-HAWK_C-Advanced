@@ -46,11 +46,6 @@ void mainMenu_6(int *m)
                         // Function: D
                         macro_d();
                         break;
-                
-                case 5:
-                        // Function: E
-                      
-                        break;
                         
                 default:
                         // Assign

@@ -55,6 +55,7 @@ Chapter 4
             4.4 ------------    BIT D       Bitwise NOT '~'
             4.5 ------------    BIT E       Bitwise shift left '<<'
             4.6 ------------    BIT F       Bitwise shift right '>>'
+            4.7 ------------    BIT G       Decimal to Binary Loop, 16 Bit
 
 Chapter 5
             5.1 Main Menu 5:    DATA A      SHOW DIRECTORY

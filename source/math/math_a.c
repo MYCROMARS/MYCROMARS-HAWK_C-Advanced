@@ -1,4 +1,4 @@
-// MATH B
+// MATH A
 
 //#include <math.h>
 
