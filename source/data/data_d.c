@@ -23,7 +23,7 @@
 void data_d(void)
 {
     // Output
-    printf("### DATE D: CREATE FOLDER, GO TO FOLDER & GO UP ###\n\n");
+    printf("### DATE D: Create Folder, go to Folder & go up ###\n\n");
     
     // Create 
     char path[1024];

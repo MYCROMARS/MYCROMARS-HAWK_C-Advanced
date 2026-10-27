@@ -20,7 +20,7 @@
 void data_c(void)
 {
     // Output
-    printf("### DATE C: CREATE FOLDER ###\n\n");
+    printf("### DATE C: Create Folder ###\n\n");
     
     // Create
     char folderName[100];

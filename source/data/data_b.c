@@ -38,7 +38,7 @@
 void data_b(void)
 {
     // Output
-    printf("### DATE B: SHOW DIRECTORY & CURRENT FOLDER ###\n\n");
+    printf("### DATE B: Show Directory & Current Folder ###\n\n");
     
     // Create 
     char path_b1[100]; // 100 byte

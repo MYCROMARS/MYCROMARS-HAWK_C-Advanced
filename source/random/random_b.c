@@ -1,4 +1,4 @@
-// RANDOM A
+// RANDOM B
 #include <time.h>
 
 // Main Function

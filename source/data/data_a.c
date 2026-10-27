@@ -17,7 +17,7 @@
 void data_a(void)
 {
     // Output
-    printf("### DATE A: SHOW DIRECTORY ###\n\n");
+    printf("### DATE A: Show Directory ###\n\n");
     
     // Create 
     char path[1024];

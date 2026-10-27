@@ -58,10 +58,10 @@ Chapter 4
             4.7 ------------    BIT G       Decimal to Binary Loop, 16 Bit
 
 Chapter 5
-            5.1 Main Menu 5:    DATA A      SHOW DIRECTORY
-            5.2 ------------    DATA B      SHOW DIRECTORY & CURRENT FOLDER
-            5.3 ------------    DATA C      CREATE FOLDER 
-            5.4 ------------    DATA D      CREATE FOLDER, GO TO FOLDER & GO UP
+            5.1 Main Menu 5:    DATA A      Show Directory 
+            5.2 ------------    DATA B      Show Directory & Current Folder
+            5.3 ------------    DATA C      Create Folder 
+            5.4 ------------    DATA D      Create Folder, go to Folder & go up
 
 Chapter 6
             6.1 Main Menu 6:    MACRO A      Calculation
