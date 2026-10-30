@@ -47,8 +47,8 @@ void data_b(void)
     if (CURRENT_path(path_b1, sizeof(path_b1)) != NULL) 
     {
         // Output: size of
-        printf("sizeof char path: %lu byte\n\n", sizeof(path_b1));
-        printf("sizeof char path: %zu byte\n\n", sizeof(path_b1));
+        printf("sizeof char path (lu): %lu byte\n", sizeof(path_b1));
+        printf("sizeof char path (zu): %zu byte\n\n", sizeof(path_b1));
 
         // Output: path
         printf("Show current path: %s\n\n", path_b1);
@@ -72,7 +72,7 @@ void data_b(void)
 
     // 2. Method, output path & Length
     // Output
-    printf("Method 2, output path\n");
+    printf("Output path Method 2\n");
 
     // Create
     char *path_b2;
@@ -131,7 +131,7 @@ void data_b(void)
 
     // 2. Method, Output path split
     // Output
-    printf("Method 2, Output Filename or Foldername\n");
+    printf("Output Foldername Method 2\n");
 
     // Pass path
     const char *path_b1_2 = path_b1;
@@ -149,7 +149,7 @@ void data_b(void)
     else filename++; // Step past the slash pointer
 
     // Output
-    printf("Filename:  %s\n\n", filename); 
+    printf("Current folder:  %s\n\n", filename); 
 
     // Extension dot
     const char *Extension = strrchr(filename, '.');
@@ -164,11 +164,11 @@ void data_b(void)
     // Output Length
     //printf("path_b1_2 length:       %d\n", path_b1); 
     //printf("filename length:        %d\n", filename); 
-    printf("filename - path_b1_2+1: %ld\n", filename-path_b1_2+1); 
+    printf("filename length: %ld\n", filename-path_b1_2+1); 
     
     // Assign
     int a = filename-path_b1_2;
     
     // Output
-    printf("First Character:      %c\n", path_b1[a]);        
+    printf("First Character: %c\n", path_b1[a]);        
 }
