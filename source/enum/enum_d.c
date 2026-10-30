@@ -32,7 +32,6 @@ void enum_d(void)
     printf("Switch button? Input 1: \n");
     printf("Exit with all other numbers. \n");
    
-
     // Input
     if((scanf("%d", &input)) == false_)
     {
@@ -45,7 +44,7 @@ void enum_d(void)
         // Go to
         goto start;
     }
-    else if (input == 1)
+    else if (input == true_)
     {
         // Output
         printf("Correct, your input was: %d\n", input);
