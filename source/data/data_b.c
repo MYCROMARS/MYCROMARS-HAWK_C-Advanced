@@ -27,11 +27,12 @@
     //     char *fname, size_t fnameNumberOfElements,
     //     char *ext,   size_t extNumberOfElements
     // );
-    #else // macOS, Linux
-        #include <unistd.h>     // for getcwd()
-        #include <libgen.h>     // for basename(), dirname()
-        #define CURRENT_path getcwd
-        #define CURRENT_folder(path) basename(path)
+    
+#else // macOS, Linux
+    #include <unistd.h>     // for getcwd()
+    #include <libgen.h>     // for basename(), dirname()
+    #define CURRENT_path getcwd
+    #define CURRENT_folder(path) basename(path)
 #endif
 
 // Main function
