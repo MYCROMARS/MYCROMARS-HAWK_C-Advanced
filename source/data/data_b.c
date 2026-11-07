@@ -44,7 +44,7 @@ void data_b(void)
     // Create 
     char path_b1[100]; // 100 byte
    
-    // Show Directory ------------------------
+    // Show Directory & (Folder on macOs / Linux)
     if (CURRENT_path(path_b1, sizeof(path_b1)) != NULL) 
     {
         // Output: size of
@@ -56,7 +56,7 @@ void data_b(void)
 
         // Windows
         #ifdef _WIN32
-
+        // do nothing
         #else // macOS, Linux
             // Create: Current folder
             char *folder = CURRENT_folder(path_b1);
@@ -130,7 +130,7 @@ void data_b(void)
     #endif
 
 
-    // 2. Method, Output path split
+    // 2. Method, Output Folder
     // Output
     printf("Output Foldername Method 2\n");
 
@@ -147,7 +147,7 @@ void data_b(void)
     
     // entire path is the filename
     if (!filename) filename = path_b1_2; 
-    else filename++; // Step past the slash pointer
+    else filename++; // Slash found, step past the slash pointer
 
     // Output
     printf("Current folder:  %s\n\n", filename); 
@@ -163,13 +163,14 @@ void data_b(void)
     }
     
     // Output Length
-    //printf("path_b1_2 length:       %d\n", path_b1); 
-    //printf("filename length:        %d\n", filename); 
-    printf("filename length: %ld\n", filename-path_b1_2+1); 
+    printf("path_b1_2 length: %zu\n", strlen(path_b1_2));   
+    printf("filename length:  %zu\n", strlen(filename));    // MYCROMARS-HAWK_C-Advanced (25)
+    printf("what remains:     %zu\n", strlen(path_b1_2) - strlen(filename));    
+    printf("what remains:     %ld\n", filename - path_b1_2); 
     
     // Assign
-    int a = filename-path_b1_2;
+    int a = filename - path_b1_2;
     
     // Output
-    printf("First Character: %c\n", path_b1[a]);        
+    printf("\nFirst Character: %c\n", path_b1[a]);        
 }
