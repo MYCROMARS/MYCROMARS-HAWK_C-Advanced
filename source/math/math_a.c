@@ -42,17 +42,18 @@ void math_a(void){
     tan1 = tan(angle*rad);
     
     // Output: sin, cos, tan
-    printf("%.2f° * rad = %f sin(rad): %f\n", angle, angle*rad, sin1);
-    printf("%.2f° * rad = %f cos(rad): %f\n", angle, angle*rad, cos1);
-    printf("%.2f° * rad = %f tan(rad): %f\n\n", angle, angle*rad, tan1);
+    printf("sin (%.2f° * %.4f) = %f\n", angle, rad, sin1);
+    printf("sin (%.2f° * %.4f) = %f\n", angle, rad, cos1);
+    printf("sin (%.2f° * %.4f) = %f\n", angle, rad, tan1);
+    //printf("%.2f° * rad = %f cos(rad): %f\n", angle, angle*rad, cos1);
+   
     
-
     //Assign --------------------------------------------
     rad = PI/180; 
     sin1 = sin(rad);
 
     // Output sin at 1°
-    printf("1°  =   1 rad: %f sin(rad): %f\n", rad, sin1);
+    printf("\n1°  =   1 rad: %f sin(rad): %f\n", rad, sin1);
  
 
     // Assign --------------------------------------------
