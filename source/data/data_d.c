@@ -8,7 +8,6 @@
 #ifdef _WIN32
     #include <direct.h>     // for _getcwd()
     #define CURRENT_path _getcwd
-    //#define MODUS )
     #define MakeFolder_(path) _mkdir(path)
     #define CHANGE_folder _chdir
 #else // macOS, Linux
