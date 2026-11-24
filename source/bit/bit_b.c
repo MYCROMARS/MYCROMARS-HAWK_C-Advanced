@@ -53,7 +53,7 @@ void bit_b(void)
     int max_b = 255;
 
     #define BITS_B 8        // 8 bit
-    int count_b = BITS_B-1;
+    int count_b = BITS_B-1; 
 
     // Placeholder for bit's
     int array_bits_b1[BITS_B] = {0,0,0,0,0,0,0,0};  
