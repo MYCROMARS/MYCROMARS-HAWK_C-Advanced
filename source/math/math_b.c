@@ -30,7 +30,7 @@ void math_b(void){
     // Output: Radiant
     printf("1 Rad = PI/180: %f\n\n", rad);
     
-    // Assign  asin(sinus), gives the rad, * PI/180 = degree
+    // Assign  asin(sinus), gives the Radiant, * PI/180 = degree
     sin1 = 1; 
     rad_2 = asin(sin1);
 

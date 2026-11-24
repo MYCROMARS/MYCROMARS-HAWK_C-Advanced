@@ -13,7 +13,7 @@
 void math_a(void){
     
     // Output
-    printf("### MATH A: From Degree to Radiant to Sine, Cosine & tangent ###\n");
+    printf("### MATH A: From Degree to Radiant to Sine, Cosine & Tangent ###\n");
 
     // Windows
     // #ifdef _WIN32 
